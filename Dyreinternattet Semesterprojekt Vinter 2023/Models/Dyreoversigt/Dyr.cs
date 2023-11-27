@@ -22,7 +22,7 @@
         }
         
 
-        public Dyr(string navn, string race, double alder, double vægt, bool vaccineStatus, bool erAdopteret, string mad)
+        public Dyr(string navn, string race, double alder, double vægt, bool vaccineStatus, bool erAdopteret)
         {
             ID = nextId++;
             Navn = navn;
