@@ -2,5 +2,6 @@
 {
     public class Hund : Dyr
     {
+        //Hund inheriter fra Dyr klasse.
     }
 }
