@@ -2,6 +2,7 @@
 {
     public class Kat : Dyr
     {
+        // Kat inheriter fra Dyr klasse
         public Kat()
         {
         }
