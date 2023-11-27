@@ -3,18 +3,18 @@ using Dyreinternattet_Semesterprojekt_Vinter_2023.Data;
 
 namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Services
 {
-    public class DyreService : IObjectService
+    public class DyreService : IDyreService //Bruger interface
     {
-        public List<Dyr> Dyreliste { get; }
+        private List<Dyr> _dyreliste; //Instance field kan referere til en liste af dyr
 
-        public DyreService()
+        public DyreService() //Når DyreService constructes, henter dyrelisten data
         {
-            Dyreliste = MockDyr.GetMockDyr();
+            _dyreliste = MockDyr.GetMockDyr();
         }
 
-        public List<Dyr> GetDyreliste()
+        public List<Dyr> GetDyr() //metode til at returnere dyrelisten
         {
-            return Dyreliste;
+            return _dyreliste;
         }
     }
 }
