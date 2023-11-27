@@ -10,7 +10,6 @@
         public double Vægt { get; set; }
         public bool VaccineStatus { get; set; }
         public bool ErAdopteret { get; set; }
-        public string Mad { get; set; }
 
          
 
@@ -31,7 +30,6 @@
             Vægt = vægt;
             VaccineStatus = vaccineStatus;
             ErAdopteret = erAdopteret;
-            Mad = mad;
         }
 
      
