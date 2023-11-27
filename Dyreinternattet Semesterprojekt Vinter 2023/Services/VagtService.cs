@@ -3,7 +3,7 @@ using Dyreinternattet_Semesterprojekt_Vinter_2023.Models.Vagtplan;
 
 namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Services
 {
-	public class VagtService
+	public class VagtService : IVagtService
 	{
 		private List<Vagt> _vagter;
 

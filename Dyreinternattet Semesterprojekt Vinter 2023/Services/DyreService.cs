@@ -8,7 +8,7 @@ namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Services
 
         public Dyreservice()
         {
-            Dyreliste = Mockpizza.GetMockPizza();
+            Dyreliste = MockDyr.GetMockDyr();
         }
 
         public List<Dyr> GetPizzas()
