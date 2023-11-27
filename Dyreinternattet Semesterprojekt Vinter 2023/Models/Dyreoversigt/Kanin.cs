@@ -4,5 +4,13 @@
     {
         // Kanin inheriter fra Dyr klassse
 
+        public Kanin()
+        {
+        }
+
+        public Kanin(string navn, string race, double alder, double vægt, bool vaccineStatus, bool erAdopteret, string mad)
+            : base(navn, race, alder, vægt, vaccineStatus, erAdopteret, mad)
+        {
+        }
     }
 }
