@@ -3,6 +3,8 @@
     public class Dyr
     {
         public int Id { get; set; }
+        public int nextId { get; set; }
+
         public string Navn { get; set; }
         public string Race { get; set; }
         public double Alder { get; set; }
@@ -10,6 +12,8 @@
         public bool VaccineStatus { get; set; }
         public bool ErAdopteret { get; set; }
         public string Mad { get; set; }
-        public kalender Kalender { get; set; }
+        public Calender Kalender { get; set; }
     }
+
+
 }
