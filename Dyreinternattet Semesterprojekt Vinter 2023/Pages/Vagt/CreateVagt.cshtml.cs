@@ -1,3 +1,4 @@
+using Dyreinternattet_Semesterprojekt_Vinter_2023.Models;
 using Dyreinternattet_Semesterprojekt_Vinter_2023.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
@@ -8,13 +9,13 @@ namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Pages.Vagt
     {
 		private IVagtService _vagtService;
 
-		public CreateItemModel(IVagtService itemService)
+		public CreateVagtModel(IVagtService vagtService)
 		{
-			_itemService = itemService;
+			_vagtService = vagtService;
 		}
 
 		[BindProperty]
-		public Models.Item Item { get; set; }
+		public Models.Vagtplan.Vagt Vagt { get; set; }
 
 		public IActionResult OnGet()
 		{
@@ -28,7 +29,7 @@ namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Pages.Vagt
 				return Page();
 			}
 
-			_itemService.AddVagt(Vagt);
+			_vagtService.AddVagt(Vagt);
 			return RedirectToPage("GetAllVagter");
 		}
     }
