@@ -3,3 +3,43 @@
 @{
 }
 <h1> Vagtplan</h1>
+
+<table class="table table-bordered table-hover table-striped">
+	<thead>
+		<tr>
+			<th>
+				Medarbejder
+			</th>
+			<th>
+				Start tid
+			</th>
+			<th>
+				Slut tid
+			</th>
+		</tr>
+	</thead>
+	<tbody>
+		@if (Model.Vagter != null)
+		{
+			foreach (var vagt in Model.Vagter)
+			{
+				<tr>
+					<td>
+						@vagt.Worker
+					</td>
+					<td>
+						@vagt.StartTid
+					</td>
+					<td>
+						@vagt.SlutTid
+					</td>
+				</tr>
+			}
+		}
+	</tbody>
+</table>
+
+<p>
+	<a class="btn btn-primary" asp-page="CreateVagt">Tilføj en ny vagt</a>
+</p>
+
