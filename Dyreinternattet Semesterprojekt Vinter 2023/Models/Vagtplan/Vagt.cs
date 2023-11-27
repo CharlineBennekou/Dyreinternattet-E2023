@@ -2,5 +2,6 @@
 {
     public class Vagt
     {
+        public Medarbejder Medarbejder {  get; set; }
     }
 }
