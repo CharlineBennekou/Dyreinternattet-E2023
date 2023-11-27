@@ -12,7 +12,7 @@
         public bool VaccineStatus { get; set; }
         public bool ErAdopteret { get; set; }
         public string Mad { get; set; }
-        public Calender Kalender { get; set; }
+        //public Calender Kalender { get; set; }
     }
 
 
