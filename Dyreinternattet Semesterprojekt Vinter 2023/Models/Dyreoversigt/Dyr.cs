@@ -9,5 +9,7 @@
         public double Vægt { get; set; }
         public bool VaccineStatus { get; set; }
         public bool ErAdopteret { get; set; }
+        public string Mad { get; set; }
+        public kalender Kalender { get; set; }
     }
 }
