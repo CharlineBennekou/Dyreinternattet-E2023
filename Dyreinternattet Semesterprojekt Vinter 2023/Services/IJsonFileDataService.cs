@@ -1,27 +1,26 @@
-﻿using System.Text.Json;
-using Dyreinternattet_Semesterprojekt_Vinter_2023.Models.Dyreoversigt;
+﻿using Dyreinternattet_Semesterprojekt_Vinter_2023.Models.Dyreoversigt;
+using System.Text.Json;
 
 namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Services
 {
-    public class JsonFileDyrService
+    public interface IJsonFileDataService<T> //På ingen måde færdig. Held og lykke :)
     {
-
         //public IWebHostEnvironment WebHostEnvironment { get; } //En service som får placering af json filen. Skal initialiseres.
-        //public JsonFileDyrService(IWebHostEnvironment webHostEnvironment) //Initialiseres med dependency injection
-        //{
-        //    WebHostEnvironment = webHostEnvironment;
-        //}
+        ////public JsonFileTService(IWebHostEnvironment webHostEnvironment) //Initialiseres med dependency injection
+        ////{
+        ////    WebHostEnvironment = webHostEnvironment;
+        ////}
 
         //private string JsonFileName
         //{
         //    get
         //    {
         //        return Path.Combine(WebHostEnvironment.WebRootPath,
-        //    "Data", "Dyr.json");
+        //    "Data");
         //    }
         //}
 
-        //public void SaveJsonDyr(List<Dyr> dyr)
+        //public void SaveJsonOject(List<T> dyr)
         //{
         //    using (FileStream jsonFileWriter = File.Create(JsonFileName))
         //    {
@@ -43,7 +42,5 @@ namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Services
         //    }
 
         //}
-
-
     }
 }
