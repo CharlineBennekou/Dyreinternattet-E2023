@@ -5,7 +5,9 @@ namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Pages
 {
     public class GetAllVagterModel : PageModel
     {
-        public void OnGet()
+
+		public List<Models.Vagtplan.Vagt>? Vagter { get; private set; }
+		public void OnGet()
         {
         }
     }
