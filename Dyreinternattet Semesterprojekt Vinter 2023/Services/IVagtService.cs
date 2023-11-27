@@ -4,7 +4,7 @@ namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Services
 {
 	public interface IVagtService
 	{
-		List<Vagt> GetVagts();
+		List<Vagt> GetVagter();
 		void AddVagt(Vagt vagt);
 	}
 }

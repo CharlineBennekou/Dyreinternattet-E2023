@@ -9,8 +9,8 @@
         public string Note { get; set; }
 
          public Besøg()
-        {
-        }
+         {
+         }
 
         public Besøg(int startTid, int slutTid, string note)
         {

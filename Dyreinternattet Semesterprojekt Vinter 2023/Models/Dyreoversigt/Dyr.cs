@@ -2,6 +2,7 @@
 {
     public class Dyr
     {
+        //Id'et bliver aktomatisk givet og alle Id bliver unikke
         static int nextId = 1;
         public int ID { get; }
         public string Navn { get; set; }
@@ -14,7 +15,7 @@
          
 
 
-
+        //Den defaulte constructor skal have et Id ligemeget hvad
         public Dyr()
         {
             ID = nextId++;
