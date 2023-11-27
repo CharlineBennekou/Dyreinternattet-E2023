@@ -2,5 +2,8 @@
 {
     public class Besøg
     {
+        public int StartTid { get; set; }
+        public int SlutTid { get; set; }
+        public string Note { get; set; }
     }
 }
