@@ -1,18 +1,23 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Dyreinternattet_Semesterprojekt_Vinter_2023.Models.Dyreoversigt;
+using Dyreinternattet_Semesterprojekt_Vinter_2023.Data;
+using Dyreinternattet_Semesterprojekt_Vinter_2023.Services;
+using Dyreinternattet_Semesterprojekt_Vinter_2023.Pages;
 
 namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Models
 {
-    public class DyreoversigtModel : PageModel
-    {
-        public List<Dyr> Dyreliste { get; private set; } = new List<Dyr>()
+    public class Pages_GetAllDyr : PageModel
+    { 
+        private IObjectService _dyreService;
+        public Pages_GetAllDyr(DyreService dyreService)
         {
-            new Dyr("Fido", "Husky-mix", 4, 42, true, false),
-            new Dyr("Hans", "Huskat", 9, 5.8, true, false)
-        };
+            _dyreService = dyreService;
+        }
+        public List<Dyr> Dyreliste { get; private set; }
         public void OnGet()
         {
+            Dyreliste = DyreService.GetDyreliste();
         }
     }
 }

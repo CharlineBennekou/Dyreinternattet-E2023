@@ -1,4 +1,5 @@
 ﻿using Dyreinternattet_Semesterprojekt_Vinter_2023.Models.Dyreoversigt;
+using Dyreinternattet_Semesterprojekt_Vinter_2023.Data;
 
 namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Services
 {
@@ -6,12 +7,12 @@ namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Services
     {
         public List<Dyr> Dyreliste { get; }
 
-        public Dyreservice()
+        public DyreService()
         {
-            Dyreliste = Mockpizza.GetMockPizza();
+            Dyreliste = MockDyr.GetMockDyr();
         }
 
-        public List<Dyr> GetPizzas()
+        public List<Dyr> GetDyreliste()
         {
             return Dyreliste;
         }
