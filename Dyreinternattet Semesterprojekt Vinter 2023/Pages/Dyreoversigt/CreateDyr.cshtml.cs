@@ -1,12 +1,13 @@
 using Dyreinternattet_Semesterprojekt_Vinter_2023.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-
+using Dyreinternattet_Semesterprojekt_Vinter_2023.Models.Dyreoversigt;
 namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Pages.Dyreoversigt
+
 {
     public class CreateDyrModel : PageModel
     {
-        private IDyreService _dyreService;
+		private IDyreService _dyreService;
         [BindProperty] //Binder UI så data fra form kan overføres til Dyre-properties
         public Models.Dyreoversigt.Dyr Dyr { get; set; }
 

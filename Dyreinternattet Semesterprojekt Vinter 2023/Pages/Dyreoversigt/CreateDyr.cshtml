@@ -1,11 +1,15 @@
 ﻿@page
 @model Dyreinternattet_Semesterprojekt_Vinter_2023.Pages.Dyreoversigt.CreateDyrModel
+@using Dyreinternattet_Semesterprojekt_Vinter_2023.Models.Dyreoversigt;
 @{
+
 }
 <h1>Create</h1>
 <form method="post">
 	<div class="form-group">
-		<p>Art </p>
+		<label asp-for="@Model.Dyr.Art" class="control-label">Dyreart</label>
+		<select asp-for="Dyr.Art" asp-items="Html.GetEnumSelectList<Dyreinternattet_Semesterprojekt_Vinter_2023.Models.Dyreoversigt.Dyr.DyreArt>()"></select>
+		<span asp-validation-for="@Model.Dyr.Art" class="text-danger"></span>
 	</div>
 	<div class="form-group">
 		<label asp-for="@Model.Dyr.Navn" class="control-label"></label>
