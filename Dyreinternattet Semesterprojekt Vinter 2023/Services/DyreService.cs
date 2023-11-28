@@ -11,8 +11,8 @@ namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Services
 
         public DyreService(JsonFileDyrService jsonFileDyrService) //Når DyreService constructes, henter dyrelisten data fra jsonfil
         {
-            //_dyreliste = MockDyr.GetMockDyr();
             JsonFileDyrService = jsonFileDyrService;
+            //_dyreliste = MockDyr.GetMockDyr();
             _dyreliste = JsonFileDyrService.GetJsonDyr().ToList();
         }
         public DyreService() //Backup hvis json ikk virker

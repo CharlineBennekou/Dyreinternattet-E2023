@@ -1,3 +1,52 @@
-{
-
-}
+[
+  {
+    "ID": 1,
+    "Art": 1,
+    "Navn": "Fido",
+    "Race": "Husky-mix",
+    "Alder": 4,
+    "V\u00E6gt": 42,
+    "VaccineStatus": true,
+    "ErAdopteret": false
+  },
+  {
+    "ID": 2,
+    "Art": 3,
+    "Navn": "Hans",
+    "Race": "Huskat",
+    "Alder": 9,
+    "V\u00E6gt": 5.8,
+    "VaccineStatus": true,
+    "ErAdopteret": false
+  },
+  {
+    "ID": 3,
+    "Art": 1,
+    "Navn": "Vovse",
+    "Race": "Storhund",
+    "Alder": 2,
+    "V\u00E6gt": 42,
+    "VaccineStatus": true,
+    "ErAdopteret": false
+  },
+  {
+    "ID": 4,
+    "Art": 2,
+    "Navn": "Kitty",
+    "Race": "Huskat",
+    "Alder": 2,
+    "V\u00E6gt": 5,
+    "VaccineStatus": true,
+    "ErAdopteret": false
+  },
+  {
+    "ID": 5,
+    "Art": 3,
+    "Navn": "Ribbi",
+    "Race": "Kanin",
+    "Alder": 0.2,
+    "V\u00E6gt": 1.2,
+    "VaccineStatus": true,
+    "ErAdopteret": true
+  }
+]

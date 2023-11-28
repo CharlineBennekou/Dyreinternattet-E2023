@@ -6,7 +6,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorPages();
 builder.Services.AddSingleton<IDyreService, DyreService>();
 builder.Services.AddSingleton<IVagtService, VagtService>();
-//builder.Services.AddTransient<JsonFileDyrService>(); Indsæt når json er klar til at sættes ind
+builder.Services.AddTransient<JsonFileDyrService>();
 
 var app = builder.Build();
 
