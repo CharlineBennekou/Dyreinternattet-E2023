@@ -9,6 +9,7 @@
 
   <ItemGroup>
     <Folder Include="Models\Andet\" />
+    <Folder Include="wwwroot\Data\" />
   </ItemGroup>
 
 </Project>
