@@ -4,7 +4,7 @@ namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Models.Vagtplan
 {
     public class Vagt
     {
-		public Medarbejder Worker { get; set; }
+		public Medarbejder Medarbejder { get; set; }
 		public double StartTid { get; set; }
 		public double SlutTid { get; set; }
 
@@ -12,9 +12,9 @@ namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Models.Vagtplan
 		{
 		}
 
-		public Vagt(Medarbejder worker, double starttid, double sluttid)
+		public Vagt(Medarbejder medarbejder, double starttid, double sluttid)
 		{
-			Worker = worker;
+			Medarbejder = medarbejder;
 			StartTid = starttid;
 			SlutTid = sluttid;
 		}

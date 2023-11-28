@@ -7,8 +7,11 @@
 
 <form method="post">
 	<div class="form-group">
-		<label asp-for="@Model.Vagt.Worker" class="control-label"></label>
-		<input asp-for="@Model.Vagt.Worker" class="form-control" />
+		<label asp-for="@Model.Vagt.Medarbejder" class="control-label"></label>
+		<select asp-for="@Model.Vagt.Medarbejder" asp-items="@Model.MedarbejderOptions()" class="form-control"></select>
+		@* <select asp-for="@Model.Vagt.Medarbejder" asp-items="@(new SelectList(Model.MedarbejderOptions(), "Medarbejder", "Medarbejder.Name"))" class="form-control"></select> *@
+		
+
 	</div>
 	<div class="form-group">
 		<label asp-for="@Model.Vagt.StartTid" class="control-label"></label>

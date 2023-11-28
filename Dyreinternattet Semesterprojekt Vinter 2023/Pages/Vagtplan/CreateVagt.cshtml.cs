@@ -1,7 +1,9 @@
+using Dyreinternattet_Semesterprojekt_Vinter_2023.Data;
 using Dyreinternattet_Semesterprojekt_Vinter_2023.Models;
 using Dyreinternattet_Semesterprojekt_Vinter_2023.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Pages.Vagt
 {
@@ -12,6 +14,10 @@ namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Pages.Vagt
 		public CreateVagtModel(IVagtService vagtService)
 		{
 			_vagtService = vagtService;
+		}
+		public SelectList MedarbejderOptions()
+		{
+			return new SelectList(MockVagter.MedarbejderOptions(), "Medarbejder", "Medarbejder.Name");
 		}
 
 		[BindProperty]
