@@ -12,7 +12,10 @@
     <div class="image-container">
         <div class="image-item">
             <img src="/images/kat.png" alt="Image 1">
-            <div class="image-caption">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</div>
+            <div class="image-caption">
+          Ikke så lang tekst
+
+            </div>
         </div>
 
         <div class="image-item">
@@ -56,6 +59,17 @@
                     <img src="/images/kat.png" alt="Image 3">
                     <div class="image-caption">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</div>
                 </div>
+@* @if (Model.Dyr != null)
+{
+	foreach (var Dyr in Model.Dyr)
+	{
+		<tr>
+			<td>
+				@Dyr.Navn
+			</td>
+            @Dyr.Art
+		</tr>
+	} *@
 
 </body>
 </>

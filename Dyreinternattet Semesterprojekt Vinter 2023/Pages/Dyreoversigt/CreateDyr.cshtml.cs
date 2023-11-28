@@ -7,7 +7,7 @@ namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Pages.Dyreoversigt
     public class CreateDyrModel : PageModel
     {
         private IDyreService _dyreService;
-        [BindProperty]
+        [BindProperty] //Binder UI så data fra form kan overføres til Dyre-properties
         public Models.Dyreoversigt.Dyr Dyr { get; set; }
 
         public CreateDyrModel(IDyreService dyreService) //Service initialiseres vha. dependency injection
@@ -19,15 +19,15 @@ namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Pages.Dyreoversigt
         {
             return Page();
         }
-        //public IActionResult OnPost()
-        //{
-        //    if (!ModelState.IsValid)
-        //    {
-        //        return Page();
-        //    }
-        //    _dyreService.AddDyr(Dyr);
-        //    return RedirectToPage("GetAllDyr");
-        //}
+        public IActionResult OnPost()
+        {
+            if (!ModelState.IsValid)
+            {
+                return Page();
+            }
+            _dyreService.AddDyr(Dyr);
+            return RedirectToPage("GetAllDyr");
+        }
 
     }
 }

@@ -2,9 +2,17 @@
 {
     public class Dyr
     {
+        public enum DyreArt //Enum med dyrearter
+        {
+            Hund,
+            Kat,
+            Kanin,
+        }
+
         //Id'et bliver aktomatisk givet og alle Id bliver unikke
         static int nextId = 1;
         public int ID { get; }
+        public DyreArt Art { get; set; }
         public string Navn { get; set; }
         public string Race { get; set; }
         public double Alder { get; set; }
@@ -22,8 +30,9 @@
         }
         
 
-        public Dyr(string navn, string race, double alder, double vægt, bool vaccineStatus, bool erAdopteret)
+        public Dyr(DyreArt art, string navn, string race, double alder, double vægt, bool vaccineStatus, bool erAdopteret)
         {
+            Art = art;
             ID = nextId++;
             Navn = navn;
             Race = race;

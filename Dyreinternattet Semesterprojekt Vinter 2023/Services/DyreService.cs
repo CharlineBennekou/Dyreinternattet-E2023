@@ -34,6 +34,7 @@ namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Services
                 {
                     if (d.ID ==  dyr.ID) //Hvis ID matcher, opdateres info
                     {
+                        d.Art = dyr.Art;
                         d.Navn = dyr.Navn;
                         d.Race = dyr.Race;
                         d.Alder = dyr.Alder;
