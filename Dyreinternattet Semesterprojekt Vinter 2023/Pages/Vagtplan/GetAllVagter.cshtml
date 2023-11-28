@@ -27,14 +27,18 @@
 					<td>
 						@vagt.Medarbejder
 					</td>
-					<td>
-						@vagt.StartTid
-					</td>
-					<td>
-						@vagt.SlutTid
-					</td>
+					<td>@FormatTid(vagt.StartTid)</td>
+					<td>@FormatTid(vagt.SlutTid)</td>
 				</tr>
 			}
+			@functions {
+			string FormatTid(double tid)
+			{
+				var timer = (int)tid;
+				var minutter = (int)((tid - timer) * 60);
+				return $"{timer:D2}:{minutter:D2}";
+			}
+		}
 		}
 	</tbody>
 </table>

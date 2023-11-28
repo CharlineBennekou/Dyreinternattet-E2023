@@ -23,6 +23,9 @@
             Tlf = tlf;
         }
 
-        
-    }
+		public override string ToString()
+		{
+            return Name;
+		}
+	}
 }

@@ -12,12 +12,17 @@ namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Models.Vagtplan
 		{
 		}
 
-		public Vagt(Medarbejder medarbejder, double starttid, double sluttid)
+		public Vagt(Medarbejder medarbejder, double startTid, double slutTid)
 		{
 			Medarbejder = medarbejder;
-			StartTid = starttid;
-			SlutTid = sluttid;
+			StartTid = startTid;
+			SlutTid = slutTid;
 		}
+		//public override string ToString()
+		//{
+		//	return $"{Medarbejder.Name} - {StartTid.ToString("hh:mm")} to {SlutTid.ToString("hh:mm")}";
+		//}
+
 	}
 } 
 
