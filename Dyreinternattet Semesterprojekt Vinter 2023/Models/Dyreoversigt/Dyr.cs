@@ -6,7 +6,7 @@
         {
             Hund,
             Kat,
-            Kanin,
+            Kanin,  
         }
 
         //Id'et bliver aktomatisk givet og alle Id bliver unikke
