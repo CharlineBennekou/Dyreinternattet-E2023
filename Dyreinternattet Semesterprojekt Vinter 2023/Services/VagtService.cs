@@ -27,5 +27,28 @@ namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Services
 		{
 			return _vagter;
 		}
-	}
+
+        public void UpdateVagt(Vagt vagt)
+        {
+            if (vagt != null) //Opdaterer kun hvis input ikke er null
+            {
+                foreach (Vagt v in _vagter) //Tjekker alle dyr
+                {
+                    if (v.ID == vagt.ID) //Hvis ID matcher, opdateres info
+                    {
+                        v.SlutTid = v.SlutTid;
+						v.StartTid	= v.StartTid;
+						v.Medarbejder = v.Medarbejder;
+
+                    }
+                }
+                JsonFileVagtService.SaveJsonVagt(_vagter); //Listen gemmes i json bagefter
+            }
+        }
+
+        public Vagt DeleteVagt(int? id)
+        {
+            throw new NotImplementedException();
+        }
+    }
 }

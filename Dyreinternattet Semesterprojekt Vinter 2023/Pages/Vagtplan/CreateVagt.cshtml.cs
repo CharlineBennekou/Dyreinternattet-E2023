@@ -9,12 +9,16 @@ namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Pages.Vagt
 {
     public class CreateVagtModel : PageModel
     {
+
         private IVagtService _vagtService;
 
         public CreateVagtModel(IVagtService vagtService)
         {
             _vagtService = vagtService;
         }
+
+        [BindProperty]
+        public Models.Vagtplan.Vagt Vagt { get; set; }
         public SelectList MedarbejderOptions()
         {
             return new SelectList(MockVagter.MedarbejderOptions(), "Medarbejder", "Medarbejder.Name");
@@ -28,8 +32,7 @@ namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Pages.Vagt
         {
             return new SelectList(MockVagter.SlutTidOptions());
         }
-        [BindProperty]
-        public Models.Vagtplan.Vagt Vagt { get; set; }
+        
 
         public IActionResult OnGet()
         {
