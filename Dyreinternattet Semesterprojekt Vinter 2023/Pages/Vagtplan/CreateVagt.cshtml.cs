@@ -29,7 +29,7 @@ namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Pages.Vagt
 				return Page();
 			}
 
-			_vagtService.AddVagt(Vagt);
+			//_vagtService.AddVagt(Vagt);
 			return RedirectToPage("GetAllVagter");
 		}
     }
