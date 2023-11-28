@@ -11,10 +11,10 @@ namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Services
 		{
 			_vagter = MockVagter.GetMockVagter();	
 		}
-		public void AddVagt(Vagt vagt)
-		{
-			_vagter.Add(vagt);
-		}
+		//public void AddVagt(Vagt vagt)
+		//{
+		//	_vagter.Add(vagt);
+		//}
 		
 		public List<Vagt> GetVagter()
 		{
