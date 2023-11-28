@@ -25,7 +25,6 @@ namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Data
 				new Vagt { Medarbejder = new Medarbejder("Sofie Nielsen", "sofie@example.com", 11112222) },
 				new Vagt { Medarbejder = new Medarbejder("Chris Hansen", "chris@example.com", 99998888) }
 			};
-		
 		}
 		public static IEnumerable<string> StartTidOptions()
 		{

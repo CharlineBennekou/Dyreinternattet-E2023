@@ -15,6 +15,7 @@ namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Pages.Dyreoversigt
             _dyreService = dyreService;
         }
         public List<Models.Dyreoversigt.Dyr> Dyreliste { get; private set; } //Property som kan referere til en liste af dyr
+
         public void OnGet() //Dyrelisten henter data fra servicen
         {
             Dyreliste = _dyreService.GetDyr();
