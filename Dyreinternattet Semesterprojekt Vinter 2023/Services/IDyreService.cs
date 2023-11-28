@@ -7,7 +7,7 @@ namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Services
     {
         List<Dyr> GetDyr();
         void AddDyr(Dyr dyr);
-       void UpdateDyr(Dyr dyr);
+        void UpdateDyr(Dyr dyr);
         Dyr DeleteDyr(int? id);
 
     }
