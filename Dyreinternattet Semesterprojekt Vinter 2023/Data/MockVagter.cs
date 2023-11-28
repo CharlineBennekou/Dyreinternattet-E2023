@@ -8,9 +8,9 @@ namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Data
 	{
 		private static List<Vagt> _vagter = new List<Vagt>()
 		{
-			new Vagt(new Medarbejder("John Doe", "john@example.com", 12345678), starttid: 8.00, sluttid: 15.00),
-			new Vagt(new Medarbejder("Jane Doe", "jane@example.com", 87654321), starttid: 7.30, sluttid: 14.30),
-			new Vagt(new Medarbejder("Bob Smith", "bob@example.com", 55555555), starttid: 15.00, sluttid: 23.00)
+			//new Vagt(new Medarbejder("John Doe", "john@example.com", 12345678), starttid: 8.00, sluttid: 15.00),
+			//new Vagt(new Medarbejder("Jane Doe", "jane@example.com", 87654321), starttid: 7.30, sluttid: 14.30),
+			//new Vagt(new Medarbejder("Bob Smith", "bob@example.com", 55555555), starttid: 15.00, sluttid: 23.00)
 		};
 
 		public static IEnumerable<Vagt>? MedarbejderOptions()
@@ -22,6 +22,23 @@ namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Data
 				new Vagt { Medarbejder = new Medarbejder("Bob Smith", "bob@example.com", 55555555) }
 			};
 		
+		}
+		public static IEnumerable<string> StartTidOptions()
+		{
+			return new[]
+			{
+				"08:00", "09:00", "10:00", "11:00", "12:00",
+				"13:00", "14:00", "15:00", "16:00", "17:00"
+			};
+		}
+
+		public static IEnumerable<string> SlutTidOptions()
+		{
+			return new[]
+			{
+				"12:00", "13:00", "14:00", "15:00", "16:00",
+				"17:00", "18:00", "19:00", "20:00", "21:00", "22:00", "23:00"
+			};
 		}
 		public static List<Vagt> GetMockVagter() { return _vagter; }
 	}
