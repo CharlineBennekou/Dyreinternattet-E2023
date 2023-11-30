@@ -7,15 +7,15 @@ namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Models.Vagtplan
         static int nextId = 1;
         public int ID { get; }
         public Medarbejder Medarbejder { get; set; }
-		public double StartTid { get; set; }
-		public double SlutTid { get; set; }
+		public string StartTid { get; set; }
+		public string SlutTid { get; set; }
 
 		public Vagt()
 		{
 			ID= nextId++;
 		}
 
-		public Vagt(Medarbejder medarbejder, double startTid, double slutTid)
+		public Vagt(Medarbejder medarbejder, string startTid, string slutTid)
 		{
 			ID=nextId++;
 			Medarbejder = medarbejder;
