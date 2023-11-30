@@ -8,7 +8,7 @@
 <form method="post">
     <div class="form-group">
         <label asp-for="@Model.Vagt.Medarbejder" class="control-label"></label>
-        <select asp-for="@Model.Vagt.Medarbejder" asp-items="@Model.MedarbejderOptions()" class="form-control"></select>
+        <select asp-for="@Model.Vagt.Medarbejder" asp-items="@(new SelectList(Model.MedarbejderOptions, "Name", "Name"))" class="form-control"></select>
         @* <select asp-for="@Model.Vagt.Medarbejder" asp-items="@(new SelectList(Model.MedarbejderOptions(), "Medarbejder", "Medarbejder.Name"))" class="form-control"></select> *@
 
 
