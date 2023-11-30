@@ -70,10 +70,15 @@ namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Services
 
         }
 
-        //public Dyr GetDyr(int id) //ikke implementeret
-        //{
-        //    return null;
-        //}
+        public Dyr GetDyrID(int id)
+        {
+            foreach (Dyr dyr in _dyreliste)
+            {
+                if (dyr.ID == id)
+                { return dyr; }
+            }
+            return null;
+        }
 
 
 

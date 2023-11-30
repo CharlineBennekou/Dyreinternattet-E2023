@@ -1,4 +1,4 @@
-﻿using Dyreinternattet_Semesterprojekt_Vinter_2023.Models.Dyreoversigt;
+﻿ using Dyreinternattet_Semesterprojekt_Vinter_2023.Models.Dyreoversigt;
 
 namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Data
 {
