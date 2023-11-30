@@ -17,7 +17,7 @@ namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Pages.Dyreoversigt
         }
         public IActionResult OnGet(int ID)
         {
-         Dyr = _dyreService.GetDyrID(ID);
+            Dyr = _dyreService.GetDyrID(ID);
             if (Dyr == null)
             {
                 return NotFound();
