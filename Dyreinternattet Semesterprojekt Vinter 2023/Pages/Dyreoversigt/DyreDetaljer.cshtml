@@ -1,0 +1,9 @@
+﻿@page "{ID:int}"
+@model Dyreinternattet_Semesterprojekt_Vinter_2023.Pages.Dyreoversigt.DyreDetaljerModel
+@{
+}
+<h1>Detaljer om @Model.Dyr.Navn </h1>
+<p>Navn: @Model.Dyr.Navn</p>
+
+
+<a asp-page="/Dyreoversigt/GetAllDyr">Tilbage til dyreoversigt</a>
