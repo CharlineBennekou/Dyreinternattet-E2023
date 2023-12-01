@@ -7,7 +7,8 @@
     "Alder": 4,
     "V\u00E6gt": 42,
     "VaccineStatus": true,
-    "ErAdopteret": false
+    "ErAdopteret": false,
+    "ImagePath": "/images/dog1.jpg"
   },
   {
     "ID": 2,
@@ -17,36 +18,18 @@
     "Alder": 9,
     "V\u00E6gt": 5.8,
     "VaccineStatus": true,
-    "ErAdopteret": false
+    "ErAdopteret": false,
+    "ImagePath": "/images/hundkat.jpg"
   },
   {
     "ID": 3,
     "Art": 1,
-    "Navn": "Vovse",
-    "Race": "Storhund",
-    "Alder": 2,
-    "V\u00E6gt": 42,
+    "Navn": "g",
+    "Race": "lol",
+    "Alder": 4,
+    "V\u00E6gt": 6,
     "VaccineStatus": true,
-    "ErAdopteret": false
-  },
-  {
-    "ID": 4,
-    "Art": 2,
-    "Navn": "Kitty",
-    "Race": "Huskat",
-    "Alder": 2,
-    "V\u00E6gt": 5,
-    "VaccineStatus": true,
-    "ErAdopteret": false
-  },
-  {
-    "ID": 5,
-    "Art": 3,
-    "Navn": "Ribbi",
-    "Race": "Kanin",
-    "Alder": 0.2,
-    "V\u00E6gt": 1.2,
-    "VaccineStatus": true,
-    "ErAdopteret": true
+    "ErAdopteret": true,
+    "ImagePath": "/images/kat1.jpg"
   }
 ]
