@@ -13,6 +13,7 @@ namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Pages.Vagtplan
     {
         private readonly IMedarbejderService _medarbejderService;
         private readonly IVagtService _vagtService;
+        public List<Medarbejder> MedarbejderOptions { get; set; }
 
         //public CreateVagtModel(MedarbejderService medarbejderService, IVagtService vagtService)
         //{
@@ -31,15 +32,16 @@ namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Pages.Vagtplan
             _medarbejderService = medarbejderService;
             _vagtService = vagtService;
         }
+      
 
         public SelectList StartTidOptions()
         {
-            return new SelectList(MockVagter.StartTidOptions());
+            return new SelectList(Models.Vagtplan.Vagt.StartTidOptions());
         }
 
         public SelectList SlutTidOptions()
         {
-            return new SelectList(MockVagter.SlutTidOptions());
+            return new SelectList(Models.Vagtplan.Vagt.SlutTidOptions());
         }
 
         public void OnGet()
@@ -63,5 +65,6 @@ Console.WriteLine("Success");
             // Redirect to the page showing all Vagter after creating a new one
             return RedirectToPage("GetAllVagter");
         }
+       
     }
 }
