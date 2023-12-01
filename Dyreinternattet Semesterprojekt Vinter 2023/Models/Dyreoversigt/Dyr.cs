@@ -11,10 +11,12 @@ namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Models.Dyreoversigt
             Kat=2,
             Kanin=3,  
         }
-		
 
-		//Id'et bliver aktomatisk givet og alle Id bliver unikke
-		static int nextId = 1;
+
+
+
+        //Id'et bliver aktomatisk givet og alle Id bliver unikke
+        static int nextId = 1;
         public int ID { get; }
         [EnumDataType(typeof(DyreArt))]
         public DyreArt Art { get; set; }
@@ -24,20 +26,19 @@ namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Models.Dyreoversigt
         public double Vægt { get; set; }
         public bool VaccineStatus { get; set; }
         public bool ErAdopteret { get; set; }
+        
 
-        public string ImagePath { get; set; }
-
-         
 
 
         //Den defaulte constructor skal have et Id ligemeget hvad
         public Dyr()
         {
             ID = nextId++;
-        }
-        
 
-        public Dyr(DyreArt art, string navn, string race, double alder, double vægt, bool vaccineStatus, bool erAdopteret, string imagepath)
+        }
+
+
+        public Dyr(DyreArt art, string navn, string race, double alder, double vægt, bool vaccineStatus, bool erAdopteret)
         {
             
             Art = art;
@@ -48,7 +49,8 @@ namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Models.Dyreoversigt
             Vægt = vægt;
             VaccineStatus = vaccineStatus;
             ErAdopteret = erAdopteret;
-            ImagePath = imagepath;
+            
+            
         }
 
      

@@ -1,18 +1,63 @@
 ﻿@page
 @model Dyreinternattet_Semesterprojekt_Vinter_2023.Pages.Dyreoversigt.CreateDyrModel
 @using Dyreinternattet_Semesterprojekt_Vinter_2023.Models.Dyreoversigt;
+@using System.IO
+@using Microsoft.AspNetCore.Hosting
+
+
 @{
 
 }
 <h1>Create</h1>
+ <style>
+        /* Style for form container */
+        form {
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+        }
 
+        /* Style for form labels */
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        /* Style for form inputs */
+        select, input {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+            margin-top: 4px;
+            margin-bottom: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        /* Style for select elements */
+        select {
+            margin-bottom: 16px;
+        }
+
+        /* Style for submit button */
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
 
 <form method="post">
-		<div class="form-group">
-			<label asp-for="@Model.Dyr.ImagePath" class="control-label">Image Path</label>
-			<input asp-for="@Model.Dyr.ImagePath" class="form-control" />
-			<span asp-validation-for="@Model.Dyr.ImagePath" class="text-danger"></span>
-		</div>
+	
 	<div class="form-group">
 		<label asp-for="@Model.Dyr.Art" class="control-label">Dyreart</label>
 		<select asp-for="Dyr.Art" asp-items="Html.GetEnumSelectList<Dyr.DyreArt>()"></select>
@@ -54,7 +99,7 @@
 		</select>
 		<span asp-validation-for="@Model.Dyr.ErAdopteret" class="text-danger"></span>
 	</div>
-
+  
 	<p>
 		<div class="form-group">
 			<input type="submit" value="Create" class="btn btn-primary" />

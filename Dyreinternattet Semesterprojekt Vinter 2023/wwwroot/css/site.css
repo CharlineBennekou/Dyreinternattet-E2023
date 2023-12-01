@@ -173,11 +173,11 @@ h1 {
 /*footer som ligger i Shared/_layout.cshtml*/
 
 .footer {
-    position: fixed;
+    position: absolute;
     bottom: 0px;
     width: 100%;
     text-align: center;
-    padding: 20px 0;
+    padding: 40px 0;
     font-size: 14px;
     background-color: black;
 }

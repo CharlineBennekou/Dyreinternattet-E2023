@@ -2,6 +2,10 @@ using Dyreinternattet_Semesterprojekt_Vinter_2023.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Dyreinternattet_Semesterprojekt_Vinter_2023.Models.Dyreoversigt;
+using System;
+using Microsoft.AspNetCore.Hosting;
+
+
 namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Pages.Dyreoversigt
 
 {
@@ -11,10 +15,15 @@ namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Pages.Dyreoversigt
         [BindProperty] //Binder UI så data fra form kan overføres til Dyre-properties
         public Models.Dyreoversigt.Dyr Dyr { get; set; }
 
+
+
         public CreateDyrModel(IDyreService dyreService) //Service initialiseres vha. dependency injection
         {
             _dyreService = dyreService;
         }
+
+
+      
 
         public IActionResult OnGet()
         {
@@ -28,7 +37,14 @@ namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Pages.Dyreoversigt
             }
             _dyreService.AddDyr(Dyr);
             return RedirectToPage("GetAllDyr");
+
         }
+
+       
+
+
+
+
 
     }
 }
