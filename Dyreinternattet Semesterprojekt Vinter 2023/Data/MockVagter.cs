@@ -26,23 +26,7 @@ namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Data
 				new Vagt { Medarbejder = new Medarbejder("Chris Hansen", "chris@example.com", 99998888) }
 			};
 		}
-		public static IEnumerable<string> StartTidOptions()
-		{
-			return new[]
-			{
-				"08:00", "09:00", "10:00", "11:00", "12:00",
-				"13:00", "14:00", "15:00", "16:00", "17:00"
-			};
-		}
 
-		public static IEnumerable<string> SlutTidOptions()
-		{
-			return new[]
-			{
-				"12:00", "13:00", "14:00", "15:00", "16:00",
-				"17:00", "18:00", "19:00", "20:00", "21:00", "22:00", "23:00"
-			};
-		}
 		public static List<Vagt> GetMockVagter() { return _vagter; }
 	}
 }
