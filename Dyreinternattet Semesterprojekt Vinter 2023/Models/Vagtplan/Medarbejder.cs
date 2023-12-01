@@ -8,7 +8,15 @@
         public string Email { get; set; }
         public int Tlf { get; set; }
 
-
+        public enum Medarbejdere
+        {
+            Andersine,
+            Kathrine,
+            Ole,
+            Jeanette,
+            Jørgen,
+            Jakob
+        }
 
         public Medarbejder()
         {

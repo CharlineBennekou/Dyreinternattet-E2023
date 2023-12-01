@@ -44,7 +44,7 @@ namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Pages.Vagtplan
             return new SelectList(Models.Vagtplan.Vagt.SlutTidOptions());
         }
 
-        public void OnGet()
+        public IActionResult OnGet()
         {
             Medarbejderliste = new SelectList(_medarbejderService.GetMedarbejdere(), "Navn");
             Vagt= new Vagt();

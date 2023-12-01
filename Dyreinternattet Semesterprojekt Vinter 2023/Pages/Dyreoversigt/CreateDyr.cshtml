@@ -5,7 +5,14 @@
 
 }
 <h1>Create</h1>
+
+
 <form method="post">
+		<div class="form-group">
+			<label asp-for="@Model.Dyr.ImagePath" class="control-label">Image Path</label>
+			<input asp-for="@Model.Dyr.ImagePath" class="form-control" />
+			<span asp-validation-for="@Model.Dyr.ImagePath" class="text-danger"></span>
+		</div>
 	<div class="form-group">
 		<label asp-for="@Model.Dyr.Art" class="control-label">Dyreart</label>
 		<select asp-for="Dyr.Art" asp-items="Html.GetEnumSelectList<Dyr.DyreArt>()"></select>
