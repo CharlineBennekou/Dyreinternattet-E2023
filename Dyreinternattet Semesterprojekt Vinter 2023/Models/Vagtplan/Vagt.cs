@@ -1,6 +1,4 @@
-﻿using Dyreinternattet_Semesterprojekt_Vinter_2023.Models.Dyreoversigt;
-
-namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Models.Vagtplan
+﻿namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Models.Vagtplan
 {
     public class Vagt
     {

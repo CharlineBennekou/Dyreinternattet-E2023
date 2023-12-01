@@ -1,19 +1,44 @@
-﻿using Dyreinternattet_Semesterprojekt_Vinter_2023.Models.Dyreoversigt;
+﻿using Dyreinternattet_Semesterprojekt_Vinter_2023.Models.Vagtplan;
 
 namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Services
 {
-    public class MedarbejderService
+    public class MedarbejderService : IMedarbejderService
     {
-        public List<Medarbejder> GetMedarbejdere()
+        private List<Medarbejder> _medarbejdere;
+        public MedarbejderService()
         {
-            
-            return new List<Medarbejder>
-        {
+            _medarbejdere = new List<Medarbejder>()
+            {
             new Medarbejder("John Doe", "john@example.com", 12345678),
             new Medarbejder("Jane Doe", "jane@example.com", 87654321),
             new Medarbejder("Joey Moe", "joey@example.com", 13264312),
-            // Add more Medarbejder objects as needed
-        };
+
+            };
+        }
+        public void AddMedarbejder(Medarbejder medarbejder)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Medarbejder DeleteMedarbejder(int? id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<Medarbejder> GetMedarbejdere()
+        {
+
+            return _medarbejdere;
+        }
+
+        public Medarbejder GetMedarbejderID(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void UpdateMedarbejder(Medarbejder medarbejder)
+        {
+            throw new NotImplementedException();
         }
     }
 

@@ -1,29 +1,36 @@
 using Dyreinternattet_Semesterprojekt_Vinter_2023.Data;
 using Dyreinternattet_Semesterprojekt_Vinter_2023.Models;
-using Dyreinternattet_Semesterprojekt_Vinter_2023.Models.Dyreoversigt;
+using Dyreinternattet_Semesterprojekt_Vinter_2023.Models.Vagtplan;
 using Dyreinternattet_Semesterprojekt_Vinter_2023.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using System.Collections.Generic;
 
-namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Pages.Vagt
+namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Pages.Vagtplan
 {
     public class CreateVagtModel : PageModel
     {
-        private readonly MedarbejderService _medarbejderService;
+        private readonly IMedarbejderService _medarbejderService;
         private readonly IVagtService _vagtService;
 
-        public CreateVagtModel(MedarbejderService medarbejderService, IVagtService vagtService)
+        //public CreateVagtModel(MedarbejderService medarbejderService, IVagtService vagtService)
+        //{
+        //    _medarbejderService = medarbejderService;
+        //    _vagtService = vagtService;
+        //}
+
+        //public List<Medarbejder> MedarbejderOptions { get; set; }
+
+        [BindProperty]
+        public Vagt Vagt { get; set; }
+        public SelectList Medarbejderliste { get; set; }
+
+        public CreateVagtModel(IMedarbejderService medarbejderService, IVagtService vagtService) //Initialisering af services
         {
             _medarbejderService = medarbejderService;
             _vagtService = vagtService;
         }
-
-        public List<Medarbejder> MedarbejderOptions { get; set; }
-
-        [BindProperty]
-        public Models.Vagtplan.Vagt Vagt { get; set; }
 
         public SelectList StartTidOptions()
         {
@@ -37,23 +44,19 @@ namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Pages.Vagt
 
         public void OnGet()
         {
-            // Populate the MedarbejderOptions property with the list of Medarbejder objects
-            MedarbejderOptions = _medarbejderService.GetMedarbejdere();
+            Medarbejderliste = new SelectList(_medarbejderService.GetMedarbejdere(), "Navn");
+            Vagt= new Vagt();
         }
 
         public IActionResult OnPost()
         {
-            Console.WriteLine("1");
             if (!ModelState.IsValid)
             {
-                Console.WriteLine("2");
+                Console.WriteLine("Fejl");
                 return Page();
-                Console.WriteLine("3");
+                
             }
-
-            // Update the Vagt Medarbejder property based on the selected value in the dropdown
-            Vagt.Medarbejder = MedarbejderOptions.Find(m => m.Name == Vagt.Medarbejder.Name);
-
+Console.WriteLine("Success");
             // Now, you can use the Vagt object to create a new Vagt in your service
             _vagtService.AddVagt(Vagt);
 

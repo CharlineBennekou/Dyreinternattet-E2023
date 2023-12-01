@@ -1,4 +1,4 @@
-﻿namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Models.Dyreoversigt
+﻿namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Models.Vagtplan
 {
     public class Medarbejder
     {
@@ -23,9 +23,9 @@
             Tlf = tlf;
         }
 
-		public override string ToString()
-		{
+        public override string ToString()
+        {
             return Name;
-		}
-	}
+        }
+    }
 }
