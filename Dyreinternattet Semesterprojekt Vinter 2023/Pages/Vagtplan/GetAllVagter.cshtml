@@ -18,22 +18,28 @@
 			</th>
 		</tr>
 	</thead>
-	<tbody>
-		@if (Model.Vagter != null)
-		{
-			foreach (var vagt in Model.Vagter)
-			{
-				<tr>
-					<td>
-						@vagt.Medarbejder
-					</td>
-					<td>@vagt.StartTid</td>
-					<td>@vagt.SlutTid</td>
-				</tr>
-			}
-		}
-		
-	</tbody>
+    <tbody>
+        @if (Model.Vagter != null)
+        {
+            foreach (var vagt in Model.Vagter)
+            {
+                <tr>
+                    <td>
+                        @if (vagt.Medarbejder != null)
+                        {
+                            <span>@vagt.Medarbejder.Name</span>
+                            <br />
+                            <span>Email: @vagt.Medarbejder.Email</span>
+                            <br />
+                            <span>Tlf: @vagt.Medarbejder.Tlf</span>
+                        }
+                    </td>
+                    <td>@vagt.StartTid</td>
+                    <td>@vagt.SlutTid</td>
+                </tr>
+            }
+        }
+    </tbody>
 </table>
 
 <p>
