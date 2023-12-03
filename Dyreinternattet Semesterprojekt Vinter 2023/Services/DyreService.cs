@@ -42,7 +42,10 @@ namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Services
                         d.VaccineStatus = dyr.VaccineStatus;
                         d.ErAdopteret = dyr.ErAdopteret;
 
+                        
+
                     }
+                    
                 }
                 JsonFileDyrService.SaveJsonDyr(_dyreliste); //Listen gemmes i json bagefter
             }

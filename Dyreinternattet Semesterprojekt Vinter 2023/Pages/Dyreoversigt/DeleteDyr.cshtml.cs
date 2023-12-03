@@ -27,8 +27,8 @@ namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Pages.Dyreoversigt
 
         public IActionResult OnPost()
         {
-            Models.Dyreoversigt.Dyr deletedItem = _dyreService.DeleteDyr(Dyr.ID);
-            if (deletedItem == null)
+            Models.Dyreoversigt.Dyr deletedDyr = _dyreService.DeleteDyr(Dyr.ID);
+            if (deletedDyr == null)
                 return RedirectToPage("/Error"); 
             return RedirectToPage("GetAllDyr");
         }
