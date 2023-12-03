@@ -14,7 +14,7 @@
 				Start tid
 			</th>
 			<th>
-				Slut tid :)
+				Slut tid
 			</th>
 		</tr>
 	</thead>
@@ -25,8 +25,16 @@
 			{
 				<tr>
 					<td>
-						@vagt.Medarbejder
+						@if (vagt != null && vagt.AssignedMedarbejder != null)
+						{
+							<span>@vagt.AssignedMedarbejder.MedarbejderName</span>
+							<br />
+							<span>Email: @vagt.AssignedMedarbejder.MedarbejderEmail</span>
+							<br />
+							<span>Tlf: @vagt.AssignedMedarbejder.MedarbejderTlf</span>
+						}
 					</td>
+
 					<td>@vagt.StartTid</td>
 					<td>@vagt.SlutTid</td>
 				</tr>

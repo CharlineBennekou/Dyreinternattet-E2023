@@ -5,7 +5,6 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorPages();
 builder.Services.AddSingleton<IDyreService, DyreService>();
 builder.Services.AddSingleton<IVagtService, VagtService>();
-builder.Services.AddSingleton<IMedarbejderService, MedarbejderService>();
 builder.Services.AddTransient<JsonFileDyrService>();
 
 var app = builder.Build();

@@ -9,30 +9,26 @@ using System.Collections.Generic;
 
 namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Pages.Vagtplan
 {
+
     public class CreateVagtModel : PageModel
     {
-        private readonly IMedarbejderService _medarbejderService;
         private readonly IVagtService _vagtService;
-        public List<Medarbejder> MedarbejderOptions { get; set; }
-
-        //public CreateVagtModel(MedarbejderService medarbejderService, IVagtService vagtService)
-        //{
-        //    _medarbejderService = medarbejderService;
-        //    _vagtService = vagtService;
-        //}
-
-        //public List<Medarbejder> MedarbejderOptions { get; set; }
 
         [BindProperty]
-        public Vagt Vagt { get; set; }
-        public SelectList Medarbejderliste { get; set; }
+        public Models.Vagtplan.Vagt Vagt { get; set; } = new Models.Vagtplan.Vagt();
+        public SelectList MedarbejderOptions { get; set; }
 
-        public CreateVagtModel(IMedarbejderService medarbejderService, IVagtService vagtService) //Initialisering af services
+        public CreateVagtModel(IVagtService vagtService)
         {
-            _medarbejderService = medarbejderService;
             _vagtService = vagtService;
+            Vagt = new Models.Vagtplan.Vagt
+            {
+                AssignedMedarbejder = new Models.Vagtplan.Vagt.Medarbejder("", "", 0)
+            };
+
+            MedarbejderOptions = new SelectList(Models.Vagtplan.Vagt.MedarbejderOptions(), nameof(Vagt.Medarbejder.MedarbejderName), nameof(Vagt.Medarbejder.MedarbejderName), nameof(Vagt.Medarbejder.MedarbejderEmail));
+
         }
-      
 
         public SelectList StartTidOptions()
         {
@@ -44,27 +40,40 @@ namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Pages.Vagtplan
             return new SelectList(Models.Vagtplan.Vagt.SlutTidOptions());
         }
 
-        public void OnGet()
+        public IActionResult OnGet()
         {
-            Medarbejderliste = new SelectList(_medarbejderService.GetMedarbejdere(), "Navn");
-            Vagt= new Vagt();
+            return Page();
         }
 
         public IActionResult OnPost()
         {
             if (!ModelState.IsValid)
             {
-                Console.WriteLine("Fejl");
                 return Page();
-                
             }
-Console.WriteLine("Success");
-            // Now, you can use the Vagt object to create a new Vagt in your service
+
+            // Get the selected Medarbejder from the dropdown
+            var selectedMedarbejderName = Vagt.AssignedMedarbejder.MedarbejderName;
+
+            // Retrieve the complete Medarbejder with all information
+            var selectedMedarbejder = Models.Vagtplan.Vagt.MedarbejderOptions()
+                .Where(m => m.MedarbejderName == selectedMedarbejderName)
+                .FirstOrDefault();
+
+            if (selectedMedarbejder == null)
+            {
+                // Handle the case where selectedMedarbejder is not found
+                // You might want to add proper error handling or redirect back to the page with an error message
+                return Page();
+            }
+
+            // Set AssignedMedarbejder with the selected Medarbejder
+            Vagt.AssignedMedarbejder = selectedMedarbejder;
+
+            // Add the Vagt
             _vagtService.AddVagt(Vagt);
 
-            // Redirect to the page showing all Vagter after creating a new one
             return RedirectToPage("GetAllVagter");
         }
-       
     }
 }
