@@ -42,7 +42,10 @@ namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Services
                         d.VaccineStatus = dyr.VaccineStatus;
                         d.ErAdopteret = dyr.ErAdopteret;
 
+                        
+
                     }
+                    
                 }
                 JsonFileDyrService.SaveJsonDyr(_dyreliste); //Listen gemmes i json bagefter
             }
@@ -70,10 +73,15 @@ namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Services
 
         }
 
-        //public Dyr GetDyr(int id) //ikke implementeret
-        //{
-        //    return null;
-        //}
+        public Dyr GetDyrID(int id)
+        {
+            foreach (Dyr dyr in _dyreliste)
+            {
+                if (dyr.ID == id)
+                { return dyr; }
+            }
+            return null;
+        }
 
 
 

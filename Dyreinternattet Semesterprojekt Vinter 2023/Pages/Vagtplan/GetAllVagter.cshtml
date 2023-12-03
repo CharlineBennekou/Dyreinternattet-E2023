@@ -1,5 +1,5 @@
 ﻿@page
-@model Dyreinternattet_Semesterprojekt_Vinter_2023.Pages.Vagt.GetAllVagterModel
+@model Dyreinternattet_Semesterprojekt_Vinter_2023.Pages.Vagtplan.GetAllVagterModel
 @{
 }
 <h1> Vagtplan</h1>
@@ -14,7 +14,7 @@
 				Start tid
 			</th>
 			<th>
-				Slut tid :)
+				Slut tid
 			</th>
 		</tr>
 	</thead>
@@ -25,21 +25,22 @@
 			{
 				<tr>
 					<td>
-						@vagt.Medarbejder
+						@if (vagt != null && vagt.AssignedMedarbejder != null)
+						{
+							<span>@vagt.AssignedMedarbejder.MedarbejderName</span>
+							<br />
+							<span>Email: @vagt.AssignedMedarbejder.MedarbejderEmail</span>
+							<br />
+							<span>Tlf: @vagt.AssignedMedarbejder.MedarbejderTlf</span>
+						}
 					</td>
-					<td>@FormatTid(vagt.StartTid)</td>
-					<td>@FormatTid(vagt.SlutTid)</td>
+
+					<td>@vagt.StartTid</td>
+					<td>@vagt.SlutTid</td>
 				</tr>
 			}
-			@functions {
-			string FormatTid(double tid)
-			{
-				var timer = (int)tid;
-				var minutter = (int)((tid - timer) * 60);
-				return $"{timer:D2}:{minutter:D2}";
-			}
 		}
-		}
+		
 	</tbody>
 </table>
 

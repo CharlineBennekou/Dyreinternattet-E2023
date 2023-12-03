@@ -7,74 +7,44 @@
     <title>Title of the document</title>
 </head>
 <body>
-    <a class="nav-link text-dark" asp-area="" asp-page="/Dyr/PrototypeDyr">Link til prototype dyr</a>
+
+
+    <div class="p3">
+        <div class="p3image">
+            <img src="images/hundkat.png" />
+        </div>
+        <h1>
+            DYRENES BESKYTTELSE ER HJEMSTED FOR ET VARIERET UDVALG AF ELSKELIGE DYR, SOM ALLE SØGER ET KÆRLIGT HJEM. VORES LEGENDE KATTE, GLADE HUNDE, ROLIGE KANINER OG SMÅ HAMSTRE VENTER PÅ EN NY START MED DIG. VED AT ADOPTERE GIVER DU IKKE BARE ET HJEM, MEN OGSÅ HÅB, GLÆDE OG KÆRLIGHED. TAG DET NÆSTE SKRIDT MOD EN MENINGSFULD FORANDRING - FIND DIN NYE FIRBENEDE VEN I DAG.
+        </h1>
     
-    <div class="image-container">
-        <div class="image-item">
-            <img src="/images/kat.png" alt="Image 1">
-            <div class="image-caption">
-          Ikke så lang tekst
-
-            </div>
         </div>
 
+
+        <div class="image-containerdyr">
+    @if (Model.Dyreliste != null)
+    {
+        @foreach (var dyr in Model.Dyreliste)
+        {
+        
         <div class="image-item">
-            <img src="/images/kat.png" alt="Image 2">
-            <div class="image-caption">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</div>
-        </div>
-
-        <div class="image-item">
-            <img src="/images/kat.png" alt="Image 3">
-            <div class="image-caption">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</div>
-        </div>
-
-        <div class="image-container2">
-            <div class="image-item">
-                <img src="/images/kat.png" alt="Image 1">
-                <div class="image-caption">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</div>
-            </div>
-
-            <div class="image-item">
-                <img src="/images/kat.png" alt="Image 2">
-                <div class="image-caption">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</div>
-            </div>
-
-            <div class="image-item">
-                <img src="/images/kat.png" alt="Image 3">
-                <div class="image-caption">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</div>
-            </div>
-
-            <div class="image-container3">
-                <div class="image-item">
-                    <img src="/images/kat.png" alt="Image 1">
-                    <div class="image-caption">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</div>
+            <div class="image-item-container">
+             <img src="@dyr.ImagePath" alt="@dyr.Navn">
+                 <a asp-page="DyreDetaljer" asp-route-id="@dyr.ID"><br>
+                    <button class="image-caption">
+                        SE MERE OM @dyr.Navn!
+                    </button>
+                        </a>
+                    </div>
                 </div>
+        }
+    }
+    </div>
+    
+   
 
-                <div class="image-item">
-                    <img src="/images/kat.png" alt="Image 2">
-                    <div class="image-caption">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</div>
-                </div>
 
-                <div class="image-item">
-                    <img src="/images/kat.png" alt="Image 3">
-                    <div class="image-caption">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</div>
-                </div>
-                @if (Model.Dyreliste != null)
-                {
-                    <table>
-                        <tr>
-                            <th>Navn</th>
-                            <th>Art</th>
-                        </tr>
-                        @foreach (var dyr in Model.Dyreliste)
-                        {
-                            <tr>
-                                <td>@dyr.Navn</td>
-                                <td>@dyr.Art</td>
-                            </tr>
-                        }
-                    </table>
-                }
+
+
 
                 <a class="btn btn-primary" asp-page="CreateDyr">Create a new animal</a>
 </body>
