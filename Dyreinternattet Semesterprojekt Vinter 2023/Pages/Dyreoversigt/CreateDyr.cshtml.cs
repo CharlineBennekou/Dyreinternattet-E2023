@@ -25,6 +25,7 @@ namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Pages.Dyreoversigt
             if (!ModelState.IsValid)
             {
                 return Page();
+
             }
             _dyreService.AddDyr(Dyr);
             return RedirectToPage("GetAllDyr");

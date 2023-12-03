@@ -48,5 +48,15 @@
     "V\u00E6gt": 1.2,
     "VaccineStatus": true,
     "ErAdopteret": true
+  },
+  {
+    "ID": 6,
+    "Art": 2,
+    "Navn": "Missekat",
+    "Race": "Norsk kat",
+    "Alder": 12,
+    "V\u00E6gt": 8,
+    "VaccineStatus": true,
+    "ErAdopteret": false
   }
 ]
