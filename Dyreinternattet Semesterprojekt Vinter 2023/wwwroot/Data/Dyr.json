@@ -8,7 +8,7 @@
     "V\u00E6gt": 42,
     "VaccineStatus": true,
     "ErAdopteret": false,
-    "ImagePath": "images/kat1.jpg",
+    "ImagePath": "/images/image1.png",
     "Beskrivelse": null
   },
   {
@@ -22,5 +22,17 @@
     "ErAdopteret": false,
     "ImagePath": "/images/image1.png",
     "Beskrivelse": null
+  },
+  {
+    "ID": 3,
+    "Art": 1,
+    "Navn": "filip2",
+    "Race": "uhu",
+    "Alder": 5,
+    "V\u00E6gt": 6,
+    "VaccineStatus": true,
+    "ErAdopteret": true,
+    "ImagePath": "/images/image1.png",
+    "Beskrivelse": "uuuyy"
   }
 ]
