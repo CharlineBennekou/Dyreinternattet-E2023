@@ -56,7 +56,7 @@ namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Services
             Dyr DyrToBeDeleted = null; //Sætter midlertidig variabel til at være null, så den returnerer null hvis dyret ik findes og derfor ikke slettes
             foreach (Dyr dyr in _dyreliste)  //Tjekker alle dyr
             {
-            if (dyr.ID == id) //Hvis ID matcher, vil vores midlertidige reference referere til dette dyr
+                if (dyr.ID == id) //Hvis ID matcher, vil vores midlertidige reference referere til dette dyr
                 {
                     DyrToBeDeleted = dyr;
                     break;
