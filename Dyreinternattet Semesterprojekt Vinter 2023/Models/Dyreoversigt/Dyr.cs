@@ -26,19 +26,19 @@ namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Models.Dyreoversigt
         public double Vægt { get; set; }
         public bool VaccineStatus { get; set; }
         public bool ErAdopteret { get; set; }
-        
-
+        public string ImagePath { get; set; }
+        public string Beskrivelse { get; set; }
 
 
         //Den defaulte constructor skal have et Id ligemeget hvad
         public Dyr()
         {
             ID = nextId++;
-
+            ImagePath = "/images/image1.png";
         }
 
 
-        public Dyr(DyreArt art, string navn, string race, double alder, double vægt, bool vaccineStatus, bool erAdopteret)
+        public Dyr(DyreArt art, string navn, string race, double alder, double vægt, bool vaccineStatus, bool erAdopteret, string imagepath, string beskrivelse)
         {
             
             Art = art;
@@ -49,6 +49,8 @@ namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Models.Dyreoversigt
             Vægt = vægt;
             VaccineStatus = vaccineStatus;
             ErAdopteret = erAdopteret;
+            ImagePath = imagepath;
+            Beskrivelse = beskrivelse;
             
             
         }

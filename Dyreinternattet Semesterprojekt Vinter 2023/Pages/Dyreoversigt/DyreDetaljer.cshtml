@@ -2,52 +2,103 @@
 @model Dyreinternattet_Semesterprojekt_Vinter_2023.Pages.Dyreoversigt.DyreDetaljerModel
 @{
 }
-
 <div class="Dyr1">
     <div class="dyrimage1">
-        <img src="images/kat1.png" alt="Dyr 1 Image"/>
+        <img src="/images/defaultimage1.png" alt="Dyr 1 Image" />
     </div>
     <div id="@Model.Dyr.ID" class="dyrcontent">
         <h1>
-            @Model.Dyr.Navn
+            <strong>@Model.Dyr.Navn</strong>
             <br>
             <br>
         </h1>
         <div class="p4">
             <p>
-                @Model.Dyr.Alder
-                <br>
-                <br>
-                @Model.Dyr.Race
-                <br>
-                <br>
-                @Model.Dyr.Vægt
-                <br>
-                <br>
-                @Model.Dyr.VaccineStatus
-                <br>
-                <br>
-                @Model.Dyr.ErAdopteret
-
+            <p>
+                <strong>Alder:</strong> @Model.Dyr.Alder år
             </p>
+            <p>
+                <strong>Vægt:</strong> @Model.Dyr.Vægt kg
+            </p>
+            <p>
+                <strong>Vaccineret:</strong> @Model.Dyr.VaccineStatus
+            </p>
+            <p>
+                <strong>Art:</strong> @Model.Dyr.Art
+            </p>
+            <p>
+                <strong>Race:</strong> @Model.Dyr.Race
+            </p>
+            <p><strong>Beskrivelse:</strong> </p>
+            <div class="boxxx">
+                <p>
+                        @Model.Dyr.Beskrivelse
+                </p>
+            </div>
+
+            <a class="btn btn-primary btn-sm" type="button" title="Edit"
+               asp-page="EditDyr" asp-route-id="@Model.Dyr.ID">Edit</a>
+            <a class="btn btn-danger btn-sm " type="button" title="Delete"
+               asp-page="DeleteDyr" asp-route-id="@Model.Dyr.ID">Delete</a>
+
         </div>
     </div>
-</div> 
+</div>
 
+<style>
+    .Dyr1 {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: darkred;
+        text-align: center;
+        padding: 43px;
+        margin-top: -10px;
+        margin-left: -90px;
+        margin-right: -90px;
+        height: 600px;
+    }
 
+    .dyrimage1 {
+        width: 50%; /* Adjust as needed */
+        height: -800px;
+    }
 
+    .dyrcontent {
+        width: 45%; /* Adjust as needed */
+    }
 
+    .Dyr1 h1 {
+        font-family: 'Arial', sans-serif;
+        font-size: 20px;
+        font-weight: bold;
+        text-align: center;
+        margin-top: -250px;
+    }
 
+    .p4 {
+        font-family: 'Arial', sans-serif;
+        font-size: 13px;
+        font-weight: bold;
+        text-align: left;
+        margin-bottom: -250px;
+        color: white;
+    }
 
+    .dyrimage1 img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
 
+    .boxxx {
+        border: 1px solid #ccc; /* Border color and thickness */
+        padding: 15px; /* Padding inside the box */
+        border-radius: 8px; /* Border radius for rounded corners */
+        background-color: black; /* Background color */
+        margin-bottom: 20px; /* Margin at the bottom for spacing */
+        max-height: 200px; /* Maximum height of the box, adjust as needed */
+        word-wrap: break-word; /* Break words to the next line if they exceed the box width */
+    }
 
-
-
-
-
-
-<h1>Detaljer om @Model.Dyr.Navn </h1>
-<p>Navn: @Model.Dyr.Navn</p>
-
-
-<a asp-page="/Dyreoversigt/GetAllDyr">Tilbage til dyreoversigt</a>
+</style>

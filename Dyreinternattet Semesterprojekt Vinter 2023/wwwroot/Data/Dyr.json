@@ -7,7 +7,9 @@
     "Alder": 4,
     "V\u00E6gt": 42,
     "VaccineStatus": true,
-    "ErAdopteret": false
+    "ErAdopteret": false,
+    "ImagePath": "images/kat1.jpg",
+    "Beskrivelse": null
   },
   {
     "ID": 2,
@@ -17,86 +19,8 @@
     "Alder": 9,
     "V\u00E6gt": 5.8,
     "VaccineStatus": true,
-    "ErAdopteret": false
-  },
-  {
-    "ID": 3,
-    "Art": 1,
-    "Navn": "g",
-    "Race": "lol",
-    "Alder": 4,
-    "V\u00E6gt": 6,
-    "VaccineStatus": true,
-    "ErAdopteret": true
-  },
-  {
-    "ID": 4,
-    "Art": 1,
-    "Navn": "hv",
-    "Race": "jj",
-    "Alder": 98,
-    "V\u00E6gt": 78,
-    "VaccineStatus": true,
-    "ErAdopteret": true
-  },
-  {
-    "ID": 5,
-    "Art": 1,
-    "Navn": "j",
-    "Race": "jj",
-    "Alder": 98,
-    "V\u00E6gt": 78,
-    "VaccineStatus": true,
-    "ErAdopteret": true
-  },
-  {
-    "ID": 6,
-    "Art": 1,
-    "Navn": "j",
-    "Race": "jj",
-    "Alder": 98,
-    "V\u00E6gt": 78,
-    "VaccineStatus": true,
-    "ErAdopteret": true
-  },
-  {
-    "ID": 7,
-    "Art": 1,
-    "Navn": "filip",
-    "Race": "w",
-    "Alder": 1,
-    "V\u00E6gt": 1,
-    "VaccineStatus": true,
-    "ErAdopteret": true
-  },
-  {
-    "ID": 8,
-    "Art": 1,
-    "Navn": "IMage",
-    "Race": "12",
-    "Alder": 3,
-    "V\u00E6gt": 2,
-    "VaccineStatus": true,
-    "ErAdopteret": true
-  },
-  {
-    "ID": 9,
-    "Art": 3,
-    "Navn": "jjj",
-    "Race": "kkk",
-    "Alder": 555,
-    "V\u00E6gt": 54,
-    "VaccineStatus": true,
-    "ErAdopteret": true
-  },
-  {
-    "ID": 10,
-    "Art": 2,
-    "Navn": "marjorine8",
-    "Race": "m",
-    "Alder": 9,
-    "V\u00E6gt": 54,
-    "VaccineStatus": true,
-    "ErAdopteret": true
+    "ErAdopteret": false,
+    "ImagePath": "/images/image1.png",
+    "Beskrivelse": null
   }
 ]
