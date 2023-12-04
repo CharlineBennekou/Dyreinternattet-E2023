@@ -34,5 +34,17 @@
     "ErAdopteret": true,
     "ImagePath": "/images/image1.png",
     "Beskrivelse": "uuuyy"
+  },
+  {
+    "ID": 5,
+    "Art": 1,
+    "Navn": "hbhbh",
+    "Race": "nun",
+    "Alder": 5,
+    "V\u00E6gt": 4,
+    "VaccineStatus": true,
+    "ErAdopteret": true,
+    "ImagePath": "/images/image1.png",
+    "Beskrivelse": " m"
   }
 ]
