@@ -32,7 +32,7 @@ namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Models.Dyreoversigt
         //Den defaulte constructor skal have et Id ligemeget hvad
         public Dyr()
         {
-            //ID = nextId++;
+            ID = nextId++;
             ImagePath = "/images/image1.png";
         }
 
@@ -41,7 +41,7 @@ namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Models.Dyreoversigt
         {
             
             Art = art;
-            //ID = nextId++;
+            ID = nextId++;
             Navn = navn;
             Race = race;
             Alder = alder;
