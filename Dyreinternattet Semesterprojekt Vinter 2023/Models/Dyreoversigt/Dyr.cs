@@ -7,18 +7,17 @@ namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Models.Dyreoversigt
     {
         public enum DyreArt //Enum med dyrearter
         {
-			Hund=1,
-            Kat=2,
-            Kanin=3,  
+			Hund=0,
+            Kat=1,
+            Kanin=2,  
         }
 
 
 
 
         //Id'et bliver aktomatisk givet og alle Id bliver unikke
-        static int nextId = 1;
-        public int ID { get; }
-        [EnumDataType(typeof(DyreArt))]
+       static int nextId = 1;
+        public int ID { get; set; }
         public DyreArt Art { get; set; }
         public string Navn { get; set; }
         public string Race { get; set; }

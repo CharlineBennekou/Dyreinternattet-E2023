@@ -22,15 +22,19 @@ namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Pages.Dyreoversigt
             Dyr = _dyreService.GetDyrID(id);
             if (Dyr == null)
                 return RedirectToPage("/Error"); //NotFound er ikke defineret endnu
+            Console.WriteLine($"OnGet: DyreID = {Dyr.ID}");
             return Page();
         }
 
         public IActionResult OnPost()
         {
+            Console.WriteLine($"OnPost: DyreID = {Dyr.ID}");
             if (!ModelState.IsValid)
             {
+                Console.WriteLine("Fejlet modelstate");
                 return Page();
             }
+            Console.WriteLine("Kom i gennem modelstate");
             _dyreService.UpdateDyr(Dyr);
             return RedirectToPage("GetAllDyr");
         }

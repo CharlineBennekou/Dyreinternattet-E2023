@@ -1,17 +1,5 @@
 [
   {
-    "ID": 1,
-    "Art": 1,
-    "Navn": "Fido",
-    "Race": "Husky-mix",
-    "Alder": 4,
-    "V\u00E6gt": 42,
-    "VaccineStatus": true,
-    "ErAdopteret": false,
-    "ImagePath": "/images/image1.png",
-    "Beskrivelse": null
-  },
-  {
     "ID": 2,
     "Art": 3,
     "Navn": "Hans",
@@ -34,5 +22,29 @@
     "ErAdopteret": true,
     "ImagePath": "/images/image1.png",
     "Beskrivelse": "uuuyy"
+  },
+  {
+    "ID": 4,
+    "Art": 1,
+    "Navn": "hbhbh",
+    "Race": "nun",
+    "Alder": 5,
+    "V\u00E6gt": 4,
+    "VaccineStatus": true,
+    "ErAdopteret": true,
+    "ImagePath": "/images/image1.png",
+    "Beskrivelse": " m"
+  },
+  {
+    "ID": 5,
+    "Art": 0,
+    "Navn": "Tester852",
+    "Race": "Testkanin",
+    "Alder": 100,
+    "V\u00E6gt": 1,
+    "VaccineStatus": true,
+    "ErAdopteret": false,
+    "ImagePath": "/images/image1.png",
+    "Beskrivelse": "Tester crud"
   }
 ]
