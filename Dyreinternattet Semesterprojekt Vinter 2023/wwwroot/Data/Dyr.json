@@ -36,7 +36,7 @@
     "Beskrivelse": "uuuyy"
   },
   {
-    "ID": 5,
+    "ID": 4,
     "Art": 1,
     "Navn": "hbhbh",
     "Race": "nun",
@@ -46,5 +46,29 @@
     "ErAdopteret": true,
     "ImagePath": "/images/image1.png",
     "Beskrivelse": " m"
+  },
+  {
+    "ID": 5,
+    "Art": 3,
+    "Navn": "Tester",
+    "Race": "Testkanin",
+    "Alder": 100,
+    "V\u00E6gt": 1,
+    "VaccineStatus": true,
+    "ErAdopteret": false,
+    "ImagePath": "/images/image1.png",
+    "Beskrivelse": "Tester crud"
+  },
+  {
+    "ID": 1,
+    "Art": 0,
+    "Navn": "Vuffer",
+    "Race": "EnglishGoodDog",
+    "Alder": 9.5,
+    "V\u00E6gt": 46,
+    "VaccineStatus": true,
+    "ErAdopteret": false,
+    "ImagePath": "/images/image1.png",
+    "Beskrivelse": "Denne hund repr\u00E6senterer en ny \u00E6ra hvor at CRUD virker"
   }
 ]
