@@ -2,7 +2,7 @@
 {
     public class Vagt
     {
-        static int nextId = 1;
+        private static int nextId = 1;
         public int Id { get; }
         public Medarbejder AssignedMedarbejder { get; set; }
         public string StartTid { get; set; }
@@ -61,12 +61,14 @@
         }
         public class Medarbejder
         {
-            static int nextId = 1;
+            private static int nextId = 1;
+            public int Id { get; set; }
             public string MedarbejderName { get; set; }
             public string MedarbejderEmail { get; set; }
             public int MedarbejderTlf { get; set; }
             public Medarbejder(string medarbejderName, string medarbejderEmail, int medarbejderTlf)
             {
+                Id = nextId++;
                 MedarbejderName = medarbejderName;
                 MedarbejderEmail = medarbejderEmail;
                 MedarbejderTlf = medarbejderTlf;
