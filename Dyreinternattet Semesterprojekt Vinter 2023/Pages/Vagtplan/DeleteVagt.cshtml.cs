@@ -38,7 +38,7 @@ namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Pages.Vagtplan
 			if (deletedVagt == null)
 				return RedirectToPage("/NotFound"); //NotFound er ikke defineret endnu
 
-			return RedirectToPage("GetAllVagter");
+			return RedirectToPage("Vagtplan/GetAllVagter");
 		}
 	}
 }
