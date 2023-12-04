@@ -7,7 +7,16 @@ namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Services
 	public class VagtService : IVagtService
 	{
 		private List<Vagt> _vagter;
-		public VagtService()
+		private JsonFileVagtService JsonFileVagtService { get; set; }
+
+        public VagtService(JsonFileVagtService jsonFileVagtService)
+        {
+            JsonFileVagtService = jsonFileVagtService;
+            // _vagter = MockVagter.GetMockVagter();
+            _vagter = JsonFileVagtService.GetJsonVagter().ToList();
+        }
+
+        public VagtService()
 		{
 
 			_vagter = MockVagter.GetMockVagter();

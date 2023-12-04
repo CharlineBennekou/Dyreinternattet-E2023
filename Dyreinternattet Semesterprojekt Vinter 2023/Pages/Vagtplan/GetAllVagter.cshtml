@@ -37,6 +37,9 @@
 
 					<td>@vagt.StartTid</td>
 					<td>@vagt.SlutTid</td>
+					<td>
+						<a class="btn btn-danger btn-sm " type="button" title="Delete" asp-page="DeleteVagt" asp-route-id="@vagt.Id"><i class="fa fa-trash"></i></a>
+					</td>
 				</tr>
 			}
 		}
