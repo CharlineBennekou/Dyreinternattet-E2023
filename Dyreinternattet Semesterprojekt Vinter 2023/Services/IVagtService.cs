@@ -8,7 +8,7 @@ namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Services
 		List<Vagt> GetVagter();
 		void AddVagt(Vagt vagt);
 
-		//void UpdateVagt(Vagt vagt);
+		void UpdateVagt(Vagt vagt);
 		Vagt GetVagt(int id);
 		Vagt DeleteVagt(int? id);
     }

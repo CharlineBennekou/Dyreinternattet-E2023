@@ -6,6 +6,7 @@ builder.Services.AddRazorPages();
 builder.Services.AddSingleton<IDyreService, DyreService>();
 builder.Services.AddSingleton<IVagtService, VagtService>();
 builder.Services.AddTransient<JsonFileDyrService>();
+builder.Services.AddTransient<JsonFileVagtService>();
 
 var app = builder.Build();
 
