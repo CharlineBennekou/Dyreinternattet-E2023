@@ -20,10 +20,9 @@ namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Services
         {
             _dyreliste = MockDyr.GetMockDyr();
         }
-        static int nextId = 1; //Flyttet til dyreservice for AddDyr
+        
         public void AddDyr(Dyr dyr) 
         {
-            dyr.ID = nextId++;
             _dyreliste.Add(dyr);
             JsonFileDyrService.SaveJsonDyr(_dyreliste);
         }
