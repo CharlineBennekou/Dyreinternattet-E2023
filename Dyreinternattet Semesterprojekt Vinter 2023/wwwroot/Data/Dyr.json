@@ -1,17 +1,5 @@
 [
   {
-    "ID": 1,
-    "Art": 1,
-    "Navn": "Fido",
-    "Race": "Husky-mix",
-    "Alder": 4,
-    "V\u00E6gt": 42,
-    "VaccineStatus": true,
-    "ErAdopteret": false,
-    "ImagePath": "/images/image1.png",
-    "Beskrivelse": null
-  },
-  {
     "ID": 2,
     "Art": 3,
     "Navn": "Hans",
@@ -70,5 +58,17 @@
     "ErAdopteret": false,
     "ImagePath": "/images/image1.png",
     "Beskrivelse": "Denne hund repr\u00E6senterer en ny \u00E6ra hvor at CRUD virker"
+  },
+  {
+    "ID": 1,
+    "Art": 0,
+    "Navn": "tester3",
+    "Race": "hgh",
+    "Alder": 5,
+    "V\u00E6gt": 5,
+    "VaccineStatus": true,
+    "ErAdopteret": true,
+    "ImagePath": "/images/image1.png",
+    "Beskrivelse": "jh"
   }
 ]
