@@ -3,7 +3,7 @@
     public class Vagt
     {
         private static int nextId = 1;
-        public int Id { get; }
+        public int Id { get; set; }
         public Medarbejder AssignedMedarbejder { get; set; }
         public string StartTid { get; set; }
         public string SlutTid { get; set; }
