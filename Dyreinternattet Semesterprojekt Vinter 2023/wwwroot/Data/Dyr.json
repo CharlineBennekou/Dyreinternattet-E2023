@@ -1,15 +1,15 @@
 [
   {
     "ID": 1,
-    "Art": 3,
-    "Navn": "Hans",
-    "Race": "Huskat",
+    "Art": 0,
+    "Navn": "Hans den f\u00F8rste",
+    "Race": "Golden",
     "Alder": 9,
     "V\u00E6gt": 5.8,
     "VaccineStatus": true,
     "ErAdopteret": false,
     "ImagePath": "/images/image1.png",
-    "Beskrivelse": null
+    "Beskrivelse": "Vores f\u00F8rste hund :)"
   },
   {
     "ID": 2,
@@ -26,7 +26,7 @@
   {
     "ID": 3,
     "Art": 1,
-    "Navn": "hbhbh",
+    "Navn": "Freia",
     "Race": "nun",
     "Alder": 5,
     "V\u00E6gt": 4,
@@ -57,7 +57,7 @@
     "VaccineStatus": true,
     "ErAdopteret": true,
     "ImagePath": "/images/image1.png",
-    "Beskrivelse": "dd"
+    "Beskrivelse": "1002"
   },
   {
     "ID": 6,
