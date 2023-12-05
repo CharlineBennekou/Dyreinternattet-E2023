@@ -5,7 +5,7 @@
     "K\u00F8n": 0,
     "Navn": "Hans den f\u00F8rste",
     "Race": "Golden",
-    "Alder": 9,
+    "Alder": 9.5,
     "V\u00E6gt": 5.8,
     "VaccineStatus": true,
     "ErAdopteret": false,
@@ -63,18 +63,5 @@
     "ErAdopteret": true,
     "ImagePath": "/images/image1.png",
     "Beskrivelse": "1002"
-  },
-  {
-    "ID": 6,
-    "Art": 1,
-    "K\u00F8n": 0,
-    "Navn": "Hej6",
-    "Race": "EndnuEnHusKat",
-    "Alder": 4,
-    "V\u00E6gt": 3,
-    "VaccineStatus": true,
-    "ErAdopteret": true,
-    "ImagePath": "/images/image1.png",
-    "Beskrivelse": "4234asd"
   }
 ]

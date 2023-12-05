@@ -63,19 +63,31 @@ namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Services
 
         public Vagt DeleteVagt(int? vagtId)
 		{
+			Vagt VagtToBeDeleted = null;
 
-			foreach (Vagt vagt in _vagter)
+            foreach (Vagt vagt in _vagter)
 			{
 				if (vagt.Id == vagtId)
 				{
-					_vagter.Remove(vagt);
+                    Console.WriteLine("Vagt fundet:");
+                    Console.WriteLine(vagt);
+                    VagtToBeDeleted = vagt;
+					break;
 
 				}
 			}
+			if (VagtToBeDeleted != null)
+			{
+				_vagter.Remove(VagtToBeDeleted);
+				JsonFileVagtService.SaveJsonVagter(_vagter);
+			}
 
-			return null;
+			return VagtToBeDeleted;
 		}
-		public List<Vagt> GetVagter() { return _vagter; }
+        
+
+        
+        public List<Vagt> GetVagter() { return _vagter; }
 
 	}
 }
