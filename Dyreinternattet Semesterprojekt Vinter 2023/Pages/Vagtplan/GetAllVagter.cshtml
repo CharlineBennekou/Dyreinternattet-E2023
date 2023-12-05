@@ -14,32 +14,37 @@
 				Start tid
 			</th>
 			<th>
-				Slut tid :)
+				Slut tid
 			</th>
 		</tr>
 	</thead>
-    <tbody>
-        @if (Model.Vagter != null)
-        {
-            foreach (var vagt in Model.Vagter)
-            {
-                <tr>
-                    <td>
-                        @if (vagt.Medarbejder != null)
-                        {
-                            <span>@vagt.Medarbejder.Name</span>
-                            <br />
-                            <span>Email: @vagt.Medarbejder.Email</span>
-                            <br />
-                            <span>Tlf: @vagt.Medarbejder.Tlf</span>
-                        }
-                    </td>
-                    <td>@vagt.StartTid</td>
-                    <td>@vagt.SlutTid</td>
-                </tr>
-            }
-        }
-    </tbody>
+	<tbody>
+		@if (Model.Vagter != null)
+		{
+			foreach (var vagt in Model.Vagter)
+			{
+				<tr>
+					<td>
+						@if (vagt != null && vagt.AssignedMedarbejder != null)
+						{
+							<span>@vagt.AssignedMedarbejder.MedarbejderName</span>
+							<br />
+							<span>Email: @vagt.AssignedMedarbejder.MedarbejderEmail</span>
+							<br />
+							<span>Tlf: @vagt.AssignedMedarbejder.MedarbejderTlf</span>
+						}
+					</td>
+
+					<td>@vagt.StartTid</td>
+					<td>@vagt.SlutTid</td>
+					<td>
+						<a class="btn btn-danger btn-sm " type="button" title="Delete" asp-page="DeleteVagt" asp-route-id="@vagt.Id"><i class="fa fa-trash"></i></a>
+					</td>
+				</tr>
+			}
+		}
+		
+	</tbody>
 </table>
 
 <p>

@@ -1,0 +1,19 @@
+﻿@page
+@model Dyreinternattet_Semesterprojekt_Vinter_2023.Pages.Dyreoversigt.DeleteDyrModel
+@{
+}
+<h1>Delete Confirmation</h1>
+<div class="alert alert-danger">
+    <h5>Are you sure you want to delete Dyr - @Model.Dyr.Navn</h5>
+
+
+
+
+
+
+
+    <form method="post">
+        <button type="submit" class="btn btn-danger">Yes</button>
+        <a class="btn btn-primary" asp-page="Dyreoversigt/GetAllDyr">No</a>
+    </form>
+</div>

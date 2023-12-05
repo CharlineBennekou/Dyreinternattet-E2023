@@ -1,5 +1,6 @@
 ﻿using Dyreinternattet_Semesterprojekt_Vinter_2023.Models.Dyreoversigt;
 using Dyreinternattet_Semesterprojekt_Vinter_2023.Data;
+using System.Diagnostics.Eventing.Reader;
 
 namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Services
 {
@@ -19,7 +20,7 @@ namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Services
         {
             _dyreliste = MockDyr.GetMockDyr();
         }
-
+        
         public void AddDyr(Dyr dyr) 
         {
             _dyreliste.Add(dyr);
@@ -34,6 +35,8 @@ namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Services
                 {
                     if (d.ID ==  dyr.ID) //Hvis ID matcher, opdateres info
                     {
+                        Console.WriteLine(dyr);
+                        Console.WriteLine("fundet");
                         d.Art = dyr.Art;
                         d.Navn = dyr.Navn;
                         d.Race = dyr.Race;
@@ -41,19 +44,26 @@ namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Services
                         d.Vægt = dyr.Vægt;
                         d.VaccineStatus = dyr.VaccineStatus;
                         d.ErAdopteret = dyr.ErAdopteret;
+                        d.ImagePath = dyr.ImagePath;
+                        d.Beskrivelse = dyr.Beskrivelse;
+
+                        
 
                     }
+                    
                 }
                 JsonFileDyrService.SaveJsonDyr(_dyreliste); //Listen gemmes i json bagefter
             }
+            Console.WriteLine("dyr er null");
         }
+       
 
         public Dyr DeleteDyr(int? id)
         {
             Dyr DyrToBeDeleted = null; //Sætter midlertidig variabel til at være null, så den returnerer null hvis dyret ik findes og derfor ikke slettes
             foreach (Dyr dyr in _dyreliste)  //Tjekker alle dyr
             {
-            if (dyr.ID == id) //Hvis ID matcher, vil vores midlertidige reference referere til dette dyr
+                if (dyr.ID == id) //Hvis ID matcher, vil vores midlertidige reference referere til dette dyr
                 {
                     DyrToBeDeleted = dyr;
                     break;

@@ -6,49 +6,78 @@ namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Services
 {
 	public class VagtService : IVagtService
 	{
-		private JsonFileVagtService JsonFileVagtService { get; set; } 
 		private List<Vagt> _vagter;
-		public VagtService(JsonFileVagtService jsonFileVagtService) //Når DyreService constructes, henter dyrelisten data fra jsonfil
-		{
-			//_dyreliste = MockDyr.GetMockDyr();
-			JsonFileVagtService = jsonFileVagtService;
-			//_vagter = JsonFileVagtService.GetJsonVagt().ToList();
+		private JsonFileVagtService JsonFileVagtService { get; set; }
+
+        public VagtService(JsonFileVagtService jsonFileVagtService)
+        {
+            JsonFileVagtService = jsonFileVagtService;
+			//_vagter = MockVagter.GetMockVagter();
+			_vagter = JsonFileVagtService.GetJsonVagter().ToList();
 		}
+
 		public VagtService()
 		{
-			_vagter = MockVagter.GetMockVagter();	
+
+			_vagter = MockVagter.GetMockVagter();
+			//_vagter = JsonFileVagtService.GetJsonVagter().ToList();
 		}
 		public void AddVagt(Vagt vagt)
 		{
 			_vagter.Add(vagt);
-			JsonFileVagtService.SaveJsonVagt(_vagter);
-		}	
-		public List<Vagt> GetVagter()
-		{
-			return _vagter;
+			JsonFileVagtService.SaveJsonVagter(_vagter);
 		}
 
+		public Vagt GetVagt(int id)
+		{
+			foreach (Vagt vagt in _vagter)
+			{
+				if (vagt.Id == id)
+					return vagt;
+			}
+
+			return null;
+		}
         public void UpdateVagt(Vagt vagt)
         {
             if (vagt != null) //Opdaterer kun hvis input ikke er null
             {
                 foreach (Vagt v in _vagter) //Tjekker alle dyr
                 {
-                    if (v.ID == vagt.ID) //Hvis ID matcher, opdateres info
+                    if (v.Id == v.Id) //Hvis ID matcher, opdateres info
                     {
-                        v.SlutTid = v.SlutTid;
-						v.StartTid	= v.StartTid;
-						v.Medarbejder = v.Medarbejder;
+                        Console.WriteLine(vagt);
+                        Console.WriteLine("fundet");
+						v.AssignedMedarbejder = vagt.AssignedMedarbejder;
+						v.StartTid = vagt.StartTid;
+						v.SlutTid = vagt.SlutTid;
+
+
+
 
                     }
+
                 }
-                JsonFileVagtService.SaveJsonVagt(_vagter); //Listen gemmes i json bagefter
+                JsonFileVagtService.SaveJsonVagter(_vagter); //Listen gemmes i json bagefter
             }
+            Console.WriteLine("dyr er null");
         }
 
-        public Vagt DeleteVagt(int? id)
-        {
-            throw new NotImplementedException();
-        }
-    }
+        public Vagt DeleteVagt(int? vagtId)
+		{
+
+			foreach (Vagt vagt in _vagter)
+			{
+				if (vagt.Id == vagtId)
+				{
+					_vagter.Remove(vagt);
+
+				}
+			}
+
+			return null;
+		}
+		public List<Vagt> GetVagter() { return _vagter; }
+
+	}
 }
