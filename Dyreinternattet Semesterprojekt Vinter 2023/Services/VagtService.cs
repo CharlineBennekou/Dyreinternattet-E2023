@@ -11,10 +11,10 @@ namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Services
 
         public VagtService(JsonFileVagtService jsonFileVagtService)
         {
-            JsonFileVagtService = jsonFileVagtService;
-            // _vagter = MockVagter.GetMockVagter();
-            _vagter = JsonFileVagtService.GetJsonVagter().ToList();
-        }
+			JsonFileVagtService = jsonFileVagtService;
+			//_vagter = MockVagter.GetMockVagter();
+			_vagter = JsonFileVagtService.GetJsonVagter().ToList();
+		}
 
         public VagtService()
 		{
