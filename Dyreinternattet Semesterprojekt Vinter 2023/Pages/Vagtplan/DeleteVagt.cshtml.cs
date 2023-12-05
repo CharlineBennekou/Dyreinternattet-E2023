@@ -37,7 +37,7 @@ namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Pages.Vagtplan
             Models.Vagtplan.Vagt deletedVagt = _vagtService.DeleteVagt(Vagt.Id);
             if (deletedVagt == null)
                 return RedirectToPage("/Error");
-            return RedirectToPage("GetAllDyr");
+            return RedirectToPage("GetAllVagter");
         }
     }
 }
