@@ -1,0 +1,58 @@
+[
+  {
+    "DyrType": "Kanin",
+    "DyrName": "Bibi",
+    "Race": "L\u00F8vehovede",
+    "Age": 5,
+    "Weight": 3.5,
+    "IsVac": true,
+    "DyrInfo": "Den elsker guler\u00F8dder",
+    "EjerName": "Ole Jensen",
+    "EjerAddress": "Lindelindevej 13",
+    "EjerPost": 2865,
+    "EjerTlf": "52618188",
+    "EjerMail": "ole@gmail.com"
+  },
+  {
+    "DyrType": "Kat",
+    "DyrName": "Miser",
+    "Race": "orange",
+    "Age": 2,
+    "Weight": 10,
+    "IsVac": false,
+    "DyrInfo": "Den sl\u00E5r mig dagen lang",
+    "EjerName": "Ilse Jakobsen",
+    "EjerAddress": "Ghettoplanen 24",
+    "EjerPost": 4260,
+    "EjerTlf": "78318188",
+    "EjerMail": "ilseghetto@gmail.com"
+  },
+  {
+    "DyrType": "Hund",
+    "DyrName": "Boris",
+    "Race": "Golden Retriever",
+    "Age": 3,
+    "Weight": 5.5,
+    "IsVac": true,
+    "DyrInfo": "Han er meget s\u00F8d",
+    "EjerName": "Martin Nielsen",
+    "EjerAddress": "Kirseb\u00E6rvej 12",
+    "EjerPost": 2635,
+    "EjerTlf": "59966999",
+    "EjerMail": "maritn1@gmail.com"
+  },
+  {
+    "DyrType": "Kat",
+    "DyrName": "Musse",
+    "Race": "Ragdoll",
+    "Age": 3,
+    "Weight": 2,
+    "IsVac": false,
+    "DyrInfo": "Hun spiser for mange mus",
+    "EjerName": "Johanne Jensen",
+    "EjerAddress": "ahdhd 15",
+    "EjerPost": 2883,
+    "EjerTlf": "92039939",
+    "EjerMail": "johanne@gmail.com"
+  }
+]

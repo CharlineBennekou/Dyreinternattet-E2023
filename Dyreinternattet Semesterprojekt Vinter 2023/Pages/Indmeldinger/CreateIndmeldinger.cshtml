@@ -1,0 +1,153 @@
+﻿@page
+@model Dyreinternattet_Semesterprojekt_Vinter_2023.Pages.Indmeldinger.CreateIndmeldingerModel
+@{
+}
+
+<br />
+<h2 class="text-center">Udfyld formularen</h2>
+<br />
+<h3 class="text-center">Vi lover at finde det perfekte sted for dit kæledyr!</h3>
+<br />
+
+
+<div class="row">
+    <div class="col-lg-9 mx-auto rounded border p-3">
+        <h2 class="text-center mb-5">Dit kældedyrs informationer</h2>
+
+
+        @if (Model.errorMessage.Length > 0)
+        {
+            <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                <strong>@Model.errorMessage</strong>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        }
+
+        <form method="post">
+
+            <div class="row mb-3">
+                <label class="col-sm-4 col-form-label">Hvilket dyr har du?</label>
+                <div class="col-sm-8">
+                    <select asp-for="DyrType" class="form-select" name="DyrType">
+                        <option value="" disabled selected>Vælg</option>
+                        <option value="Hund">Hund</option>
+                        <option value="Kat">Kat</option>
+                        <option value="Kanin">Kanin</option>
+                    </select>
+                    <span asp-validation-for="DyrType" class="text-danger"></span>
+                </div>
+            </div>
+
+
+            <div class="row mb-3">
+                <label class="col-sm-4 col-form-label">Hvad hedder dit dyr?</label>
+                <div class="col-sm-8">
+                    <input class="form-control" asp-for="DyrName" placeholder="Frode" />
+                    <span asp-validation-for="DyrName" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <label class="col-sm-4 col-form-label">Hvilken race er dit dyr?</label>
+                <div class="col-sm-8">
+                    <input class="form-control" asp-for="Race" placeholder="Golden retriever" />
+                    <span asp-validation-for="Race" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <label class="col-sm-4 col-form-label">Hvor gammel er dit dyr?</label>
+                <div class="col-sm-8">
+                    <input class="form-control" asp-for="Age" placeholder="2" value="" />
+                    <span asp-validation-for="Age" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <label class="col-sm-4 col-form-label">Hvor meget vejer dit dyr?</label>
+                <div class="col-sm-8">
+                    <input class="form-control" asp-for="Weight" placeholder="3,5" value="" />
+                    <span asp-validation-for="Weight" class="text-danger"></span>
+                </div>
+            </div>
+
+
+            <div class="row mb-3">
+                <label class="col-sm-4 col-form-label">Er dit dyr vaccineret?</label>
+                <div class="col-sm-8">
+                    <select asp-for="IsVac" class="form-select" name="IsVac">
+                        <option value="vælg" disabled selected>Vælg</option>
+                        <option value="true">Ja</option>
+                        <option value="false">Nej</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <label class="col-sm-4 col-form-label">Kort om dit dyr</label>
+                <div class="col-sm-8">
+                    <textarea class="form-control" asp-for="DyrInfo" placeholder="..."></textarea>
+                    <span asp-validation-for="DyrInfo" class="text-danger"></span>
+                </div>
+            </div>
+
+
+            <br />
+            <br />
+            <br />
+
+
+            <h2 class="text-center mb-5">Dine kontakt oplysninger</h2>
+
+
+            <div class="row mb-3">
+                <label class="col-sm-4 col-form-label">Fulde Navn</label>
+                <div class="col-sm-8">
+                    <input class="form-control" asp-for="EjerName" placeholder="Jens Jensen" />
+                    <span asp-validation-for="EjerName" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <label class="col-sm-4 col-form-label">Adresse</label>
+                <div class="col-sm-8">
+                    <input class="form-control" asp-for="EjerAddress" placeholder="Strandhaven 138" />
+                    <span asp-validation-for="EjerAddress" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <label class="col-sm-4 col-form-label">Postnummer</label>
+                <div class="col-sm-8">
+                    <input class="form-control" asp-for="EjerPost" placeholder="2665" value="" />
+                    <span asp-validation-for="EjerPost" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <label class="col-sm-4 col-form-label">Tlf</label>
+                <div class="col-sm-8">
+                    <input class="form-control" asp-for="EjerTlf" placeholder="60528405" />
+                    <span asp-validation-for="EjerTlf" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <label class="col-sm-4 col-form-label">Mail</label>
+                <div class="col-sm-8">
+                    <input class="form-control" asp-for="EjerMail" placeholder="jens138@gmail.com" />
+                    <span asp-validation-for="EjerMail" class="text-danger"></span>
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class="offset-sm-4" col-sm-8">
+                    <button type="submit" class="btn btn-primary">Send ansøgning</button>
+                </div>
+            </div>
+
+
+        </form>
+    </div>
+</div>
