@@ -11,6 +11,11 @@ namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Models.Dyreoversigt
             Kat=1,
             Kanin=2,  
         }
+        public enum EKøn
+        { 
+        Han=0,
+        Hun=1,
+        }
 
 
 
@@ -19,6 +24,7 @@ namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Models.Dyreoversigt
        static int nextId = 1;
         public int ID { get; set; }
         public DyreArt Art { get; set; }
+        public EKøn Køn { get; set; }
         public string Navn { get; set; }
         public string Race { get; set; }
         public double Alder { get; set; }
