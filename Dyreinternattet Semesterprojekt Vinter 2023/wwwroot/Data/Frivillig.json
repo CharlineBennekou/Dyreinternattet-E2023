@@ -1,0 +1,34 @@
+[
+  {
+    "Name": "Stine",
+    "Birthday": "2000-11-28",
+    "Address": "Kongevej 22 Hellerup 4565",
+    "Tlf": "35278071",
+    "Mail": "stinehellerup@gmail.com",
+    "Description": "Jeg elsker dyr."
+  },
+  {
+    "Name": "Thomas",
+    "Birthday": "1995-02-15",
+    "Address": "Jordb\u00E6rdgade 84, N\u00E6stved 7055",
+    "Tlf": "65748394",
+    "Mail": "thomasjordb\u00E6r@gmail.com",
+    "Description": "Jeg har boet p\u00E5 en g\u00E5rd hele mit liv."
+  },
+  {
+    "Name": "Karen Larsen",
+    "Birthday": "1980-04-20",
+    "Address": "Strandhaven 80",
+    "Tlf": "12345678",
+    "Mail": "irfihr@gmail.com",
+    "Description": "Dyr er mit liv"
+  },
+  {
+    "Name": "Jens jenen",
+    "Birthday": "2001-02-28",
+    "Address": "Strandhaven 140",
+    "Tlf": "89899389",
+    "Mail": "ieiiil@gmail.com",
+    "Description": "huhiu"
+  }
+]
