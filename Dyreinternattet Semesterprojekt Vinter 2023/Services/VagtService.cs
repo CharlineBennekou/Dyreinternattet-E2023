@@ -44,23 +44,21 @@ namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Services
             {
                 foreach (Vagt v in _vagter) //Tjekker alle dyr
                 {
-                    if (v.Id == v.Id) //Hvis ID matcher, opdateres info
+                    if (v.Id == vagt.Id) //Hvis ID matcher, opdateres info
                     {
                         Console.WriteLine(vagt);
                         Console.WriteLine("fundet");
-						v.AssignedMedarbejder = vagt.AssignedMedarbejder;
+						v.AssignedMedarbejder.MedarbejderName = vagt.AssignedMedarbejder.MedarbejderName;
+						v.AssignedMedarbejder.MedarbejderEmail = vagt.AssignedMedarbejder.MedarbejderEmail;
+						v.AssignedMedarbejder.MedarbejderTlf = vagt.AssignedMedarbejder.MedarbejderTlf;
 						v.StartTid = vagt.StartTid;
 						v.SlutTid = vagt.SlutTid;
-
-
-
-
                     }
 
                 }
                 JsonFileVagtService.SaveJsonVagter(_vagter); //Listen gemmes i json bagefter
             }
-            Console.WriteLine("dyr er null");
+            Console.WriteLine("Vagt er null");
         }
 
         public Vagt DeleteVagt(int? vagtId)

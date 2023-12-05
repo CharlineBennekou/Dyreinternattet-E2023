@@ -14,15 +14,14 @@ namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Pages.Vagtplan
 	{
 		private IVagtService _vagtService;
 
+		[BindProperty]
+		public Models.Vagtplan.Vagt Vagt { get; set; }
+
 		public DeleteVagtModel(IVagtService vagtService)
 		{
 			_vagtService = vagtService;
 		}
 
-		[BindProperty]
-		public Models.Vagtplan.Vagt Vagt { get; set; } = new Models.Vagtplan.Vagt();
-
-			
 		public IActionResult OnGet(int id)
 		{
 			Vagt = _vagtService.GetVagt(id);
@@ -38,7 +37,7 @@ namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Pages.Vagtplan
 			if (deletedVagt == null)
 				return RedirectToPage("/NotFound"); //NotFound er ikke defineret endnu
 
-			return RedirectToPage("Vagtplan/GetAllVagter");
+			return RedirectToPage("GetAllVagter");
 		}
 	}
 }
