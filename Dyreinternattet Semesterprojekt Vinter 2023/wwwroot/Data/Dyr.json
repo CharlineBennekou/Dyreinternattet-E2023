@@ -2,9 +2,10 @@
   {
     "ID": 1,
     "Art": 0,
+    "K\u00F8n": 0,
     "Navn": "Hans den f\u00F8rste",
     "Race": "Golden",
-    "Alder": 9,
+    "Alder": 9.5,
     "V\u00E6gt": 5.8,
     "VaccineStatus": true,
     "ErAdopteret": false,
@@ -14,8 +15,9 @@
   {
     "ID": 2,
     "Art": 1,
-    "Navn": "filip2",
-    "Race": "uhu",
+    "K\u00F8n": 0,
+    "Navn": "Filip2",
+    "Race": "Huskat",
     "Alder": 5,
     "V\u00E6gt": 6,
     "VaccineStatus": true,
@@ -26,7 +28,8 @@
   {
     "ID": 3,
     "Art": 1,
-    "Navn": "Freia",
+    "K\u00F8n": 1,
+    "Navn": "Freia3",
     "Race": "nun",
     "Alder": 5,
     "V\u00E6gt": 4,
@@ -38,37 +41,27 @@
   {
     "ID": 4,
     "Art": 0,
-    "Navn": "Tester852",
+    "K\u00F8n": 0,
+    "Navn": "Tester4",
     "Race": "Testkanin",
     "Alder": 100,
     "V\u00E6gt": 1,
     "VaccineStatus": true,
     "ErAdopteret": false,
     "ImagePath": "/images/image1.png",
-    "Beskrivelse": "Tester crud fr"
+    "Beskrivelse": "Tester crud fr cda"
   },
   {
     "ID": 5,
     "Art": 0,
-    "Navn": "hej37",
+    "K\u00F8n": 0,
+    "Navn": "hej5",
     "Race": "Storhund",
     "Alder": 2,
-    "V\u00E6gt": 3,
+    "V\u00E6gt": 32,
     "VaccineStatus": true,
     "ErAdopteret": true,
     "ImagePath": "/images/image1.png",
     "Beskrivelse": "1002"
-  },
-  {
-    "ID": 6,
-    "Art": 0,
-    "Navn": "Hej38",
-    "Race": "dada",
-    "Alder": 4,
-    "V\u00E6gt": 3,
-    "VaccineStatus": true,
-    "ErAdopteret": true,
-    "ImagePath": "/images/image1.png",
-    "Beskrivelse": "4234asd"
   }
 ]

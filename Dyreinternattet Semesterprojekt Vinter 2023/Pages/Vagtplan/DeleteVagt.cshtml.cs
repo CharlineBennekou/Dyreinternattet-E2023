@@ -1,5 +1,6 @@
 using Dyreinternattet_Semesterprojekt_Vinter_2023.Data;
 using Dyreinternattet_Semesterprojekt_Vinter_2023.Models;
+using Dyreinternattet_Semesterprojekt_Vinter_2023.Models.Dyreoversigt;
 using Dyreinternattet_Semesterprojekt_Vinter_2023.Models.Vagtplan;
 using Dyreinternattet_Semesterprojekt_Vinter_2023.Services;
 using Microsoft.AspNetCore.Mvc;
@@ -14,15 +15,14 @@ namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Pages.Vagtplan
 	{
 		private IVagtService _vagtService;
 
+		[BindProperty]
+		public Models.Vagtplan.Vagt Vagt { get; set; }
+
 		public DeleteVagtModel(IVagtService vagtService)
 		{
 			_vagtService = vagtService;
 		}
 
-		[BindProperty]
-		public Models.Vagtplan.Vagt Vagt { get; set; } = new Models.Vagtplan.Vagt();
-
-			
 		public IActionResult OnGet(int id)
 		{
 			Vagt = _vagtService.GetVagt(id);
@@ -32,13 +32,12 @@ namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Pages.Vagtplan
 			return Page();
 		}
 
-		public IActionResult OnPost()
-		{
-			Models.Vagtplan.Vagt deletedVagt = _vagtService.DeleteVagt(Vagt.Id);
-			if (deletedVagt == null)
-				return RedirectToPage("/NotFound"); //NotFound er ikke defineret endnu
-
-			return RedirectToPage("Vagtplan/GetAllVagter");
-		}
-	}
+        public IActionResult OnPost()
+        {
+            Models.Vagtplan.Vagt deletedVagt = _vagtService.DeleteVagt(Vagt.Id);
+            if (deletedVagt == null)
+                return RedirectToPage("/Error");
+            return RedirectToPage("GetAllDyr");
+        }
+    }
 }

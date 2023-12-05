@@ -21,11 +21,6 @@ namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Pages.Vagtplan
         public CreateVagtModel(IVagtService vagtService)
         {
             _vagtService = vagtService;
-            Vagt = new Models.Vagtplan.Vagt
-            {
-                AssignedMedarbejder = new Models.Vagtplan.Vagt.Medarbejder("", "", 0)
-            };
-
             MedarbejderOptions = new SelectList(Models.Vagtplan.Vagt.MedarbejderOptions(), nameof(Vagt.Medarbejder.MedarbejderName), nameof(Vagt.Medarbejder.MedarbejderName), nameof(Vagt.Medarbejder.MedarbejderEmail));
 
         }
