@@ -11,12 +11,12 @@ namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Services
 
         public VagtService(JsonFileVagtService jsonFileVagtService)
         {
-			JsonFileVagtService = jsonFileVagtService;
+            JsonFileVagtService = jsonFileVagtService;
 			//_vagter = MockVagter.GetMockVagter();
 			_vagter = JsonFileVagtService.GetJsonVagter().ToList();
 		}
 
-        public VagtService()
+		public VagtService()
 		{
 
 			_vagter = MockVagter.GetMockVagter();
@@ -25,7 +25,7 @@ namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Services
 		public void AddVagt(Vagt vagt)
 		{
 			_vagter.Add(vagt);
-			//JsonFileVagtService.SaveJsonVagter(_vagter);
+			JsonFileVagtService.SaveJsonVagter(_vagter);
 		}
 
 		public Vagt GetVagt(int id)
@@ -38,23 +38,32 @@ namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Services
 
 			return null;
 		}
-		//public void UpdateVagt(Vagt vagt)
-		//{
-		//	if (vagt != null)
-		//	{
-		//		foreach (Vagt i in _vagter)
-		//		{
-		//			if (i.Id == i.Id)
-		//			{
-		//				i.MedarbejderName = vagt.MedarbejderName;
-		//				i.StartTid = vagt.StartTid;
-		//				i.SlutTid = vagt.SlutTid;
-		//			}
-		//		}
-		//	}
-		//}
+        public void UpdateVagt(Vagt vagt)
+        {
+            if (vagt != null) //Opdaterer kun hvis input ikke er null
+            {
+                foreach (Vagt v in _vagter) //Tjekker alle dyr
+                {
+                    if (v.Id == v.Id) //Hvis ID matcher, opdateres info
+                    {
+                        Console.WriteLine(vagt);
+                        Console.WriteLine("fundet");
+						v.AssignedMedarbejder = vagt.AssignedMedarbejder;
+						v.StartTid = vagt.StartTid;
+						v.SlutTid = vagt.SlutTid;
 
-		public Vagt DeleteVagt(int? vagtId)
+
+
+
+                    }
+
+                }
+                JsonFileVagtService.SaveJsonVagter(_vagter); //Listen gemmes i json bagefter
+            }
+            Console.WriteLine("dyr er null");
+        }
+
+        public Vagt DeleteVagt(int? vagtId)
 		{
 
 			foreach (Vagt vagt in _vagter)

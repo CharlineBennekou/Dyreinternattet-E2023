@@ -21,7 +21,7 @@ namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Services
 			}
 		}
 
-		public void SaveJsonVagt(List<Vagt> vagt) //Liste som input
+		public void SaveJsonVagter(List<Vagt> vagt) //Liste som input
 		{
 			using (FileStream jsonFileWriter = File.Create(JsonFileName)) //Fil skabes eller bruges
 			{

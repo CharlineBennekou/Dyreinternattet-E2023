@@ -1,6 +1,6 @@
 [
   {
-    "ID": 2,
+    "ID": 1,
     "Art": 3,
     "Navn": "Hans",
     "Race": "Huskat",
@@ -12,7 +12,7 @@
     "Beskrivelse": null
   },
   {
-    "ID": 3,
+    "ID": 2,
     "Art": 1,
     "Navn": "filip2",
     "Race": "uhu",
@@ -24,7 +24,7 @@
     "Beskrivelse": "uuuyy"
   },
   {
-    "ID": 4,
+    "ID": 3,
     "Art": 1,
     "Navn": "hbhbh",
     "Race": "nun",
@@ -36,7 +36,7 @@
     "Beskrivelse": " m"
   },
   {
-    "ID": 5,
+    "ID": 4,
     "Art": 0,
     "Navn": "Tester852",
     "Race": "Testkanin",
@@ -45,6 +45,30 @@
     "VaccineStatus": true,
     "ErAdopteret": false,
     "ImagePath": "/images/image1.png",
-    "Beskrivelse": "Tester crud"
+    "Beskrivelse": "Tester crud fr"
+  },
+  {
+    "ID": 5,
+    "Art": 0,
+    "Navn": "hej37",
+    "Race": "Storhund",
+    "Alder": 2,
+    "V\u00E6gt": 3,
+    "VaccineStatus": true,
+    "ErAdopteret": true,
+    "ImagePath": "/images/image1.png",
+    "Beskrivelse": "dd"
+  },
+  {
+    "ID": 6,
+    "Art": 0,
+    "Navn": "Hej38",
+    "Race": "dada",
+    "Alder": 4,
+    "V\u00E6gt": 3,
+    "VaccineStatus": true,
+    "ErAdopteret": true,
+    "ImagePath": "/images/image1.png",
+    "Beskrivelse": "4234asd"
   }
 ]
