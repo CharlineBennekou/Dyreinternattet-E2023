@@ -2,7 +2,8 @@
 {
     public class Frivillige
     {
-
+        static int nextId = 1;
+        public int ID { get; set; }
         public string Name { get; set; }
         public string Birthday { get; set; }
         public string Address { get; set; }
@@ -12,10 +13,12 @@
 
         public Frivillige()
         {
+            ID = nextId++;
         }
 
         public Frivillige(string name, string birthday, string address, string tlf, string mail, string description)
         {
+            ID = nextId++;
             Name = name;
             Birthday = birthday;
             Address = address;
