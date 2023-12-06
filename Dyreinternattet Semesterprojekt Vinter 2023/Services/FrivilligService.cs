@@ -31,7 +31,46 @@ namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Services
             JsonFileFrivilligService.SaveJsonFrivillig(_frivList);
         }
 
-        public List<Frivillige> GetFrivillig()
+
+		public Frivillige GetFriv(int id)
+		{
+			foreach (Frivillige frivillige in _frivList)
+			{
+				if (frivillige.ID == id)
+					return frivillige;
+			}
+
+			return null;
+		}
+
+
+		public Frivillige DeleteFriv(int? friveId)
+		{
+			Frivillige FrivToBeDeleted = null;
+
+			foreach (Frivillige frivillige in _frivList)
+			{
+				if (frivillige.ID == friveId)
+				{
+					Console.WriteLine("Frivillig fundet:");
+					Console.WriteLine(frivillige);
+					FrivToBeDeleted = frivillige;
+					break;
+
+				}
+			}
+			if (FrivToBeDeleted != null)
+			{
+				_frivList.Remove(FrivToBeDeleted);
+				JsonFileFrivilligService.SaveJsonFrivillig(_frivList);
+			}
+
+			return FrivToBeDeleted;
+		}
+
+
+
+		public List<Frivillige> GetFrivillig()
         {
             return _frivList;
         }

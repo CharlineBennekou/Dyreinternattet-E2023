@@ -1,5 +1,6 @@
 [
   {
+    "ID": 1,
     "Name": "Stine",
     "Birthday": "2000-11-28",
     "Address": "Kongevej 22 Hellerup 4565",
@@ -8,6 +9,7 @@
     "Description": "Jeg elsker dyr."
   },
   {
+    "ID": 2,
     "Name": "Thomas",
     "Birthday": "1995-02-15",
     "Address": "Jordb\u00E6rdgade 84, N\u00E6stved 7055",
@@ -16,6 +18,7 @@
     "Description": "Jeg har boet p\u00E5 en g\u00E5rd hele mit liv."
   },
   {
+    "ID": 3,
     "Name": "Karen Larsen",
     "Birthday": "1980-04-20",
     "Address": "Strandhaven 80",
@@ -24,11 +27,12 @@
     "Description": "Dyr er mit liv"
   },
   {
-    "Name": "Jens jenen",
-    "Birthday": "2001-02-28",
-    "Address": "Strandhaven 140",
-    "Tlf": "89899389",
-    "Mail": "ieiiil@gmail.com",
-    "Description": "huhiu"
+    "ID": 4,
+    "Name": "Hans Hansen",
+    "Birthday": "1965-11-15",
+    "Address": "\u00C6blemosvej 2",
+    "Tlf": "70388495",
+    "Mail": "HansHansen@gmail.com",
+    "Description": "Jeg kan snakke med dyr"
   }
 ]
