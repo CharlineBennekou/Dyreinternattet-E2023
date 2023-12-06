@@ -14,10 +14,10 @@ namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Services
         public FrivilligService(JsonFileFrivilligService jsonFileFrivilligService) //Når FrivilligeService constructes, henter frivlisten data fra jsonfil
         {
             JsonFileFrivilligService = jsonFileFrivilligService;
-            //_frivList = MockFrivillig.GetMockFrivillig();
-            _frivList = JsonFileFrivilligService.GetJsonFrivillig().ToList();
+			//_frivList = MockFrivillig.GetMockFrivillig();
+			_frivList = JsonFileFrivilligService.GetJsonFrivillig().ToList();
 
-        }
+		}
 
         public FrivilligService() //Backup hvis json ikk virker
         {

@@ -3,7 +3,8 @@
     public class Indmelding
     {
 
-
+        static int nextId = 1;
+        public int ID { get; set; }
         public string DyrType { get; set; }
         public string DyrName { get; set; }
         public string Race { get; set; }
@@ -25,12 +26,14 @@
 
         public Indmelding()
         {
+            ID = nextId++;
         }
 
 
         public Indmelding(string dyrType, string dyrName, string race, int age, double weight, bool isVac,
             string dyrInfo, string ejerName, string ejerAddress, int ejerPost, string ejerTlf, string ejerMail)
         {
+            ID = nextId++;
             DyrType = dyrType;
             DyrName = dyrName;
             Race = race;
