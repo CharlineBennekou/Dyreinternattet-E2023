@@ -37,6 +37,7 @@ namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Services
                     {
                         Console.WriteLine(dyr);
                         Console.WriteLine("fundet");
+                        d.Køn = dyr.Køn;
                         d.Art = dyr.Art;
                         d.Navn = dyr.Navn;
                         d.Race = dyr.Race;

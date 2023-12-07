@@ -16,6 +16,11 @@
 		<span asp-validation-for="@Model.Dyr.Art" class="text-danger"></span>
 	</div>
 	<div class="form-group">
+		<label asp-for="@Model.Dyr.Køn" class="control-label">Køn</label>
+		<select asp-for="Dyr.Køn" asp-items="Html.GetEnumSelectList<Dyr.EKøn>()"></select>
+		<span asp-validation-for="@Model.Dyr.Køn" class="text-danger"></span>
+	</div>
+	<div class="form-group">
 		<label asp-for="@Model.Dyr.Navn" class="control-label"></label>
 		<input asp-for="@Model.Dyr.Navn" class="form-control" />
 		<span asp-validation-for="@Model.Dyr.Navn" class="text-danger"></span>

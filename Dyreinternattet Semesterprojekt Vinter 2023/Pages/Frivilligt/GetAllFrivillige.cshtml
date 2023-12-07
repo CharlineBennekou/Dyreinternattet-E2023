@@ -1,0 +1,69 @@
+﻿@page
+@model Dyreinternattet_Semesterprojekt_Vinter_2023.Pages.Frivilligt.GetAllFrivilligeModel
+@{
+}
+
+<h1>Se de frivillige</h1>
+<div class="row">
+    <table class="table table-bordered table-hover table-striped">
+        <thead>
+            <tr>
+                <th>
+                    Navn
+                </th>
+                <th>
+                    Fødselsdag
+                </th>
+                <th>
+                    Adresse
+                </th>
+                <th>
+                    Postnummer
+                </th>
+                <th>
+                    Telefon
+                </th>
+                <th>
+                    Mail
+                </th>
+                <th>
+                    Beskrivelse
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @if (@Model.FrivList != null)
+            {
+                foreach (var frivillige in Model.FrivList)
+                {
+                    <tr>
+                        <td>
+                            @frivillige.Name
+                        </td>
+                        <td>
+                            @frivillige.Birthday
+                        </td>
+                        <td>
+                            @frivillige.Address
+                        </td>
+                        <td>
+                            @frivillige.Postnummer
+                        </td>
+                        <td>
+                            @frivillige.Tlf
+                        </td>
+                        <td>
+                            @frivillige.Mail
+                        </td>
+                        <td>
+                            @frivillige.Description
+                        </td>
+                        <td>
+                            <a class="btn btn-danger btn-sm" type="button" title="Delete" asp-page="DeleteFrivillig" asp-route-id="@frivillige.ID"><i class="fa fa-trash">Delete</i></a>
+                        </td>
+                    </tr>
+                }
+            }
+        </tbody>
+    </table>
+</div>

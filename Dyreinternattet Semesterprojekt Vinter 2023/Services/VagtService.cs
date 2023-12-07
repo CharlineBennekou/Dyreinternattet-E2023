@@ -44,40 +44,50 @@ namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Services
             {
                 foreach (Vagt v in _vagter) //Tjekker alle dyr
                 {
-                    if (v.Id == v.Id) //Hvis ID matcher, opdateres info
+                    if (v.Id == vagt.Id) //Hvis ID matcher, opdateres info
                     {
                         Console.WriteLine(vagt);
                         Console.WriteLine("fundet");
-						v.AssignedMedarbejder = vagt.AssignedMedarbejder;
+						v.AssignedMedarbejder.MedarbejderName = vagt.AssignedMedarbejder.MedarbejderName;
+						v.AssignedMedarbejder.MedarbejderEmail = vagt.AssignedMedarbejder.MedarbejderEmail;
+						v.AssignedMedarbejder.MedarbejderTlf = vagt.AssignedMedarbejder.MedarbejderTlf;
 						v.StartTid = vagt.StartTid;
 						v.SlutTid = vagt.SlutTid;
-
-
-
-
                     }
 
                 }
                 JsonFileVagtService.SaveJsonVagter(_vagter); //Listen gemmes i json bagefter
             }
-            Console.WriteLine("dyr er null");
+            Console.WriteLine("Vagt er null");
         }
 
         public Vagt DeleteVagt(int? vagtId)
 		{
+			Vagt VagtToBeDeleted = null;
 
-			foreach (Vagt vagt in _vagter)
+            foreach (Vagt vagt in _vagter)
 			{
 				if (vagt.Id == vagtId)
 				{
-					_vagter.Remove(vagt);
+                    Console.WriteLine("Vagt fundet:");
+                    Console.WriteLine(vagt);
+                    VagtToBeDeleted = vagt;
+					break;
 
 				}
 			}
+			if (VagtToBeDeleted != null)
+			{
+				_vagter.Remove(VagtToBeDeleted);
+				JsonFileVagtService.SaveJsonVagter(_vagter);
+			}
 
-			return null;
+			return VagtToBeDeleted;
 		}
-		public List<Vagt> GetVagter() { return _vagter; }
+        
+
+        
+        public List<Vagt> GetVagter() { return _vagter; }
 
 	}
 }
