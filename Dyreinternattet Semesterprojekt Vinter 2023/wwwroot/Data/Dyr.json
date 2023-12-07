@@ -14,7 +14,7 @@
   {
     "ID": 2,
     "Art": 1,
-    "Navn": "filip2",
+    "Navn": "filip24",
     "Race": "uhu",
     "Alder": 5,
     "V\u00E6gt": 6,
@@ -50,12 +50,12 @@
   {
     "ID": 5,
     "Art": 0,
-    "Navn": "hej37",
+    "Navn": "hej3000",
     "Race": "Storhund",
     "Alder": 2,
     "V\u00E6gt": 3,
-    "VaccineStatus": true,
-    "ErAdopteret": true,
+    "VaccineStatus": false,
+    "ErAdopteret": false,
     "ImagePath": "/images/image1.png",
     "Beskrivelse": "1002"
   },

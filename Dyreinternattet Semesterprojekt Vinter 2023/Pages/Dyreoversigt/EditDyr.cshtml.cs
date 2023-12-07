@@ -1,3 +1,5 @@
+using DocumentFormat.OpenXml.Vml;
+using Dyreinternattet_Semesterprojekt_Vinter_2023.Models.Dyreoversigt;
 using Dyreinternattet_Semesterprojekt_Vinter_2023.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
@@ -8,6 +10,7 @@ namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Pages.Dyreoversigt
     {
         private IDyreService _dyreService;
 
+       
 
         [BindProperty] //Binder UI så data fra form kan overføres til Dyre-properties
         public Models.Dyreoversigt.Dyr Dyr { get; set; }
@@ -38,6 +41,18 @@ namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Pages.Dyreoversigt
             _dyreService.UpdateDyr(Dyr);
             return RedirectToPage("GetAllDyr");
         }
+
+      
+
+
+
+
+
+
+
+
+
+
 
 
 
