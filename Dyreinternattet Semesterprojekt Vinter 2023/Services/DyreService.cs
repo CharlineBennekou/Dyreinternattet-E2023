@@ -97,5 +97,19 @@ namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Services
         {
             return _dyreliste;
         }
+
+        public IEnumerable<Dyr> NameSearch(string str) //metode til søgefunktion med navn
+        {
+            List<Dyr> nameSearch = new List<Dyr>();
+            foreach (Dyr d in _dyreliste)
+            {
+                if(string.IsNullOrEmpty(str)) || d.Navn.ToLower().Contains(str.ToLower())
+                        {
+                            nameSearch.Add(d);
+                        }
+
+            }
+            return nameSearch;
+        }
     }
 }
