@@ -21,6 +21,10 @@ namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Pages.Frivilligt
         public string Address { get; set; }
 
         [BindProperty]
+        [Required(ErrorMessage = "Indtast venligst et postnummer")]
+        public int Postnummer { get; set; }
+
+        [BindProperty]
         [Required(ErrorMessage = "Indtast venligst et tlf-nummer")]
         public string Tlf { get; set; }
 

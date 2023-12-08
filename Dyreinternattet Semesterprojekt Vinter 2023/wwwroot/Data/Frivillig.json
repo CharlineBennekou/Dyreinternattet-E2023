@@ -1,34 +1,32 @@
 [
   {
+    "ID": 1,
     "Name": "Stine",
     "Birthday": "2000-11-28",
-    "Address": "Kongevej 22 Hellerup 4565",
+    "Address": "Kongevej 22",
+    "Postnummer": 4665,
     "Tlf": "35278071",
     "Mail": "stinehellerup@gmail.com",
     "Description": "Jeg elsker dyr."
   },
   {
+    "ID": 2,
     "Name": "Thomas",
     "Birthday": "1995-02-15",
-    "Address": "Jordb\u00E6rdgade 84, N\u00E6stved 7055",
+    "Address": "Jordb\u00E6rdgade 84",
+    "Postnummer": 6025,
     "Tlf": "65748394",
     "Mail": "thomasjordb\u00E6r@gmail.com",
     "Description": "Jeg har boet p\u00E5 en g\u00E5rd hele mit liv."
   },
   {
-    "Name": "Karen Larsen",
-    "Birthday": "1980-04-20",
-    "Address": "Strandhaven 80",
-    "Tlf": "12345678",
-    "Mail": "irfihr@gmail.com",
-    "Description": "Dyr er mit liv"
-  },
-  {
-    "Name": "Jens jenen",
-    "Birthday": "2001-02-28",
-    "Address": "Strandhaven 140",
-    "Tlf": "89899389",
-    "Mail": "ieiiil@gmail.com",
-    "Description": "huhiu"
+    "ID": 3,
+    "Name": "Lars",
+    "Birthday": "2000-03-12",
+    "Address": "Kaffevej 4",
+    "Postnummer": 3065,
+    "Tlf": "74738475",
+    "Mail": "fbhbfh@gmail.com",
+    "Description": "Jeg kan snakke med dyr"
   }
 ]

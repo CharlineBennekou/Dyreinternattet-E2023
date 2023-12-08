@@ -9,5 +9,8 @@ namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Services
 
         void AddFrivillig(Frivillige frivillige);
 
-    }
+		Frivillige GetFriv(int id);
+
+		Frivillige DeleteFriv(int? friveId);
+	}
 }

@@ -3,7 +3,8 @@
 @using Dyreinternattet_Semesterprojekt_Vinter_2023.Models.Dyreoversigt;
 @{
 }
-<form method="post">
+<form method="post" class="professional-form">
+    
     <div class="form-group">
         <label asp-for="Dyr.Art" class="control-label"></label>
         <select asp-for="Dyr.Art" asp-items="Html.GetEnumSelectList<Dyr.DyreArt>()"></select>
@@ -42,17 +43,12 @@
         <span asp-validation-for="Dyr.VaccineStatus" class="text-danger"></span>
     </div>
     <div class="form-group">
-        <label asp-for="Dyr.ErAdopteret" class="control-label"></label>
+        <label asp-for="Dyr.ErAdopteret" class="control-label">er den adoptered</label>
         <select asp-for="Dyr.ErAdopteret">
             <option value="true">Ja</option>
             <option value="false">Nej</option>
         </select>
         <span asp-validation-for="Dyr.ErAdopteret" class="text-danger"></span>
-    </div>
-    <div class="form-group">
-        <label asp-for="Dyr.ImagePath" class="control-label"></label>
-        <input asp-for="Dyr.ImagePath" class="form-control" />
-        <span asp-validation-for="Dyr.ImagePath" class="text-danger"></span>
     </div>
     <div class="form-group">
         <label asp-for="Dyr.Beskrivelse" class="control-label"></label>
@@ -73,3 +69,5 @@
 <p>
     <a asp-page="Dyreoversigt/GetAllDyr">Back to List</a>
 </p>
+
+
