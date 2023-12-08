@@ -29,7 +29,7 @@ namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Pages.Dyreoversigt
 
         public IActionResult OnPostNameSearch()
         {
-           Dyreliste = _dyreService.NameSearch(SearchString).ToList();
+            Dyreliste = _dyreService.NameSearch(SearchString).ToList();
             return Page();
         }
 

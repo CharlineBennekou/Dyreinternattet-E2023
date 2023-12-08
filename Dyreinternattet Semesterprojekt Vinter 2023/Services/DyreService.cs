@@ -103,7 +103,7 @@ namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Services
             List<Dyr> nameSearch = new List<Dyr>();
             foreach (Dyr d in _dyreliste)
             {
-                if(string.IsNullOrEmpty(str)) || d.Navn.ToLower().Contains(str.ToLower())
+                if ((string.IsNullOrEmpty(str)) || (d.Navn.ToLower().Contains(str.ToLower())))
                         {
                             nameSearch.Add(d);
                         }
