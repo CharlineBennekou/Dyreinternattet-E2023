@@ -16,7 +16,7 @@ body {
     margin-bottom: 60px;
     margin: 0;
     font-family: 'Arial', sans-serif;
-    background-color: white;
+    background-color: antiquewhite;
     padding-bottom: 90px;
 }
 
@@ -81,7 +81,7 @@ h1 {
 .image11, .image12, .image13 {
     display: inline-block;
     position: relative;
-    border: 5px solid white; /* Border color */
+    border: 5px solid black; /* Border color */
     max-width: 90%; /* Ensure images don't exceed their container */
     background-color: black;
     margin-right: 10px; /* Adjust the margin as needed */
@@ -104,14 +104,14 @@ h1 {
 
         .image11 p:hover, .image12 p:hover, .image13 p:hover {
             background-color: rgba(0, 0, 0, 0.9); /* Darken the background on hover */
-            transform: translateY(-5px) scale(1.05); /* Move the text up and add a subtle scale effect on hover */
-            color: darkred; /* Change text color on hover */
+            transform: translateY(-5px) scale(1.02); /* Move the text up and add a subtle scale effect on hover */
+            color: indianred; /* Change text color on hover */
         }
 
 
 /*Rød boks med tekst og billede */
 .farve {
-    background-color: darkred;
+    background-color: indianred;
     color: white;
     overflow: hidden; /* Clear the float and contain the floated elements */
     padding: 20px; /*Adjust padding as needed */
@@ -265,7 +265,7 @@ h1 {
         font-size: 20px;
         width: 70%; /* Set your desired width */
         font-weight: bold;
-        text-align: center; /* Adjust as needed */
+        text-align: left; /* Adjust as needed */
         margin-top: -150px;
     }
 

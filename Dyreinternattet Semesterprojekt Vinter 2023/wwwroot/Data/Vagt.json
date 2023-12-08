@@ -36,8 +36,8 @@
     "Id": 4,
     "AssignedMedarbejder": {
       "Id": 36,
-      "MedarbejderName": "Astrid",
-      "MedarbejderEmail": "astrid@example.com",
+      "MedarbejderName": "Karl",
+      "MedarbejderEmail": "karl@example.com",
       "MedarbejderTlf": 11112222
     },
     "StartTid": "16:00",
@@ -58,11 +58,22 @@
     "Id": 12,
     "AssignedMedarbejder": {
       "Id": 49,
-      "MedarbejderName": "J\u00F8rgen",
-      "MedarbejderEmail": "jorgen@example.com",
+      "MedarbejderName": "Hans",
+      "MedarbejderEmail": "hans@example.com",
       "MedarbejderTlf": 44443333
     },
     "StartTid": "15:00",
-    "SlutTid": "22:00"
+    "SlutTid": "23:00"
+  },
+  {
+    "Id": 9,
+    "AssignedMedarbejder": {
+      "Id": 39,
+      "MedarbejderName": "Odin",
+      "MedarbejderEmail": "odin@example.com",
+      "MedarbejderTlf": 98765432
+    },
+    "StartTid": "09:00",
+    "SlutTid": "14:00"
   }
 ]
