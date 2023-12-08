@@ -111,5 +111,25 @@ namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Services
             }
             return nameSearch;
         }
+
+
+
+        public IEnumerable<Dyr> DyreFilter(string Race, Dyr.DyreArt Art, Dyr.EKøn Køn)
+        {
+            List<Dyr> filterList = new List<Dyr>();
+            foreach (Dyr dyr in _dyreliste)
+            {
+                if (dyr.Race == Race && dyr.Art == Art && dyr.Køn == Køn)
+                {
+                    filterList.Add(dyr);
+                }
+
+            }
+            return filterList;
+
+
+
+
+        }
     }
 }
