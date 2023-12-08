@@ -2,18 +2,19 @@
 {
     public class Besøg
     {
-       
-
-        public int StartTid { get; set; }
-        public int SlutTid { get; set; }
+        static int nextId = 1;
+        public int Id { get; }
+        public string StartTid { get; set; }
+        public string SlutTid { get; set; }
         public string Note { get; set; }
 
          public Besøg()
          {
          }
 
-        public Besøg(int startTid, int slutTid, string note)
+        public Besøg(string startTid, string slutTid, string note)
         {
+            Id = nextId++;
             StartTid = startTid;
             SlutTid = slutTid;
             Note = note;
