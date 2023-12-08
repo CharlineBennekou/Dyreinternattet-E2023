@@ -1,0 +1,73 @@
+﻿@page "{ID:int}"
+@model Dyreinternattet_Semesterprojekt_Vinter_2023.Pages.Dyreoversigt.EditDyrModel
+@using Dyreinternattet_Semesterprojekt_Vinter_2023.Models.Dyreoversigt;
+@{
+}
+<form method="post" class="professional-form">
+    
+    <div class="form-group">
+        <label asp-for="Dyr.Art" class="control-label"></label>
+        <select asp-for="Dyr.Art" asp-items="Html.GetEnumSelectList<Dyr.DyreArt>()"></select>
+    </div>
+    <div class="form-group">
+        <label asp-for="Dyr.Navn" class="control-label"></label>
+        <input asp-for="Dyr.Navn" class="form-control" />
+        <span asp-validation-for="Dyr.Navn" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="@Model.Dyr.Køn" class="control-label">Køn</label>
+        <select asp-for="Dyr.Køn" asp-items="Html.GetEnumSelectList<Dyr.EKøn>()"></select>
+        <span asp-validation-for="@Model.Dyr.Køn" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Dyr.Race" class="control-label"></label>
+        <input asp-for="Dyr.Race" class="form-control" />
+        <span asp-validation-for="Dyr.Race" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Dyr.Alder" class="control-label"></label>
+        <input asp-for="Dyr.Alder" class="form-control" />
+        <span asp-validation-for="Dyr.Alder" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Dyr.Vægt" class="control-label"></label>
+        <input asp-for="Dyr.Vægt" class="form-control" />
+        <span asp-validation-for="Dyr.Vægt" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Dyr.VaccineStatus" class="control-label"></label>
+        <select asp-for="Dyr.VaccineStatus">
+            <option value="true">Ja</option>
+            <option value="false">Nej</option>
+        </select>
+        <span asp-validation-for="Dyr.VaccineStatus" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Dyr.ErAdopteret" class="control-label">er den adoptered</label>
+        <select asp-for="Dyr.ErAdopteret">
+            <option value="true">Ja</option>
+            <option value="false">Nej</option>
+        </select>
+        <span asp-validation-for="Dyr.ErAdopteret" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Dyr.Beskrivelse" class="control-label"></label>
+        <input asp-for="Dyr.Beskrivelse" class="form-control" />
+        <span asp-validation-for="Dyr.Beskrivelse" class="text-danger"></span>
+    </div>
+    <div class= "form-group" hidden>
+        <label asp-for="Dyr.ID" class="control-label"></label>
+        <input asp-for="Dyr.ID" class="form-control" />
+    </div>
+    <p>
+        <div class="form-group">
+            <input type="submit" value="Update" class="btn btn-primary" />
+        </div>
+    </p>
+</form>
+
+<p>
+    <a asp-page="Dyreoversigt/GetAllDyr">Back to List</a>
+</p>
+
+

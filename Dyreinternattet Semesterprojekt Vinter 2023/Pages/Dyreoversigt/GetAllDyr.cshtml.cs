@@ -4,6 +4,8 @@ using Dyreinternattet_Semesterprojekt_Vinter_2023.Models.Dyreoversigt;
 using Dyreinternattet_Semesterprojekt_Vinter_2023.Data;
 using Dyreinternattet_Semesterprojekt_Vinter_2023.Services;
 using Dyreinternattet_Semesterprojekt_Vinter_2023.Pages;
+using System.Net.Http.Headers;
+using DocumentFormat.OpenXml.Spreadsheet;
 
 namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Pages.Dyreoversigt
 {
@@ -20,5 +22,16 @@ namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Pages.Dyreoversigt
         {
             Dyreliste = _dyreService.GetDyr();
         }
+
+
+        [BindProperty]
+        public string SearchString { get; set; }
+
+        public IActionResult OnPostNameSearch()
+        {
+            Dyreliste = _dyreService.NameSearch(SearchString).ToList();
+            return Page();
+        }
+
     }
 }

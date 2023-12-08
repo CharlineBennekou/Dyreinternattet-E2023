@@ -8,7 +8,18 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Models\Medarbejder\**" />
+    <Content Remove="Models\Medarbejder\**" />
+    <EmbeddedResource Remove="Models\Medarbejder\**" />
+    <None Remove="Models\Medarbejder\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="Models\Andet\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="DocumentFormat.OpenXml" Version="3.0.0" />
   </ItemGroup>
 
 </Project>

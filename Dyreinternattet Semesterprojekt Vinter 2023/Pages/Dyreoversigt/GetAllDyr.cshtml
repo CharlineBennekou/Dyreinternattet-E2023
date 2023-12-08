@@ -7,30 +7,55 @@
     <title>Title of the document</title>
 </head>
 <body>
-    
-    <div class="image-container">
-        <div class="image-item">
-            <img src="/images/kat.png" alt="Image 1">
-            <div class="image-caption">
-              Ikke så lang tekst
 
-            </div>
+    <br />
+    <form method="post">
+        <div class="input-group mb-3">
+            <input asp-for="SearchString" class="form-control mr-1"
+                   placeholder="Enter search term" />
+            <input type="submit" asp-page-handler="NameSearch"
+                   value="Search" class="btn btn-primary" />
         </div>
+    </form>
+
+    <br />
+
+
+    <div class="p3">
+        <div class="p3image">
+            <img src="/images/hundkat.png" />
+        </div>
+        <h1>
+            DYRENES BESKYTTELSE ER HJEMSTED FOR ET VARIERET UDVALG AF ELSKELIGE DYR, SOM ALLE SØGER ET KÆRLIGT HJEM. VORES LEGENDE KATTE, GLADE HUNDE, ROLIGE KANINER OG SMÅ HAMSTRE VENTER PÅ EN NY START MED DIG. VED AT ADOPTERE GIVER DU IKKE BARE ET HJEM, MEN OGSÅ HÅB, GLÆDE OG KÆRLIGHED. TAG DET NÆSTE SKRIDT MOD EN MENINGSFULD FORANDRING - FIND DIN NYE FIRBENEDE VEN I DAG.
+        </h1>
+    
+        </div>
+
+
+        <div class="image-containerdyr">
+    @if (Model.Dyreliste != null)
+    {
+        @foreach (var dyr in Model.Dyreliste)
+        {
+        
+        <div class="image-item">
+            <div class="image-item-container">
+             <img src="@dyr.ImagePath" alt="@dyr.Navn" >
+                 <a asp-page="DyreDetaljer" asp-route-id="@dyr.ID"><br>
+                    <button class="image-caption">
+                        SE MERE OM @dyr.Navn!
+                    </button>
+                        </a>
+                    </div>
+                </div>
+        }
+    }
     </div>
 
-                @if (Model.Dyreliste != null)
-                {
-                 
-                        @foreach (var dyr in Model.Dyreliste)
-                        {
-                            <tr>
-                                <td>Navn: @dyr.Navn</td> <br>
-                                <td>Art: @dyr.Art</td> <br>
-                <a  asp-page="DyreDetaljer" asp-route-id="@dyr.ID">Se mere info</a> <br>
-                            </tr>
-                        }
-                    
-                }
+
+
+
+
 
                 <a class="btn btn-primary" asp-page="CreateDyr">Create a new animal</a>
 </body>

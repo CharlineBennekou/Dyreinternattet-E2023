@@ -8,10 +8,11 @@ namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Data
 	{
 		private static List<Vagt> _vagter = new List<Vagt>()
 		{
-			new Vagt(new Medarbejder("John Doe", "john@example.com", 12345678), startTid: "8:00", slutTid: "15:00"),
-			new Vagt(new Medarbejder("Jane Doe", "jane@example.com", 87654321), startTid : "8:00", slutTid : "15:00"),
-			new Vagt(new Medarbejder("Bob Smith", "bob@example.com", 55555555), startTid : "8:00", slutTid : "15:00")
+			new Vagt(medarbejderName : "Joakim Von Luxemborg", medarbejderEmail : "joakim@example.com", medarbejderTlf : 12345678, startTid : "08:00", slutTid : "15:00"),
+			new Vagt(medarbejderName : "Bill Smith", medarbejderEmail : "bill@example.com", medarbejderTlf : 87654321, startTid : "07:00", slutTid : "14:00"),
+			new Vagt(medarbejderName: "Åge Knudsen", medarbejderEmail: "åge@example.com", medarbejderTlf: 55555555, startTid : "11:00", slutTid : "19:00")
 		};
+
 		public static List<Vagt> GetMockVagter() { return _vagter; }
 	}
 }

@@ -1,0 +1,49 @@
+﻿@page
+@model Dyreinternattet_Semesterprojekt_Vinter_2023.Pages.Vagtplan.EditVagtModel
+@{
+}
+
+<form method="post">
+    <div class="form-group">
+        <label asp-for="@Model.Vagt.AssignedMedarbejder.MedarbejderName" class="control-label"></label>
+        <input asp-for="@Model.Vagt.AssignedMedarbejder.MedarbejderName"  class="form-control" />
+        <span asp-validation-for="@Model.Vagt.AssignedMedarbejder.MedarbejderName" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="@Model.Vagt.AssignedMedarbejder.MedarbejderEmail" class="control-label"></label>
+        <input asp-for="@Model.Vagt.AssignedMedarbejder.MedarbejderEmail" class="form-control" />
+        <span asp-validation-for="@Model.Vagt.AssignedMedarbejder.MedarbejderEmail" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="@Model.Vagt.AssignedMedarbejder.MedarbejderTlf" class="control-label"></label>
+        <input asp-for="@Model.Vagt.AssignedMedarbejder.MedarbejderTlf" class="form-control" />
+        <span asp-validation-for="@Model.Vagt.AssignedMedarbejder.MedarbejderTlf" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="@Model.Vagt.StartTid" class="control-label">Start Tid</label>
+        <select asp-for="@Model.Vagt.StartTid" asp-items="@Model.StartTidOptions()" class="form-control">
+            <option value="">Select Start Tid</option>
+        </select>
+        <span asp-validation-for="@Model.Vagt.StartTid" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="@Model.Vagt.SlutTid" class="control-label">Slut Tid</label>
+        <select asp-for="@Model.Vagt.SlutTid" asp-items="@Model.SlutTidOptions()" class="form-control">
+            <option value="">Select Slut Tid</option>
+        </select>
+        <span asp-validation-for="@Model.Vagt.SlutTid" class="text-danger"></span>
+    </div>
+    <div class="form-group" hidden>
+        <label asp-for="@Model.Vagt.Id" class="control-label"></label>
+        <input asp-for="@Model.Vagt.Id" class="form-control" />
+    </div>
+    <p>
+        <div class="form-group">
+            <input type="submit" value="Update" class="btn btn-primary" />
+        </div>
+    </p>
+</form>
+
+<p>
+    <a asp-page="/Vagtplan/GetAllVagter">Back to List</a>
+</p>

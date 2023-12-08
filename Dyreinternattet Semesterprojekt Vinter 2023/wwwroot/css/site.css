@@ -1,101 +1,714 @@
-html {
-  font-size: 14px;
-}
 
 @media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
+    html {
+        font-size: 16px;
+        max-width: 1920px;
+    }
 }
 
-.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
-}
 
 html {
-  position: relative;
-  min-height: 100%;
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: antiquewhite;
+    padding-bottom: 90px;
+}
+
+/* nav bar som ligger i Shared/_layout.cshtml*/
+
+header {
+    background-color: black;
+    padding: 15px 0;
+}
+
+nav {
+    display: flex;
+    justify-content: flex-start;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.nav-link {
+    color: darkred;
+    text-decoration: none;
+    margin-right: 100px;
+    display: inline-block; /* Add this to make the links display inline */
+}
+
+    .nav-link:hover {
+        text-decoration: underline;
+    }
+
+
+/* paragraph under nav bar*/
+
+.p {
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    font-family: 'Arial', sans-serif; /* Choose a professional font */
+    font-size: 40px; /* Increase font size for emphasis */
+    color: black; /* Text color */
+    font-weight: bold;
 }
 
 
+
+/* billederne med borders*/
 
 .image-container {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    overflow: hidden;
+    justify-content: center;
+}
+
+.changing-image {
+    flex: 1;
+    width: 300px; /* Set your desired width */
+    height: 200px; /*Set your desired height*/
+    object-fit: cover; /* Maintain aspect ratio while covering the container*/
+    margin: 50px;
+}
+
+.image11, .image12, .image13 {
+    display: inline-block;
+    position: relative;
+    border: 5px solid black; /* Border color */
+    max-width: 90%; /* Ensure images don't exceed their container */
+    background-color: black;
+    margin-right: 10px; /* Adjust the margin as needed */
+    height: 500px;
+}
+
+    .image11 p, .image12 p, .image13 p {
+        position: absolute;
+        bottom: 5px;
+        left: 0;
+        width: 100%;
+        background-color: black; /*Black background */
+        color: #fff; /*White tex*/
+        padding: 10px; /* Padding for text */
+        margin: 0;
+        text-align: left;
+        /*transition: background-color 0.3s, transform 0.3s;*/ /* Smooth transition for background color and transform */
+        transition: background-color 0.3s, transform 0.3s, color 0.3s; /* Adding color transition */
+    }
+
+        .image11 p:hover, .image12 p:hover, .image13 p:hover {
+            background-color: rgba(0, 0, 0, 0.9); /* Darken the background on hover */
+            transform: translateY(-5px) scale(1.02); /* Move the text up and add a subtle scale effect on hover */
+            color: indianred; /* Change text color on hover */
+        }
+
+
+/*Rød boks med tekst og billede */
+.farve {
+    background-color: indianred;
+    color: white;
+    overflow: hidden; /* Clear the float and contain the floated elements */
+    padding: 20px; /*Adjust padding as needed */
+    margin-top: 30px;
+    margin-left: -90px;
+    margin-right: -90px;
+}
+
+    .farve p {
+        position: absolute;
+        font-family: 'Arial', sans-serif;
+        right: 50px;
+        font-size: 20px;
+        width: 700px; /* Set your desired width */
+        font-weight: bold;
+    }
+
+.image14 {
+    float: left;
+    margin-right: 20px; /* Adjust margin as needed */
+}
+
+    .image14 img {
+        max-width: 100%; /* Make sure the image doesn't exceed its container */
+        height: auto; /* Maintain aspect ratio */
+        display: block; /* Remove extra space below inline images */
+        width: 650px; /* Set your desired width */
+        height: 400px; /*Set your desired height*/
+    }
+
+.p2 {
+    overflow: hidden; /* Clear the float and contain the floated elements */
+    text-align: center;
     padding: 20px;
 }
 
-.image-item {
-    width: 30%; /* Adjust the width as needed */
-    margin-bottom: 20px;
-    text-align: center;
+.btn1 {
+    background-color: black; /* Set your desired background color */
+    color: darkred; /* Set your desired text color */
+    padding: 10px 20px; /* Adjust padding as needed */
+    font-size: 16px; /* Set your desired font size */
+    border: none; /* Remove border if not needed */
+    cursor: pointer; /* Add a pointer cursor on hover for better user experience */
+    font: bold;
+    transition: background-color 0.3s, transform 0.3s, color 0.3s; /* Adding color transition */
+    position: absolute;
+    bottom: 120px;
+    right: 30px;
 }
 
-    .image-item img {
-        width: 100%;
-        border: 1px solid #ddd;
-        border-radius: 8px;
+    .btn1:hover {
+        background-color: rgba(0, 0, 0, 0.9); /* Darken the background on hover */
+        transform: translateY(-5px) scale(1.05); /* Move the text up and add a subtle scale effect on hover */
+        color: darkred; /* Change text color on hover */
     }
 
-.image-caption {
-    margin-top: 10px;
+
+
+/*footer som ligger i Shared/_layout.cshtml*/
+
+.footer {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    text-align: center;
+    padding: 40px 0;
+    font-size: 14px;
+    background-color: black;
 }
 
-.image-container2 {
+
+/*GetAllDyre/ dyreliste*/
+
+
+
+.image-containerdyr {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     padding: 20px;
 }
 
+
+
+
+
 .image-item {
-    width: 30%; /* Adjust the width as needed */
-    margin-bottom: 20px;
+
     text-align: center;
+    border: 5px solid white; /* Add border around the entire item */
+    border-radius: 8px;
+    overflow: hidden; /* Ensure the border wraps around the content */
+    width: calc(33.33% - 20px); /* 33.33% width for each item with 20px margin */
+    margin: 0 10px 20px 10px; /* Adjust the margin as needed */
+    box-sizing: border-box; /* Ensure padding is included in the width */
+
 }
 
-    .image-item img {
-        width: 100%;
-        border: 1px solid #ddd;
-        border-radius: 8px;
-    }
-
-.image-caption {
-    margin-top: 10px;
-}
-
-.image-container3 {
+.image-item-container {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    padding: 20px;
+    flex-direction: column;
+    height: 100%; /* Ensure the container takes the full height of the .image-item */
+    background-color: black;
+    color: white;
 }
 
-.image-item {
-    width: 30%; /* Adjust the width as needed */
-    margin-bottom: 20px;
-    text-align: center;
+.image-item img {
+    width: 100%;
+    border-bottom: 1px solid #ddd; /* Add a border between the image and text */
+    border-radius: 0px 0px 0 0; /* Ensure rounded corners on the top */
 }
-
-    .image-item img {
-        width: 100%;
-        border: 1px solid #ddd;
-        border-radius: 8px;
-    }
 
 .image-caption {
-    margin-top: 10px;
+    background-color: black; /* Set your desired background color */
+    color: darkred; /* Set your desired text color */
+    padding: 10px 20px; /* Adjust padding as needed */
+    font-size: 16px; /* Set your desired font size */
+    border: none; /* Remove border if not needed */
+    cursor: pointer; /* Add a pointer cursor on hover for better user experience */
+    font: bold;
+    transition: background-color 0.3s, transform 0.3s, color 0.3s; /* Adding color transition */
+    /* Add more styles as needed */
+}
+
+    .image-caption:hover {
+        background-color: rgba(0, 0, 0, 0.9); /* Darken the background on hover */
+        transform: translateY(-5px) scale(1.05); /* Move the text up and add a subtle scale effect on hover */
+        color: darkred; /* Change text color on hover */
+    }
+
+
+/*Næste side*/
+/*rød box over dyrelisten*/
+
+.p3 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: darkred;
+    text-align: center;
+    padding: 43px;
+    margin-top: -10px;
+    margin-left: -90px;
+    margin-right: -90px;
+    height: 400px;
+}
+
+    .p3 h1 {
+        font-family: 'Arial', sans-serif;
+        right: 0px;
+        font-size: 20px;
+        width: 70%; /* Set your desired width */
+        font-weight: bold;
+        text-align: left; /* Adjust as needed */
+        margin-top: -150px;
+    }
+
+.p3image {
+    width: 50%; /* Adjust as needed */
+    margin-left: -50px;
+}
+
+    .p3image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+
+/*side til hvert dyr NY SIDE*/
+/*DYR 1*/
+
+.Dyr1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: darkred;
+    text-align: center;
+    padding: 43px;
+    margin-top: -10px;
+    margin-left: -90px;
+    margin-right: -90px;
+    height: 600px;
+}
+
+.dyrimage1 {
+    width: 50%; /* Adjust as needed */
+    height: -800px;
+}
+
+.dyrcontent {
+    width: 45%; /* Adjust as needed */
+}
+
+.Dyr1 h1 {
+    font-family: 'Arial', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: -250px;
+}
+
+.p4 {
+    font-family: 'Arial', sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    text-align: left;
+    margin-bottom: -250px;
+    color: white;
+}
+
+.dyrimage1 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/*DYR 2*/
+
+.Dyr2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    text-align: center;
+    padding: 43px;
+    margin-top: -10px;
+    margin-left: -90px;
+    margin-right: -90px;
+    height: 600px;
+}
+
+.dyrimage2 {
+    width: 50%; /* Adjust as needed */
+    height: -800px;
+}
+
+.dyrcontent2 {
+    width: 45%; /* Adjust as needed */
+}
+
+.Dyr2 h1 {
+    font-family: 'Arial', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: -250px;
+}
+
+.p5 {
+    font-family: 'Arial', sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    text-align: left;
+    margin-bottom: -250px;
+    color: darkred;
+}
+
+
+.dyrimage2 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/*DYR 3*/
+
+.Dyr3 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: darkred;
+    text-align: center;
+    padding: 43px;
+    margin-top: -10px;
+    margin-left: -90px;
+    margin-right: -90px;
+    height: 600px;
+}
+
+.dyrimage3 {
+    width: 50%; /* Adjust as needed */
+    height: -800px;
+}
+
+.dyrcontent3 {
+    width: 45%; /* Adjust as needed */
+}
+
+.Dyr3 h1 {
+    font-family: 'Arial', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: -250px;
+}
+
+.p6 {
+    font-family: 'Arial', sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    text-align: left;
+    margin-bottom: -250px;
+    color: white;
 }
 
 
 
+.dyrimage3 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 
+/*DYR 4*/
 
-.boxt {
-    max-width: 400px;
-    padding: 20px;
-    border: 2px solid #333;
-    border-radius: 10px;
+.Dyr4 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    ;
     text-align: center;
+    padding: 43px;
+    margin-top: -10px;
+    margin-left: -90px;
+    margin-right: -90px;
+    height: 600px;
+}
+
+.dyrimage4 {
+    width: 50%; /* Adjust as needed */
+    height: -800px;
+}
+
+.dyrcontent4 {
+    width: 45%; /* Adjust as needed */
+}
+
+.Dyr4 h1 {
+    font-family: 'Arial', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: -250px;
+}
+
+.p7 {
+    font-family: 'Arial', sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    text-align: left;
+    margin-bottom: -250px;
+    color: darkred;
+}
+
+
+
+.dyrimage4 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/*DYR 5*/
+
+.Dyr5 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: darkred;
+    text-align: center;
+    padding: 43px;
+    margin-top: -10px;
+    margin-left: -90px;
+    margin-right: -90px;
+    height: 600px;
+}
+
+.dyrimage5 {
+    width: 50%; /* Adjust as needed */
+    height: -800px;
+}
+
+.dyrcontent5 {
+    width: 45%; /* Adjust as needed */
+}
+
+.Dyr5 h1 {
+    font-family: 'Arial', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: -250px;
+}
+
+.p8 {
+    font-family: 'Arial', sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    text-align: left;
+    margin-bottom: -250px;
+    color: white;
+}
+
+.dyrimage5 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/*DYR 6*/
+
+
+.Dyr6 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    text-align: center;
+    padding: 43px;
+    margin-top: -10px;
+    margin-left: -90px;
+    margin-right: -90px;
+    height: 600px;
+}
+
+.dyrimage6 {
+    width: 50%; /* Adjust as needed */
+    height: -800px;
+}
+
+.dyrcontent6 {
+    width: 45%; /* Adjust as needed */
+}
+
+.Dyr6 h1 {
+    font-family: 'Arial', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: -250px;
+}
+
+.p9 {
+    font-family: 'Arial', sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    text-align: left;
+    margin-bottom: -250px;
+    color: darkred;
+}
+
+.dyrimage6 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/*DYR 7*/
+
+
+.Dyr7 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: darkred;
+    text-align: center;
+    padding: 43px;
+    margin-top: -10px;
+    margin-left: -90px;
+    margin-right: -90px;
+    height: 600px;
+}
+
+.dyrimage7 {
+    width: 50%; /* Adjust as needed */
+    height: -800px;
+}
+
+.dyrcontent7 {
+    width: 45%; /* Adjust as needed */
+}
+
+.Dyr7 h1 {
+    font-family: 'Arial', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: -250px;
+}
+
+.p10 {
+    font-family: 'Arial', sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    text-align: left;
+    margin-bottom: -250px;
+    color: white;
+}
+
+.dyrimage7 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/*DYR 8*/
+.Dyr8 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    text-align: center;
+    padding: 43px;
+    margin-top: -10px;
+    margin-left: -90px;
+    margin-right: -90px;
+    height: 600px;
+}
+
+.dyrimage8 {
+    width: 50%; /* Adjust as needed */
+    height: -800px;
+}
+
+.dyrcontent8 {
+    width: 45%; /* Adjust as needed */
+}
+
+.Dyr8 h1 {
+    font-family: 'Arial', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: -250px;
+}
+
+.p11 {
+    font-family: 'Arial', sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    text-align: left;
+    margin-bottom: -250px;
+    color: darkred;
+}
+
+.dyrimage8 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/*DYR 9*/
+.Dyr9 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: darkred;
+    text-align: center;
+    padding: 43px;
+    margin-top: -10px;
+    margin-left: -90px;
+    margin-right: -90px;
+    height: 600px;
+}
+
+.dyrimage9 {
+    width: 50%; /* Adjust as needed */
+    height: -800px;
+}
+
+.dyrcontent9 {
+    width: 45%; /* Adjust as needed */
+}
+
+.Dyr9 h1 {
+    font-family: 'Arial', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: -250px;
+}
+
+.p12 {
+    font-family: 'Arial', sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    text-align: left;
+    margin-bottom: -250px;
+    color: white;
+}
+
+.dyrimage9 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }

@@ -1,13 +1,17 @@
 using Dyreinternattet_Semesterprojekt_Vinter_2023.Services;
 var builder = WebApplication.CreateBuilder(args);
 
-
 // Add services to the container.
 builder.Services.AddRazorPages();
 builder.Services.AddSingleton<IDyreService, DyreService>();
 builder.Services.AddSingleton<IVagtService, VagtService>();
-builder.Services.AddScoped<MedarbejderService>();
+builder.Services.AddSingleton<IFrivilligService, FrivilligService>();
+builder.Services.AddSingleton<IIndService, IndService>();
 builder.Services.AddTransient<JsonFileDyrService>();
+builder.Services.AddTransient<JsonFileVagtService>();
+builder.Services.AddTransient<JsonFileFrivilligService>();
+builder.Services.AddTransient<JsonFileIndService>();
+
 
 var app = builder.Build();
 

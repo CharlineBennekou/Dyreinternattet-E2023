@@ -17,12 +17,11 @@ namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Services
 		{
 			get
 			{
-				return Path.Combine(WebHostEnvironment.WebRootPath,
-			"Data", "Vagt.json");
+				return Path.Combine(WebHostEnvironment.WebRootPath, "Data", "Vagt.json");
 			}
 		}
 
-		public void SaveJsonVagt(List<Vagt> vagt) //Liste som input
+		public void SaveJsonVagter(List<Vagt> vagt) //Liste som input
 		{
 			using (FileStream jsonFileWriter = File.Create(JsonFileName)) //Fil skabes eller bruges
 			{
@@ -37,7 +36,7 @@ namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Services
 
 		}
 
-		public IEnumerable<Vagt> GetJsonVagt() //burde være public, virker ik?
+		public IEnumerable<Vagt> GetJsonVagter() //burde være public, virker ik?
 		{
 			using (StreamReader jsonFileReader = File.OpenText(JsonFileName))
 			{

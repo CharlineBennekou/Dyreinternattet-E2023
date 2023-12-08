@@ -1,40 +1,47 @@
-﻿using Dyreinternattet_Semesterprojekt_Vinter_2023.Models.Dyreoversigt;
-
-namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Models.Vagtplan
+﻿namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Models.Vagtplan
 {
     public class Vagt
     {
-        static int nextId = 1;
-        public int ID { get; }
-        public Medarbejder Medarbejder { get; set; }
-		public string StartTid { get; set; }
-		public string SlutTid { get; set; }
+        private static int nextId = 1;
+        public int Id { get; set; }
+        public Medarbejder AssignedMedarbejder { get; set; }
+        public string StartTid { get; set; }
+        public string SlutTid { get; set; }
 
-		public Vagt()
-		{
-			ID= nextId++;
-		}
+        public Vagt()
+        {
+            Id = nextId++;
+            AssignedMedarbejder = new Medarbejder("", "", 0);
+        }
 
-		public Vagt(Medarbejder medarbejder, string startTid, string slutTid)
-		{
-			ID=nextId++;
-			Medarbejder = medarbejder;
-			StartTid = startTid;
-			SlutTid = slutTid;
-		}
-        //public static IEnumerable<Vagt> MedarbejderOptions()
-        //{
-        //    return new[]
-        //    {
-        //        new Vagt { Medarbejder = new Medarbejder("John Doe", "john@example.com", 12345678) },
-        //        new Vagt { Medarbejder = new Medarbejder("Jane Doe", "jane@example.com", 87654321) },
-        //        new Vagt { Medarbejder = new Medarbejder("Bob Smith", "bob@example.com", 55555555) },
-        //        new Vagt { Medarbejder = new Medarbejder("Sofus Jensen", "sofus@example.com", 98765432) },
-        //        new Vagt { Medarbejder = new Medarbejder("Erik Andersen", "erik@example.com", 45678901) },
-        //        new Vagt { Medarbejder = new Medarbejder("Sofie Nielsen", "sofie@example.com", 11112222) },
-        //        new Vagt { Medarbejder = new Medarbejder("Chris Hansen", "chris@example.com", 99998888) }
-        //    };
-        //}
+        public Vagt(string medarbejderName, string medarbejderEmail, int medarbejderTlf, string startTid, string slutTid)
+        {
+            Id = nextId++;
+            AssignedMedarbejder = new Medarbejder(medarbejderName, medarbejderEmail, medarbejderTlf);
+            StartTid = startTid;
+            SlutTid = slutTid;
+        }
+        public static IEnumerable<Medarbejder> MedarbejderOptions()
+        {
+            return new List<Medarbejder>
+            {
+                new Medarbejder("Hans Christian Andersen", "hans@example.com", 12345678),
+                new Medarbejder("Joakim Von And", "joakim@example.com", 87654321),
+                new Medarbejder("Erik", "erik@example.com", 55555555),
+                new Medarbejder("Odin", "odin@example.com", 98765432),
+                new Medarbejder("Irene", "irene@example.com", 45678901),
+                new Medarbejder("Astrid", "astrid@example.com", 11112222),
+                new Medarbejder("Anni", "anni@example.com", 99998888),
+                new Medarbejder("Jørgen", "jorgen@example.com", 44443333),
+                new Medarbejder("Ib", "ib@example.com", 77776666),
+                new Medarbejder("Åbæk", "aabek@example.com", 22221111)
+            };
+        }
+
+
+
+
+
         public static IEnumerable<string> StartTidOptions()
         {
             return new[]
@@ -52,11 +59,21 @@ namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Models.Vagtplan
                 "17:00", "18:00", "19:00", "20:00", "21:00", "22:00", "23:00"
             };
         }
-        //public override string ToString()
-        //{
-        //	return $"{Medarbejder.Name} - {StartTid.ToString("hh:mm")} to {SlutTid.ToString("hh:mm")}";
-        //}
-
+        public class Medarbejder
+        {
+            private static int nextId = 1;
+            public int Id { get; set; }
+            public string MedarbejderName { get; set; }
+            public string MedarbejderEmail { get; set; }
+            public int MedarbejderTlf { get; set; }
+            public Medarbejder(string medarbejderName, string medarbejderEmail, int medarbejderTlf)
+            {
+                Id = nextId++;
+                MedarbejderName = medarbejderName;
+                MedarbejderEmail = medarbejderEmail;
+                MedarbejderTlf = medarbejderTlf;
+            }
+        }
     }
 } 
 
