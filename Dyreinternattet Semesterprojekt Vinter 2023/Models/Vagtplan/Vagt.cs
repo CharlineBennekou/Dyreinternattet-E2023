@@ -2,13 +2,15 @@
 {
     public class Vagt
     {
+        #region Properties
         private static int nextId = 1;
         public int Id { get; set; }
         public Medarbejder AssignedMedarbejder { get; set; }
         public string StartTid { get; set; }
         public string SlutTid { get; set; }
+        #endregion
 
-        public Vagt()
+        public Vagt() // Default Constructor
         {
             Id = nextId++;
             AssignedMedarbejder = new Medarbejder("", "", 0);

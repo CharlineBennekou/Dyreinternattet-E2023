@@ -4,19 +4,19 @@ using System.Diagnostics.Eventing.Reader;
 
 namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Services
 {
-    public class DyreService : IDyreService //Bruger interface
+    public class _dyreService : IDyreService //Bruger interface
     {
         private JsonFileDyrService JsonFileDyrService { get; set; } //Auto property for Jsonfilservice
 
         private List<Dyr> _dyreliste; //Instance field kan referere til en liste af dyr
 
-        public DyreService(JsonFileDyrService jsonFileDyrService) //Når DyreService constructes, henter dyrelisten data fra jsonfil
+        public _dyreService(JsonFileDyrService jsonFileDyrService) //Når DyreService constructes, henter dyrelisten data fra jsonfil
         {
             JsonFileDyrService = jsonFileDyrService;
             //_dyreliste = MockDyr.GetMockDyr();
             _dyreliste = JsonFileDyrService.GetJsonDyr().ToList();
         }
-        public DyreService() //Backup hvis json ikk virker
+        public _dyreService() //Backup hvis json ikk virker
         {
             _dyreliste = MockDyr.GetMockDyr();
         }
@@ -111,5 +111,30 @@ namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Services
             }
             return nameSearch;
         }
+
+
+
+        public IEnumerable<Dyr> DyreFilter(string Race, Dyr.DyreArt Art, Dyr.EKøn Køn)
+        {
+            List<Dyr> filterList = new List<Dyr>();
+            foreach (Dyr dyr in _dyreliste)
+            {
+                if (dyr.Race == Race && dyr.Art == Art && dyr.Køn == Køn)
+                {
+                    filterList.Add(dyr);
+                }
+
+            }
+            return filterList;
+
+
+
+
+        }
+
+        //public IEnumerable<Dyr> DyrFilter(string Race, Dyr.DyreArt Art, Dyr.EKøn Køn)
+        //{
+        //    throw new NotImplementedException();
+        //}
     }
 }

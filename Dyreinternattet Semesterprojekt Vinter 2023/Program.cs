@@ -3,14 +3,12 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
-builder.Services.AddSingleton<IDyreService, DyreService>();
+builder.Services.AddSingleton<IDyreService, _dyreService>();
 builder.Services.AddSingleton<IVagtService, VagtService>();
 builder.Services.AddSingleton<IFrivilligService, FrivilligService>();
-builder.Services.AddSingleton<IIndService, IndService>();
 builder.Services.AddTransient<JsonFileDyrService>();
 builder.Services.AddTransient<JsonFileVagtService>();
 builder.Services.AddTransient<JsonFileFrivilligService>();
-builder.Services.AddTransient<JsonFileIndService>();
 
 
 var app = builder.Build();
