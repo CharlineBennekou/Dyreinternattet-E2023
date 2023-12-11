@@ -15,8 +15,6 @@
   {
     "ID": 2,
     "Art": 1,
-    "Navn": "filip24",
-    "Race": "uhu",
     "K\u00F8n": 0,
     "Navn": "Filip2",
     "Race": "Huskat",
@@ -41,33 +39,29 @@
     "Beskrivelse": " m"
   },
   {
-    "ID": 4,
-    "Art": 0,
+    "ID": 6,
+    "Art": 1,
     "K\u00F8n": 0,
-    "Navn": "Tester4",
-    "Race": "Testkanin",
-    "Alder": 100,
-    "V\u00E6gt": 1,
+    "Navn": "hatice",
+    "Race": "ghg",
+    "Alder": 12,
+    "V\u00E6gt": 5,
     "VaccineStatus": true,
-    "ErAdopteret": false,
-    "ImagePath": "/images/image1.png",
-    "Beskrivelse": "Tester crud fr cda"
+    "ErAdopteret": true,
+    "ImagePath": "/images/dog1.jpg",
+    "Beskrivelse": "d"
   },
   {
     "ID": 5,
-    "Art": 0,
-    "Navn": "hej3000",
+    "Art": 1,
     "K\u00F8n": 0,
-    "Navn": "hej5",
-    "Race": "Storhund",
-    "Alder": 2,
-    "V\u00E6gt": 3,
-    "VaccineStatus": false,
-    "ErAdopteret": false,
-    "V\u00E6gt": 32,
+    "Navn": "Pop ",
+    "Race": "Hus",
+    "Alder": 551,
+    "V\u00E6gt": 25,
     "VaccineStatus": true,
     "ErAdopteret": true,
-    "ImagePath": "/images/image1.png",
-    "Beskrivelse": "1002"
+    "ImagePath": "/images/dog1.jpg",
+    "Beskrivelse": "f"
   }
 ]

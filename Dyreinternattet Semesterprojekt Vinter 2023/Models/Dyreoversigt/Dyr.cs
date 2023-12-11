@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using DocumentFormat.OpenXml.Spreadsheet;
+using System.ComponentModel.DataAnnotations;
 using System.Reflection;
 
 namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Models.Dyreoversigt
@@ -35,11 +36,36 @@ namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Models.Dyreoversigt
         public string Beskrivelse { get; set; }
 
 
+        
+
+
+
+
+
         //Den defaulte constructor skal have et Id ligemeget hvad
         public Dyr()
         {
             ID = nextId++;
-            ImagePath = "/images/image1.png";
+            switch (Art)
+            {
+                case DyreArt.Hund:
+                    ImagePath = "/images/dog1.jpg";
+                    break;
+                case DyreArt.Kat:
+                    ImagePath = "/images/kat1.jpg";
+                    break;
+                case DyreArt.Kanin:
+                    ImagePath = "/images/kanin1.jpg";
+                    break;
+                default:
+                    ImagePath = null;
+                    break;
+            }
+
+
+
+
+
         }
 
 

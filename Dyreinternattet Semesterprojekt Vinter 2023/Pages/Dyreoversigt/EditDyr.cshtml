@@ -3,7 +3,13 @@
 @using Dyreinternattet_Semesterprojekt_Vinter_2023.Models.Dyreoversigt;
 @{
 }
-<form method="post" class="professional-form">
+
+<div class="row">
+    <div class="col-lg-9 mx-auto rounded border p-3">
+        <h2 class="text-center mb-5">Opdatere dit dyr!</h2>
+<div method="post" class="professional-form">
+    <form method="post">
+
     
     <div class="form-group">
         <label asp-for="Dyr.Art" class="control-label"></label>
@@ -64,8 +70,9 @@
             <input type="submit" value="Update" class="btn btn-primary" />
         </div>
     </p>
-</form>
-
+            </form>
+</div>
+</div>
 <p>
     <a asp-page="Dyreoversigt/GetAllDyr">Back to List</a>
 </p>

@@ -1,4 +1,3 @@
-
 @media (min-width: 768px) {
     html {
         font-size: 16px;
@@ -35,7 +34,8 @@ nav {
 }
 
 .nav-link {
-    color: darkred;
+    color: indianred;
+    font-weight: bold;
     text-decoration: none;
     margin-right: 100px;
     display: inline-block; /* Add this to make the links display inline */
@@ -111,7 +111,7 @@ h1 {
 
 /*Rød boks med tekst og billede */
 .farve {
-    background-color: indianred;
+    background-color: saddlebrown;
     color: white;
     overflow: hidden; /* Clear the float and contain the floated elements */
     padding: 20px; /*Adjust padding as needed */
