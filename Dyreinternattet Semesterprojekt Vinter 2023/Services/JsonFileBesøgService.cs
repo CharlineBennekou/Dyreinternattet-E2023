@@ -18,9 +18,6 @@
             }
         }
 
-        public void SaveJsonBesøg(List<Besøg>)
-
-
     }
 
 

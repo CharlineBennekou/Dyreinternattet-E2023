@@ -131,5 +131,10 @@ namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Services
 
 
         }
+
+        public IEnumerable<Dyr> DyrFilter(string Race, Dyr.DyreArt Art, Dyr.EKøn Køn)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
