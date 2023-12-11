@@ -1,5 +1,6 @@
 ﻿@page
 @model Dyreinternattet_Semesterprojekt_Vinter_2023.Pages.Indmeldinger.CreateIndmeldingerModel
+@using Dyreinternattet_Semesterprojekt_Vinter_2023.Models.Indmeldinger;
 @{
 }
 
@@ -26,15 +27,12 @@
         <form method="post">
 
             <div class="row mb-3">
-                <label class="col-sm-4 col-form-label">Hvilket dyr har du?</label>
+                <label asp-for="@Model.Indmelding.DyrArt" class="col-sm-4 col-form-label">Hvilket dyr har du?</label>
                 <div class="col-sm-8">
-                    <select asp-for="DyrType" class="form-select" name="DyrType">
-                        <option value="" disabled selected>Vælg</option>
-                        <option value="Hund">Hund</option>
-                        <option value="Kat">Kat</option>
-                        <option value="Kanin">Kanin</option>
-                    </select>
-                    <span asp-validation-for="DyrType" class="text-danger"></span>
+                    <select asp-for="@Model.Indmelding.DyrArt" class="form-select" asp-items="Html.GetEnumSelectList<Indmelding.DyrType>()" name="DyrArt">
+                        <option selected="selected" value="" disabled>Vælg</option>
+                    </select>                    
+                    <span asp-validation-for="@Model.Indmelding.DyrArt" class="text-danger"></span>
                 </div>
             </div>
 
@@ -47,6 +45,18 @@
                 </div>
             </div>
 
+
+            <div class="row mb-3">
+                <label asp-for="@Model.Indmelding.DyrGender" class="col-sm-4 col-form-label">Hvilket køn er dit dyr?</label>
+                <div class="col-sm-8">
+                    <select asp-for="@Model.Indmelding.DyrGender" class="form-select" asp-items="Html.GetEnumSelectList<Indmelding.DyrKøn>()" name="DyrGender">
+                        <option selected="selected" value="" disabled>Vælg</option>
+                    </select>
+                    <span asp-validation-for="@Model.Indmelding.DyrGender" class="text-danger"></span>
+                </div>
+            </div>
+
+
             <div class="row mb-3">
                 <label class="col-sm-4 col-form-label">Hvilken race er dit dyr?</label>
                 <div class="col-sm-8">
@@ -58,7 +68,7 @@
             <div class="row mb-3">
                 <label class="col-sm-4 col-form-label">Hvor gammel er dit dyr?</label>
                 <div class="col-sm-8">
-                    <input class="form-control" asp-for="Age" placeholder="2" value="" />
+                    <input class="form-control" asp-for="Age" placeholder="2" value="0" />
                     <span asp-validation-for="Age" class="text-danger"></span>
                 </div>
             </div>
@@ -66,7 +76,7 @@
             <div class="row mb-3">
                 <label class="col-sm-4 col-form-label">Hvor meget vejer dit dyr?</label>
                 <div class="col-sm-8">
-                    <input class="form-control" asp-for="Weight" placeholder="3,5" value="" />
+                    <input class="form-control" asp-for="Weight" placeholder="3,5" value="0" />
                     <span asp-validation-for="Weight" class="text-danger"></span>
                 </div>
             </div>
@@ -119,7 +129,7 @@
             <div class="row mb-3">
                 <label class="col-sm-4 col-form-label">Postnummer</label>
                 <div class="col-sm-8">
-                    <input class="form-control" asp-for="EjerPost" placeholder="2665" value="" />
+                    <input class="form-control" asp-for="EjerPost" placeholder="2665" value="0" />
                     <span asp-validation-for="EjerPost" class="text-danger"></span>
                 </div>
             </div>

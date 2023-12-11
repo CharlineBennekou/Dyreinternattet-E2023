@@ -1,6 +1,7 @@
 using Dyreinternattet_Semesterprojekt_Vinter_2023.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Dyreinternattet_Semesterprojekt_Vinter_2023.Models.Dyreoversigt;
 
 namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Pages.Indmeldinger
 {

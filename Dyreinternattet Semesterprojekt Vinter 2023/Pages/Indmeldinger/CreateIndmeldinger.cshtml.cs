@@ -2,20 +2,25 @@ using Dyreinternattet_Semesterprojekt_Vinter_2023.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using System.ComponentModel.DataAnnotations;
+using Dyreinternattet_Semesterprojekt_Vinter_2023.Models.Dyreoversigt;
 
 namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Pages.Indmeldinger
 {
     public class CreateIndmeldingerModel : PageModel
     {
 
-        //Dyr propeties
-        [BindProperty]
-        [Required(ErrorMessage = "Vælg venligst hvilket dyr du har")]
-        public string DyrType { get; set; }
+
+        //[BindProperty]
+        //[Required(ErrorMessage = "Vælg venligst hvilket dyr du har")]
+        //public DyrType DyrArt { get; set; }
 
         [BindProperty]
         [Required(ErrorMessage = "Indtast venligst et navn på dyret")]
         public string DyrName { get; set; }
+
+        //[BindProperty]
+        //[Required(ErrorMessage = "Vælg venligst hvilket dyr du har")]
+        //public Dyr EKøn { get; set; }
 
         [BindProperty]
         [Required(ErrorMessage = "Indtast venligst racen på dyret")]
@@ -61,7 +66,8 @@ namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Pages.Indmeldinger
         [Required(ErrorMessage = "Indtast venligst en gyldig email")]
         public string EjerMail { get; set; }
 
-
+        [BindProperty]
+        public Models.Indmeldinger.Indmelding Indmelding { get; set; }
 
         private IIndService _indService;
 
@@ -70,8 +76,9 @@ namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Pages.Indmeldinger
             _indService = indService;
         }
 
-        [BindProperty]
-        public Models.Indmeldinger.Indmelding Indmelding { get; set; }
+
+
+
 
         public string errorMessage = "";
 
@@ -88,6 +95,7 @@ namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Pages.Indmeldinger
             if (!ModelState.IsValid)
             {
                 errorMessage = "Alle felter er ikke blevet udfyldt";
+
                 return Page();
             }
             _indService.AddInd(Indmelding);
