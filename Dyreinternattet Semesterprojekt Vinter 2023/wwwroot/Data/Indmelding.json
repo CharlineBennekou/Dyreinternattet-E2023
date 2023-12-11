@@ -62,5 +62,21 @@
     "EjerPost": 8065,
     "EjerTlf": "90958595",
     "EjerMail": "alipostej42@gmail.com"
+  },
+  {
+    "ID": 5,
+    "DyrArt": 1,
+    "DyrName": "Abdi",
+    "DyrGender": 0,
+    "Race": "Huskat",
+    "Age": 5,
+    "Weight": 4,
+    "IsVac": true,
+    "DyrInfo": "Min elskede Abdi f\u00E5r mine \u00F8jne til at kl\u00F8",
+    "EjerName": "Jonas Nielsen",
+    "EjerAddress": "Sandgade 40",
+    "EjerPost": 2665,
+    "EjerTlf": "89895748",
+    "EjerMail": "nielsen40@gmail.com"
   }
 ]
