@@ -11,6 +11,23 @@ namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Pages.Account
         public Credential Credential { get; set; }
         public void OnGet()
         {
+
+        }
+
+        public IActionResult onPost()
+        {
+            if (ModelState.IsValid)
+            {
+                if (Credential.UserName == "admin" && Credential.Password == "kode")
+                {
+                    return RedirectToPage("index");
+
+                }
+                ModelState.AddModelError(string.Empty, "invalid login attempt");
+            }
+            return null;
+            Console.WriteLine("modelstate invalid");
+
         }
 
        
