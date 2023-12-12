@@ -35,11 +35,14 @@
                         @Model.Dyr.Beskrivelse
                 </p>
             </div>
-
-            <a class="btn btn-primary btn-sm" type="button" title="Edit"
-               asp-page="EditDyr" asp-route-id="@Model.Dyr.ID">Edit</a>
-            <a class="btn btn-danger btn-sm " type="button" title="Delete"
-               asp-page="DeleteDyr" asp-route-id="@Model.Dyr.ID">Delete</a>
+            @if (User.Identity.IsAuthenticated) //viser kun knapper hvis bruger er authenticated
+                 {
+                <a class="btn btn-primary btn-sm" type="button" title="Edit"
+                   asp-page="EditDyr" asp-route-id="@Model.Dyr.ID">Edit</a>
+                <a class="btn btn-danger btn-sm " type="button" title="Delete"
+                   asp-page="DeleteDyr" asp-route-id="@Model.Dyr.ID">Delete</a>
+                }
+           
 
         </div>
     </div>

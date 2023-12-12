@@ -1,12 +1,14 @@
 using DocumentFormat.OpenXml.Vml;
 using Dyreinternattet_Semesterprojekt_Vinter_2023.Models.Dyreoversigt;
 using Dyreinternattet_Semesterprojekt_Vinter_2023.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Pages.Dyreoversigt
 {
-    public class EditDyrModel : PageModel
+	[Authorize]
+	public class EditDyrModel : PageModel
     {
         private IDyreService _dyreService;
 

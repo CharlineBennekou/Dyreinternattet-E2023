@@ -56,8 +56,11 @@
 
 
 
-
-                <a class="btn btn-primary" asp-page="CreateDyr">Create a new animal</a>
+    @if (User.Identity.IsAuthenticated) //Viser kun hvis bruger er authenticated
+    {
+         <a class="btn btn-primary" asp-page="CreateDyr">Create a new animal</a>
+    }
+   
 </body>
 
 
