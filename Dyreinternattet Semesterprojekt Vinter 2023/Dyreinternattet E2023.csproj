@@ -8,14 +8,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Models\Andet\**" />
     <Compile Remove="Models\Medarbejder\**" />
+    <Content Remove="Models\Andet\**" />
     <Content Remove="Models\Medarbejder\**" />
+    <EmbeddedResource Remove="Models\Andet\**" />
     <EmbeddedResource Remove="Models\Medarbejder\**" />
+    <None Remove="Models\Andet\**" />
     <None Remove="Models\Medarbejder\**" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Models\Andet\" />
   </ItemGroup>
 
   <ItemGroup>
