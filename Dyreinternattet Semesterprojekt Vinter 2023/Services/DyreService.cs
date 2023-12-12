@@ -100,7 +100,7 @@ namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Services
         }
 
 
-        public IEnumerable<Dyr> Search(string searchTerm, DyreArt art)
+        public IEnumerable<Dyr> Search(string searchTerm)
         {
             List<Dyr> searchResults = new List<Dyr>();
 
@@ -108,10 +108,7 @@ namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Services
             {
                 if (string.IsNullOrEmpty(searchTerm) ||
                     d.Navn.ToLower().Contains(searchTerm.ToLower()) ||
-                    d.Race.ToLower().Contains(searchTerm.ToLower()) ||
-                    d.Art.ToLower().Contains(art.ToLower())
-                    
-
+                    d.Race.ToLower().Contains(searchTerm.ToLower()))
 
                 {
                     searchResults.Add(d);

@@ -27,12 +27,12 @@ namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Pages.Dyreoversigt
         [BindProperty]
         public string SearchString { get; set; }
 
-        public IActionResult OnPostNameSearch()
+        public IActionResult OnPostSearch()
         {
-            Dyreliste = _dyreService.NameSearch(SearchString).ToList();
+            Dyreliste = _dyreService.Search(SearchString).ToList();
             return Page();
         }
-
+    }
 
         //public IActionResult OnPostDyrFilter()
         //{
@@ -40,8 +40,8 @@ namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Pages.Dyreoversigt
         //    return Page();
         //}
 
-        public IActionResult 
+        //public IActionResult 
 
 
-    }
+    
 }
