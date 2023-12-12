@@ -114,12 +114,12 @@ namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Services
 
 
 
-        public IEnumerable<Dyr> DyreFilter(string Race, Dyr.DyreArt Art, Dyr.EKøn Køn)
+        public IEnumerable<Dyr> DyreFilter(Dyr.DyreArt Art, Dyr.EKøn Køn)
         {
             List<Dyr> filterList = new List<Dyr>();
             foreach (Dyr dyr in _dyreliste)
             {
-                if (dyr.Race == Race && dyr.Art == Art && dyr.Køn == Køn)
+                if (dyr.Art == Art && dyr.Køn == Køn)
                 {
                     filterList.Add(dyr);
                 }
@@ -132,9 +132,9 @@ namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Services
 
         }
 
-        //public IEnumerable<Dyr> DyrFilter(string Race, Dyr.DyreArt Art, Dyr.EKøn Køn)
-        //{
-        //    throw new NotImplementedException();
-        //}
+        public IEnumerable<Dyr> DyrFilter(Dyr.DyreArt Art, Dyr.EKøn Køn)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

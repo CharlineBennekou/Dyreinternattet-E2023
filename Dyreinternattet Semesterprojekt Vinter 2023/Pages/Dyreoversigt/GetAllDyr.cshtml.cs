@@ -33,13 +33,14 @@ namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Pages.Dyreoversigt
             return Page();
         }
 
-       
+
         //public IActionResult OnPostDyrFilter()
         //{
         //    Dyreliste = _dyreService.DyrFilter.ToList();
         //    return Page();
         //}
 
+        public IActionResult 
 
 
     }
