@@ -118,67 +118,6 @@ h1 {
         }
 
 
-/*Rød boks med tekst og billede */
-.farve {
-    background-color: black;
-    color: white;
-    overflow: hidden; /* Clear the float and contain the floated elements */
-    padding: 20px; /*Adjust padding as needed */
-    margin-top: 30px;
-    margin-left: -170px;
-    margin-right: -170px;
-}
-
-    .farve p {
-        position: absolute;
-        font-family: 'Arial', sans-serif;
-        right: 30px;
-        font-size: 20px;
-        width: 700px; /* Set your desired width */
-        font-weight: bold;
-    }
-
-.image14 {
-    float: left;
-    margin-right: 20px; /* Adjust margin as needed */
-}
-
-    .image14 img {
-        max-width: 100%; /* Make sure the image doesn't exceed its container */
-        height: auto; /* Maintain aspect ratio */
-        display: block; /* Remove extra space below inline images */
-        width: 650px; /* Set your desired width */
-        height: 400px; /*Set your desired height*/
-    }
-
-.p2 {
-    overflow: hidden; /* Clear the float and contain the floated elements */
-    text-align: center;
-    padding: 20px;
-}
-
-.btn1 {
-    background-color: black; /* Set your desired background color */
-    color: darkred; /* Set your desired text color */
-    padding: 10px 20px; /* Adjust padding as needed */
-    font-size: 16px; /* Set your desired font size */
-    border: none; /* Remove border if not needed */
-    cursor: pointer; /* Add a pointer cursor on hover for better user experience */
-    font: bold;
-    transition: background-color 0.3s, transform 0.3s, color 0.3s; /* Adding color transition */
-    position: absolute;
-    bottom: 120px;
-    right: 30px;
-}
-
-    .btn1:hover {
-        background-color: rgba(0, 0, 0, 0.9); /* Darken the background on hover */
-        transform: translateY(-5px) scale(1.05); /* Move the text up and add a subtle scale effect on hover */
-        color: darkred; /* Change text color on hover */
-    }
-
-
-
 /*footer som ligger i Shared/_layout.cshtml*/
 
 .footer {
