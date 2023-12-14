@@ -13,7 +13,7 @@
         <div class="input-group mb-3">
             <input asp-for="SearchString" class="form-control mr-1"
                    placeholder="Enter search term" />
-            <input type="submit" asp-page-handler="NameSearch"
+            <input type="submit" asp-page-handler="Search"
                    value="Search" class="btn btn-primary" />
         </div>
     </form>
@@ -56,8 +56,11 @@
 
 
 
-
-                <a class="btn btn-primary" asp-page="CreateDyr">Create a new animal</a>
+    @if (User.Identity.IsAuthenticated) //Viser kun hvis bruger er authenticated
+    {
+         <a class="btn btn-primary" asp-page="CreateDyr">Create a new animal</a>
+    }
+   
 </body>
 
 

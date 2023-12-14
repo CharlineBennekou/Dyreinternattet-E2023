@@ -10,11 +10,12 @@ namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Services
         void AddDyr(Dyr dyr);
         void UpdateDyr(Dyr dyr);
         Dyr DeleteDyr(int? id);
-        IEnumerable<Dyr> NameSearch(string str);
 
-        //    IEnumerable<Dyr> DyrFilter(string Race, Dyr.DyreArt Art, Dyr.EKøn Køn);
-        //}
+        //IEnumerable<Dyr> search(string str);
 
+        IEnumerable<Dyr> Search(string searchTerm);
     }
-   
+
 }
+   
+

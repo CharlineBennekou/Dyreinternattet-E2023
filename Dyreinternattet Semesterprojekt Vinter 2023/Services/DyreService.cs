@@ -1,6 +1,7 @@
 ﻿using Dyreinternattet_Semesterprojekt_Vinter_2023.Models.Dyreoversigt;
 using Dyreinternattet_Semesterprojekt_Vinter_2023.Data;
 using System.Diagnostics.Eventing.Reader;
+using static Dyreinternattet_Semesterprojekt_Vinter_2023.Models.Dyreoversigt.Dyr;
 
 namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Services
 {
@@ -98,28 +99,53 @@ namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Services
             return _dyreliste;
         }
 
-        public IEnumerable<Dyr> NameSearch(string str) //metode til søgefunktion med navn
+
+        public IEnumerable<Dyr> Search(string searchTerm)
         {
-            List<Dyr> nameSearch = new List<Dyr>();
+            List<Dyr> searchResults = new List<Dyr>();
+
             foreach (Dyr d in _dyreliste)
             {
-                if ((string.IsNullOrEmpty(str)) || (d.Navn.ToLower().Contains(str.ToLower())))
-                        {
-                            nameSearch.Add(d);
-                        }
+                if (string.IsNullOrEmpty(searchTerm) ||
+                    d.Navn.ToLower().Contains(searchTerm.ToLower()) ||
+                    d.Race.ToLower().Contains(searchTerm.ToLower()))
 
+                {
+                    searchResults.Add(d);
+                }   
             }
-            return nameSearch;
+
+            return searchResults;
         }
 
 
 
-        public IEnumerable<Dyr> DyreFilter(string Race, Dyr.DyreArt Art, Dyr.EKøn Køn)
+
+
+
+
+        //public IEnumerable<Dyr> NameSearch(string str) //metode til søgefunktion med navn
+        //{
+        //    List<Dyr> nameSearch = new List<Dyr>();
+        //    foreach (Dyr d in _dyreliste)
+        //    {
+        //        if ((string.IsNullOrEmpty(str)) || (d.Navn.ToLower().Contains(str.ToLower())))
+        //                {
+        //                    nameSearch.Add(d);
+        //                }
+
+        //    }
+        //    return nameSearch;
+        //}
+
+
+
+        public IEnumerable<Dyr> DyreFilter(Dyr.DyreArt Art, Dyr.EKøn Køn)
         {
             List<Dyr> filterList = new List<Dyr>();
             foreach (Dyr dyr in _dyreliste)
             {
-                if (dyr.Race == Race && dyr.Art == Art && dyr.Køn == Køn)
+                if (dyr.Art == Art && dyr.Køn == Køn)
                 {
                     filterList.Add(dyr);
                 }
@@ -132,9 +158,9 @@ namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Services
 
         }
 
-        //public IEnumerable<Dyr> DyrFilter(string Race, Dyr.DyreArt Art, Dyr.EKøn Køn)
-        //{
-        //    throw new NotImplementedException();
-        //}
+        public IEnumerable<Dyr> DyrFilter(Dyr.DyreArt Art, Dyr.EKøn Køn)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

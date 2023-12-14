@@ -18,10 +18,25 @@
                 <a class="nav-link" asp-area="" asp-page="/Index">Home</a>
                 <a class="nav-link" asp-area="" asp-page="/Frivilligt/CreateFrivillig">Bliv Frivillig</a>
                 <a class="nav-link" asp-area="" asp-page="/Dyreoversigt/GetAllDyr">Se dyr</a>
-                <a class="nav-link" asp-area="" asp-page="/Vagtplan/GetAllVagter">Vagtplan</a>
-                <a class="nav-link" asp-area="" asp-page="/Frivilligt/GetAllFrivillige">Se Frivillige</a>
+                
                 <a class="nav-link" asp-area="" asp-page="/Indmeldinger/CreateIndmeldinger">Indmeld dit dyr</a>
-                <a class="nav-link" asp-area="" asp-page="/Indmeldinger/GetAllIndmelding">Se indmeldinger</a>
+                
+                @if (User.Identity.IsAuthenticated) //tjekker om bruger er logget ind
+                     {
+                    <a class="nav-link" asp-area="" asp-page="/Vagtplan/GetAllVagter">Vagtplan</a>
+                    <a class="nav-link" asp-area="" asp-page="/Frivilligt/GetAllFrivillige">Se Frivillige</a>
+                    <a class="nav-link" asp-area="" asp-page="/Indmeldinger/GetAllIndmelding">Se indmeldinger</a>
+                         <form method="post" asp-page="/Account/Logout">
+                         <button type="submit" class="nav-link btn btn-link">Log ud</button> @* Viser log ud knap *@
+                         </form>
+                    }
+                    else
+                    {
+                        <a class="nav-link" asp-area="" asp-page="/Account/Login">Log ind</a> @* Viser log ind link *@
+                    }
+
+                
+               
             </div>
         </nav>
     </header>
