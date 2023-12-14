@@ -28,6 +28,11 @@ namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Pages.Dyreoversigt
 
         public IActionResult OnGet()
         {
+            var userClaims = User.Claims;
+            foreach (var claim in userClaims)
+            {
+                Console.WriteLine($"{claim.Type}: {claim.Value}");
+            }
             return Page();
         }
         public IActionResult OnPost()

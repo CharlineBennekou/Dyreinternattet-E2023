@@ -1,12 +1,14 @@
 using Dyreinternattet_Semesterprojekt_Vinter_2023.Models;
 using Dyreinternattet_Semesterprojekt_Vinter_2023.Models.Vagtplan;
 using Dyreinternattet_Semesterprojekt_Vinter_2023.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Pages.Vagtplan
 {
+    [Authorize]
     public class EditVagtModel : PageModel
     {
         private IVagtService _vagtService;

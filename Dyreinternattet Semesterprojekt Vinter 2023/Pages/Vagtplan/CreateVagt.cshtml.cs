@@ -2,6 +2,7 @@ using Dyreinternattet_Semesterprojekt_Vinter_2023.Data;
 using Dyreinternattet_Semesterprojekt_Vinter_2023.Models;
 using Dyreinternattet_Semesterprojekt_Vinter_2023.Models.Vagtplan;
 using Dyreinternattet_Semesterprojekt_Vinter_2023.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
@@ -9,7 +10,7 @@ using System.Collections.Generic;
 
 namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Pages.Vagtplan
 {
-
+    [Authorize]
     public class CreateVagtModel : PageModel
     {
         private readonly IVagtService _vagtService;

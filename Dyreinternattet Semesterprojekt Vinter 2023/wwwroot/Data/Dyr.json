@@ -9,8 +9,8 @@
     "V\u00E6gt": 5.8,
     "VaccineStatus": true,
     "ErAdopteret": false,
-    "ImagePath": "/images/image1.png",
-    "Beskrivelse": "Vores f\u00F8rste hund :)"
+    "ImagePath": "/images/dog1.jpg",
+    "Beskrivelse": "Vores f\u00F8rste hund :)!"
   },
   {
     "ID": 2,
@@ -22,8 +22,8 @@
     "V\u00E6gt": 6,
     "VaccineStatus": true,
     "ErAdopteret": true,
-    "ImagePath": "/images/image1.png",
-    "Beskrivelse": "uuuyy"
+    "ImagePath": "/images/dog1.jpg",
+    "Beskrivelse": "Dette er en kat. Han bider."
   },
   {
     "ID": 3,
