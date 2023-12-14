@@ -15,29 +15,38 @@ body {
     margin-bottom: 60px;
     margin: 0;
     font-family: 'Arial', sans-serif;
-    background-color: antiquewhite;
+    background-color: whitesmoke;
     padding-bottom: 90px;
 }
 
 /* nav bar som ligger i Shared/_layout.cshtml*/
 
 header {
-    background-color: black;
-    padding: 15px 0;
+    background-color: #fff;
+    padding: 20px 0;
 }
 
 nav {
     display: flex;
-    justify-content: flex-start;
-    max-width: 960px;
+    justify-content: space-between; 
+    align-items: center; 
+    max-width: 90%;
     margin: 0 auto;
+    background-color: #fff; 
+    padding: 10px 10px; 
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow for depth */
 }
-
+.navBarImage {
+    width: auto; /* Allow the image to scale proportionally */
+    max-height: 150px; /* Set a maximum height for the image */
+    margin-right: 20px; /* Add some space between the image and links */
+}
 .nav-link {
     color: indianred;
     font-weight: bold;
     text-decoration: none;
-    margin-right: 100px;
+    margin-right: 20px;
     display: inline-block; /* Add this to make the links display inline */
 }
 
@@ -111,19 +120,19 @@ h1 {
 
 /*Rød boks med tekst og billede */
 .farve {
-    background-color: saddlebrown;
+    background-color: black;
     color: white;
     overflow: hidden; /* Clear the float and contain the floated elements */
     padding: 20px; /*Adjust padding as needed */
     margin-top: 30px;
-    margin-left: -90px;
-    margin-right: -90px;
+    margin-left: -170px;
+    margin-right: -170px;
 }
 
     .farve p {
         position: absolute;
         font-family: 'Arial', sans-serif;
-        right: 50px;
+        right: 30px;
         font-size: 20px;
         width: 700px; /* Set your desired width */
         font-weight: bold;
@@ -214,7 +223,7 @@ h1 {
     display: flex;
     flex-direction: column;
     height: 100%; /* Ensure the container takes the full height of the .image-item */
-    background-color: black;
+    background-color: #A29691;
     color: white;
 }
 
@@ -225,8 +234,8 @@ h1 {
 }
 
 .image-caption {
-    background-color: black; /* Set your desired background color */
-    color: darkred; /* Set your desired text color */
+    background-color: floralwhite; /* Set your desired background color */
+    color: black; /* Set your desired text color */
     padding: 10px 20px; /* Adjust padding as needed */
     font-size: 16px; /* Set your desired font size */
     border: none; /* Remove border if not needed */
@@ -250,7 +259,7 @@ h1 {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: darkred;
+    background-color: #D7CBC6;
     text-align: center;
     padding: 43px;
     margin-top: -10px;
@@ -284,7 +293,7 @@ h1 {
 /*side til hvert dyr NY SIDE*/
 /*DYR 1*/
 
-.Dyr1 {
+/*.Dyr1 {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -298,13 +307,13 @@ h1 {
 }
 
 .dyrimage1 {
-    width: 50%; /* Adjust as needed */
-    height: -800px;
+    width: 50%;*/ /* Adjust as needed */
+    /*height: -800px;
 }
 
 .dyrcontent {
-    width: 45%; /* Adjust as needed */
-}
+    width: 45%;*/ /* Adjust as needed */
+/*}
 
 .Dyr1 h1 {
     font-family: 'Arial', sans-serif;
@@ -327,388 +336,6 @@ h1 {
     width: 100%;
     height: 100%;
     object-fit: cover;
-}
+}*/
 
 
-/*DYR 2*/
-
-.Dyr2 {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: white;
-    text-align: center;
-    padding: 43px;
-    margin-top: -10px;
-    margin-left: -90px;
-    margin-right: -90px;
-    height: 600px;
-}
-
-.dyrimage2 {
-    width: 50%; /* Adjust as needed */
-    height: -800px;
-}
-
-.dyrcontent2 {
-    width: 45%; /* Adjust as needed */
-}
-
-.Dyr2 h1 {
-    font-family: 'Arial', sans-serif;
-    font-size: 20px;
-    font-weight: bold;
-    text-align: center;
-    margin-top: -250px;
-}
-
-.p5 {
-    font-family: 'Arial', sans-serif;
-    font-size: 13px;
-    font-weight: bold;
-    text-align: left;
-    margin-bottom: -250px;
-    color: darkred;
-}
-
-
-.dyrimage2 img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-/*DYR 3*/
-
-.Dyr3 {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: darkred;
-    text-align: center;
-    padding: 43px;
-    margin-top: -10px;
-    margin-left: -90px;
-    margin-right: -90px;
-    height: 600px;
-}
-
-.dyrimage3 {
-    width: 50%; /* Adjust as needed */
-    height: -800px;
-}
-
-.dyrcontent3 {
-    width: 45%; /* Adjust as needed */
-}
-
-.Dyr3 h1 {
-    font-family: 'Arial', sans-serif;
-    font-size: 20px;
-    font-weight: bold;
-    text-align: center;
-    margin-top: -250px;
-}
-
-.p6 {
-    font-family: 'Arial', sans-serif;
-    font-size: 13px;
-    font-weight: bold;
-    text-align: left;
-    margin-bottom: -250px;
-    color: white;
-}
-
-
-
-.dyrimage3 img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-/*DYR 4*/
-
-.Dyr4 {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: white;
-    ;
-    text-align: center;
-    padding: 43px;
-    margin-top: -10px;
-    margin-left: -90px;
-    margin-right: -90px;
-    height: 600px;
-}
-
-.dyrimage4 {
-    width: 50%; /* Adjust as needed */
-    height: -800px;
-}
-
-.dyrcontent4 {
-    width: 45%; /* Adjust as needed */
-}
-
-.Dyr4 h1 {
-    font-family: 'Arial', sans-serif;
-    font-size: 20px;
-    font-weight: bold;
-    text-align: center;
-    margin-top: -250px;
-}
-
-.p7 {
-    font-family: 'Arial', sans-serif;
-    font-size: 13px;
-    font-weight: bold;
-    text-align: left;
-    margin-bottom: -250px;
-    color: darkred;
-}
-
-
-
-.dyrimage4 img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-
-/*DYR 5*/
-
-.Dyr5 {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: darkred;
-    text-align: center;
-    padding: 43px;
-    margin-top: -10px;
-    margin-left: -90px;
-    margin-right: -90px;
-    height: 600px;
-}
-
-.dyrimage5 {
-    width: 50%; /* Adjust as needed */
-    height: -800px;
-}
-
-.dyrcontent5 {
-    width: 45%; /* Adjust as needed */
-}
-
-.Dyr5 h1 {
-    font-family: 'Arial', sans-serif;
-    font-size: 20px;
-    font-weight: bold;
-    text-align: center;
-    margin-top: -250px;
-}
-
-.p8 {
-    font-family: 'Arial', sans-serif;
-    font-size: 13px;
-    font-weight: bold;
-    text-align: left;
-    margin-bottom: -250px;
-    color: white;
-}
-
-.dyrimage5 img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-/*DYR 6*/
-
-
-.Dyr6 {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: white;
-    text-align: center;
-    padding: 43px;
-    margin-top: -10px;
-    margin-left: -90px;
-    margin-right: -90px;
-    height: 600px;
-}
-
-.dyrimage6 {
-    width: 50%; /* Adjust as needed */
-    height: -800px;
-}
-
-.dyrcontent6 {
-    width: 45%; /* Adjust as needed */
-}
-
-.Dyr6 h1 {
-    font-family: 'Arial', sans-serif;
-    font-size: 20px;
-    font-weight: bold;
-    text-align: center;
-    margin-top: -250px;
-}
-
-.p9 {
-    font-family: 'Arial', sans-serif;
-    font-size: 13px;
-    font-weight: bold;
-    text-align: left;
-    margin-bottom: -250px;
-    color: darkred;
-}
-
-.dyrimage6 img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-/*DYR 7*/
-
-
-.Dyr7 {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: darkred;
-    text-align: center;
-    padding: 43px;
-    margin-top: -10px;
-    margin-left: -90px;
-    margin-right: -90px;
-    height: 600px;
-}
-
-.dyrimage7 {
-    width: 50%; /* Adjust as needed */
-    height: -800px;
-}
-
-.dyrcontent7 {
-    width: 45%; /* Adjust as needed */
-}
-
-.Dyr7 h1 {
-    font-family: 'Arial', sans-serif;
-    font-size: 20px;
-    font-weight: bold;
-    text-align: center;
-    margin-top: -250px;
-}
-
-.p10 {
-    font-family: 'Arial', sans-serif;
-    font-size: 13px;
-    font-weight: bold;
-    text-align: left;
-    margin-bottom: -250px;
-    color: white;
-}
-
-.dyrimage7 img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-/*DYR 8*/
-.Dyr8 {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: white;
-    text-align: center;
-    padding: 43px;
-    margin-top: -10px;
-    margin-left: -90px;
-    margin-right: -90px;
-    height: 600px;
-}
-
-.dyrimage8 {
-    width: 50%; /* Adjust as needed */
-    height: -800px;
-}
-
-.dyrcontent8 {
-    width: 45%; /* Adjust as needed */
-}
-
-.Dyr8 h1 {
-    font-family: 'Arial', sans-serif;
-    font-size: 20px;
-    font-weight: bold;
-    text-align: center;
-    margin-top: -250px;
-}
-
-.p11 {
-    font-family: 'Arial', sans-serif;
-    font-size: 13px;
-    font-weight: bold;
-    text-align: left;
-    margin-bottom: -250px;
-    color: darkred;
-}
-
-.dyrimage8 img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-/*DYR 9*/
-.Dyr9 {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: darkred;
-    text-align: center;
-    padding: 43px;
-    margin-top: -10px;
-    margin-left: -90px;
-    margin-right: -90px;
-    height: 600px;
-}
-
-.dyrimage9 {
-    width: 50%; /* Adjust as needed */
-    height: -800px;
-}
-
-.dyrcontent9 {
-    width: 45%; /* Adjust as needed */
-}
-
-.Dyr9 h1 {
-    font-family: 'Arial', sans-serif;
-    font-size: 20px;
-    font-weight: bold;
-    text-align: center;
-    margin-top: -250px;
-}
-
-.p12 {
-    font-family: 'Arial', sans-serif;
-    font-size: 13px;
-    font-weight: bold;
-    text-align: left;
-    margin-bottom: -250px;
-    color: white;
-}
-
-.dyrimage9 img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}

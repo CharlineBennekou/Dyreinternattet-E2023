@@ -12,6 +12,9 @@
     <header>
         <nav>
             <div>
+                <img src="~/images/zealandDyrTransp.png" class="navBarImage" />
+            </div>
+            <div>
                 <a class="nav-link" asp-area="" asp-page="/Index">Home</a>
                 <a class="nav-link" asp-area="" asp-page="/Frivilligt/CreateFrivillig">Bliv Frivillig</a>
                 <a class="nav-link" asp-area="" asp-page="/Dyreoversigt/GetAllDyr">Se dyr</a>
@@ -37,6 +40,7 @@
             </div>
         </nav>
     </header>
+
     <div class="container">
         <main role="main" class="pb-3">
             @RenderBody()

@@ -78,5 +78,21 @@
     "EjerPost": 2665,
     "EjerTlf": "89895748",
     "EjerMail": "nielsen40@gmail.com"
+  },
+  {
+    "ID": 6,
+    "DyrArt": 2,
+    "DyrName": "Kaninus",
+    "DyrGender": 1,
+    "Race": "Dv\u00E6rg",
+    "Age": 1,
+    "Weight": 3,
+    "IsVac": true,
+    "DyrInfo": "Den er s\u00F8d men f\u00E6lder meget.",
+    "EjerName": "Eksempel 1",
+    "EjerAddress": "Eksempeladr 123",
+    "EjerPost": 1234,
+    "EjerTlf": "12345678",
+    "EjerMail": "eks.mail.com"
   }
 ]
