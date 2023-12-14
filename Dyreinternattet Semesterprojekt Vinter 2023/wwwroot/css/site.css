@@ -22,17 +22,26 @@ body {
 /* nav bar som ligger i Shared/_layout.cshtml*/
 
 header {
-    background-color: black;
-    padding: 15px 0;
+    background-color: #fff;
+    padding: 20px 0;
 }
 
 nav {
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between; 
+    align-items: center; 
     max-width: 960px;
     margin: 0 auto;
+    background-color: #fff; 
+    padding: 20px 20px; 
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow for depth */
 }
-
+.navBarImage {
+    width: auto; /* Allow the image to scale proportionally */
+    max-height: 150px; /* Set a maximum height for the image */
+    margin-right: 10px; /* Add some space between the image and links */
+}
 .nav-link {
     color: indianred;
     font-weight: bold;
