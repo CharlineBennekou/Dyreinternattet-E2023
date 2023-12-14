@@ -3,19 +3,20 @@
 @{
 }
 
-<h1 class="Overskift">
-    <strong>@Model.Dyr.Navn</strong>
-    <br>
-    <br>
-</h1>
 
-<div class="Dyr1">
-    <div class="dyrimage1">
-        <img src="@Model.Dyr.ImagePath" alt="Dyr 1 Image" />
-    </div>
-    <div id="@Model.Dyr.ID" class="dyrcontent">
-        <div class="p4">
-            <p>          
+<div class="HeleDyr1">
+    <h1 class="Overskrift">
+        <strong>@Model.Dyr.Navn</strong>
+        <br>    
+        <br>
+    </h1>
+
+    <div class="Dyr1">
+        <div class="dyrimage1">
+            <img src="@Model.Dyr.ImagePath" alt="Dyr 1 Image" />
+        </div>
+        <div id="@Model.Dyr.ID" class="dyrcontent">
+            <div class="p4">                  
             <p>
                 <div><strong>Alder:</strong> <p id="aar"> @Model.Dyr.Alder år</p></div>
             </p>
@@ -55,11 +56,23 @@
         </>
     </div>
 </div>
-
+</div>
 <style>
 
-        .Overskift 
+
+    .HeleDyr1
+    {
+        padding: 50px;
+            margin-left: -50px;
+            margin-right: -50px;
+            padding-bottom: 0px;
+
+    }
+
+
+        .Overskrift 
         {
+           
             font-family: 'Palatino Linotype', sans-serif;
             background-color: #A29691;
             font-size: 40px;
@@ -70,6 +83,8 @@
             margin-left: -90px;
             margin-right: -90px;
             height: 100px;
+
+
         }
 
 
