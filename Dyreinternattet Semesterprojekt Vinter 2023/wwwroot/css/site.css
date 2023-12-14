@@ -15,7 +15,7 @@ body {
     margin-bottom: 60px;
     margin: 0;
     font-family: 'Arial', sans-serif;
-    background-color: antiquewhite;
+    background-color: whitesmoke;
     padding-bottom: 90px;
 }
 
@@ -223,7 +223,7 @@ h1 {
     display: flex;
     flex-direction: column;
     height: 100%; /* Ensure the container takes the full height of the .image-item */
-    background-color: black;
+    background-color: #A29691;
     color: white;
 }
 
@@ -234,8 +234,8 @@ h1 {
 }
 
 .image-caption {
-    background-color: black; /* Set your desired background color */
-    color: darkred; /* Set your desired text color */
+    background-color: floralwhite; /* Set your desired background color */
+    color: black; /* Set your desired text color */
     padding: 10px 20px; /* Adjust padding as needed */
     font-size: 16px; /* Set your desired font size */
     border: none; /* Remove border if not needed */
@@ -259,7 +259,7 @@ h1 {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: darkred;
+    background-color: #D7CBC6;
     text-align: center;
     padding: 43px;
     margin-top: -10px;
