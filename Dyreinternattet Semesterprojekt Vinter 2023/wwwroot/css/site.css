@@ -22,22 +22,31 @@ body {
 /* nav bar som ligger i Shared/_layout.cshtml*/
 
 header {
-    background-color: black;
-    padding: 15px 0;
+    background-color: #fff;
+    padding: 20px 0;
 }
 
 nav {
     display: flex;
-    justify-content: flex-start;
-    max-width: 960px;
+    justify-content: space-between; 
+    align-items: center; 
+    max-width: 90%;
     margin: 0 auto;
+    background-color: #fff; 
+    padding: 10px 10px; 
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow for depth */
 }
-
+.navBarImage {
+    width: auto; /* Allow the image to scale proportionally */
+    max-height: 150px; /* Set a maximum height for the image */
+    margin-right: 20px; /* Add some space between the image and links */
+}
 .nav-link {
     color: indianred;
     font-weight: bold;
     text-decoration: none;
-    margin-right: 100px;
+    margin-right: 20px;
     display: inline-block; /* Add this to make the links display inline */
 }
 
@@ -111,19 +120,19 @@ h1 {
 
 /*Rød boks med tekst og billede */
 .farve {
-    background-color: saddlebrown;
+    background-color: black;
     color: white;
     overflow: hidden; /* Clear the float and contain the floated elements */
     padding: 20px; /*Adjust padding as needed */
     margin-top: 30px;
-    margin-left: -90px;
-    margin-right: -90px;
+    margin-left: -170px;
+    margin-right: -170px;
 }
 
     .farve p {
         position: absolute;
         font-family: 'Arial', sans-serif;
-        right: 50px;
+        right: 30px;
         font-size: 20px;
         width: 700px; /* Set your desired width */
         font-weight: bold;
