@@ -102,5 +102,18 @@
     "ErAdopteret": false,
     "ImagePath": "/images/animals/kaleido.jpg",
     "Beskrivelse": "Kaleido er en dejlig kat som elsker at lege, men ikke med fremmede og foretr\u00E6kker et hjem uden sm\u00E5 b\u00F8rn."
+  },
+  {
+    "ID": 9,
+    "Art": 2,
+    "K\u00F8n": 0,
+    "Navn": "Albert",
+    "Race": "Magisk kanin",
+    "Alder": 4,
+    "V\u00E6gt": 8.5,
+    "VaccineStatus": true,
+    "ErAdopteret": false,
+    "ImagePath": "/images/animals/kanin.jpg",
+    "Beskrivelse": "Stor kanin"
   }
 ]
