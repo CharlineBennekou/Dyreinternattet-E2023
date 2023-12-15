@@ -56,13 +56,13 @@
     "Art": 1,
     "K\u00F8n": 0,
     "Navn": "Nero",
-    "Race": "Kat",
+    "Race": "Sort kat",
     "Alder": 2,
     "V\u00E6gt": 4.8,
     "VaccineStatus": true,
     "ErAdopteret": false,
     "ImagePath": "/images/animals/nero.jpg",
-    "Beskrivelse": "Nero er en lille sort kat som elsker at putte"
+    "Beskrivelse": "Nero er en lille kat med en stor k\u00E6rlighed for musik. Tolererer sm\u00E5 b\u00F8rn s\u00E5 l\u00E6nge de ikke r\u00F8rer hans trommes\u00E6t."
   },
   {
     "ID": 6,
