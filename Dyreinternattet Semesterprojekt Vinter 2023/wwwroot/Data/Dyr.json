@@ -57,12 +57,12 @@
     "K\u00F8n": 0,
     "Navn": "Nero",
     "Race": "Kat",
-    "Alder": 1,
-    "V\u00E6gt": 2,
+    "Alder": 2,
+    "V\u00E6gt": 4.8,
     "VaccineStatus": true,
     "ErAdopteret": false,
-    "ImagePath": "/images/animals/kat.jpg",
-    "Beskrivelse": "asdasd"
+    "ImagePath": "/images/animals/nero.jpg",
+    "Beskrivelse": "Nero er en lille sort kat som elsker at putte"
   },
   {
     "ID": 6,
@@ -76,5 +76,31 @@
     "ErAdopteret": false,
     "ImagePath": "/images/animals/kanin.jpg",
     "Beskrivelse": "En lille ninus"
+  },
+  {
+    "ID": 7,
+    "Art": 0,
+    "K\u00F8n": 1,
+    "Navn": "Snefnug",
+    "Race": "Pomeranian",
+    "Alder": 9,
+    "V\u00E6gt": 4.5,
+    "VaccineStatus": true,
+    "ErAdopteret": true,
+    "ImagePath": "/images/animals/hund.jpg",
+    "Beskrivelse": "En lille adelig pomeranian"
+  },
+  {
+    "ID": 8,
+    "Art": 1,
+    "K\u00F8n": 0,
+    "Navn": "Kaleido",
+    "Race": "British Shorthair",
+    "Alder": 2.9,
+    "V\u00E6gt": 6.7,
+    "VaccineStatus": true,
+    "ErAdopteret": false,
+    "ImagePath": "/images/animals/kaleido.jpg",
+    "Beskrivelse": "Kaleido er en dejlig kat som elsker at lege, men ikke med fremmede og foretr\u00E6kker et hjem uden sm\u00E5 b\u00F8rn."
   }
 ]

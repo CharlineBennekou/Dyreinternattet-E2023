@@ -34,7 +34,7 @@ namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Models.Dyreoversigt
         public bool ErAdopteret { get; set; }
         public string ImagePath { get; set; }
         public string Beskrivelse { get; set; }
-        public IFormFile ImageFile { get; set; }
+        //public IFormFile ImageFile { get; set; }
 
 
         
@@ -48,7 +48,8 @@ namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Models.Dyreoversigt
         {
             ID = nextId++;
             ImagePath = "/images/image1";
-        }
+            //ImageFile = null;
+    }
 
 
         public Dyr(DyreArt art, string navn, string race, double alder, double vægt, bool vaccineStatus, bool erAdopteret, string imagepath, string beskrivelse)

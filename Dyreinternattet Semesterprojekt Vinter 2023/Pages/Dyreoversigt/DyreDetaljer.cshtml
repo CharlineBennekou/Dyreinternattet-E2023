@@ -14,7 +14,7 @@
     <div class="Dyr1">
         <div class="dyrimage1">
             <img src="@Model.Dyr.ImagePath" alt="Dyr 1 Image" />
-            <form method="post" enctype="multipart/form-data">
+          @*   <form method="post" enctype="multipart/form-data">
                 <div class="form-group">
                     <label asp-for="Dyr.ImageFile">Upload nyt billede</label>
                     <input asp-for="Dyr.ImageFile" type="file" class="form-control" />
@@ -25,7 +25,7 @@
                     <input asp-for="Dyr.ID" class="form-control" />
                 </div>
                 <button type="submit">Upload</button>
-            </form>
+            </form> *@
         </div>
         <div id="@Model.Dyr.ID" class="dyrcontent">
             <div class="p4">                  

@@ -62,6 +62,7 @@ namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Services
                         d.VaccineStatus = dyr.VaccineStatus;
                         d.ErAdopteret = dyr.ErAdopteret;
                         d.Beskrivelse = dyr.Beskrivelse;
+                        d.ImagePath = dyr.ImagePath;
 
                         
 
@@ -71,7 +72,7 @@ namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Services
                 JsonFileDyrService.SaveJsonDyr(_dyreliste); //Listen gemmes i json bagefter
             }
         }
-        public void UpdateDyrImage(Dyr dyr)
+        public void UpdateDyrImage(Dyr dyr) //Obsolete
         {
             if (dyr != null) //Opdaterer kun hvis input ikke er null
             {
