@@ -100,21 +100,29 @@ namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Services
         }
 
 
+
+        // Søge funktionen til siden "se dyr". Du kan søge med navn eller race.
         public IEnumerable<Dyr> Search(string searchTerm)
         {
+            // Den søger fra listen dyr med navn eller race
             List<Dyr> searchResults = new List<Dyr>();
+
 
             foreach (Dyr d in _dyreliste)
             {
+                // Dyret skal søges når searchTerm har en string med enten navn eller race.
                 if (string.IsNullOrEmpty(searchTerm) ||
+
+                    // ToLower er at den string skla søges med små bogstaver.
                     d.Navn.ToLower().Contains(searchTerm.ToLower()) ||
                     d.Race.ToLower().Contains(searchTerm.ToLower()))
 
+                    // SerachResults tilføjer dyr objektet når den er søgt.
                 {
                     searchResults.Add(d);
                 }   
             }
-
+            // Derfor skal den retunere SearchReasults
             return searchResults;
         }
 
@@ -140,27 +148,27 @@ namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Services
 
 
 
-        public IEnumerable<Dyr> DyreFilter(Dyr.DyreArt Art, Dyr.EKøn Køn)
-        {
-            List<Dyr> filterList = new List<Dyr>();
-            foreach (Dyr dyr in _dyreliste)
-            {
-                if (dyr.Art == Art && dyr.Køn == Køn)
-                {
-                    filterList.Add(dyr);
-                }
+        //public IEnumerable<Dyr> DyreFilter(Dyr.DyreArt Art, Dyr.EKøn Køn)
+        //{
+        //    List<Dyr> filterList = new List<Dyr>();
+        //    foreach (Dyr dyr in _dyreliste)
+        //    {
+        //        if (dyr.Art == Art && dyr.Køn == Køn)
+        //        {
+        //            filterList.Add(dyr);
+        //        }
 
-            }
-            return filterList;
-
-
+        //    }
+        //    return filterList;
 
 
-        }
 
-        public IEnumerable<Dyr> DyrFilter(Dyr.DyreArt Art, Dyr.EKøn Køn)
-        {
-            throw new NotImplementedException();
-        }
+
+        //}
+
+        //public IEnumerable<Dyr> DyrFilter(Dyr.DyreArt Art, Dyr.EKøn Køn)
+        //{
+        //    throw new NotImplementedException();
+        //}
     }
 }
