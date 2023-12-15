@@ -9,7 +9,7 @@
     "V\u00E6gt": 5.8,
     "VaccineStatus": true,
     "ErAdopteret": false,
-    "ImagePath": "/images/dog1.jpg",
+    "ImagePath": "/images/animals/hund.jpg",
     "Beskrivelse": "Vores f\u00F8rste hund :)!"
   },
   {
@@ -22,7 +22,7 @@
     "V\u00E6gt": 6,
     "VaccineStatus": true,
     "ErAdopteret": true,
-    "ImagePath": "/images/dog1.jpg",
+    "ImagePath": "/images/animals/kat.jpg",
     "Beskrivelse": "Dette er en kat. Han bider."
   },
   {
@@ -35,21 +35,8 @@
     "V\u00E6gt": 4,
     "VaccineStatus": true,
     "ErAdopteret": true,
-    "ImagePath": "/images/image1.png",
+    "ImagePath": "/images/animals/kat.jpg",
     "Beskrivelse": " m"
-  },
-  {
-    "ID": 6,
-    "Art": 1,
-    "K\u00F8n": 0,
-    "Navn": "hatice",
-    "Race": "ghg",
-    "Alder": 12,
-    "V\u00E6gt": 5,
-    "VaccineStatus": true,
-    "ErAdopteret": true,
-    "ImagePath": "/images/dog1.jpg",
-    "Beskrivelse": "d"
   },
   {
     "ID": 5,
@@ -61,7 +48,33 @@
     "V\u00E6gt": 25,
     "VaccineStatus": true,
     "ErAdopteret": true,
-    "ImagePath": "/images/dog1.jpg",
+    "ImagePath": "/images/animals/kat.jpg",
     "Beskrivelse": "f"
+  },
+  {
+    "ID": 9,
+    "Art": 1,
+    "K\u00F8n": 0,
+    "Navn": "Nero",
+    "Race": "Kat",
+    "Alder": 1,
+    "V\u00E6gt": 2,
+    "VaccineStatus": true,
+    "ErAdopteret": false,
+    "ImagePath": "/images/animals/kat.jpg",
+    "Beskrivelse": "asdasd"
+  },
+  {
+    "ID": 6,
+    "Art": 2,
+    "K\u00F8n": 0,
+    "Navn": "Ninus",
+    "Race": "Dv\u00E6rgkanin",
+    "Alder": 0.2,
+    "V\u00E6gt": 0.9,
+    "VaccineStatus": true,
+    "ErAdopteret": false,
+    "ImagePath": "/images/animals/kanin.jpg",
+    "Beskrivelse": "En lille ninus"
   }
 ]

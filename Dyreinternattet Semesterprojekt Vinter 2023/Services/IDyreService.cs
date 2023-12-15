@@ -9,6 +9,7 @@ namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Services
         Dyr GetDyrID(int id);
         void AddDyr(Dyr dyr);
         void UpdateDyr(Dyr dyr);
+        void UpdateDyrImage(Dyr dyr);
         Dyr DeleteDyr(int? id);
 
         //IEnumerable<Dyr> search(string str);

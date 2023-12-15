@@ -37,11 +37,22 @@ namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Pages.Dyreoversigt
         }
         public IActionResult OnPost()
         {
+            Console.WriteLine("onpost");
             if (!ModelState.IsValid)
             {
+                Console.WriteLine("Invalid ModelState");
+                foreach (var modelStateKey in ModelState.Keys)
+                {
+                    var modelStateVal = ModelState[modelStateKey];
+                    foreach (var error in modelStateVal.Errors)
+                    {
+                        Console.WriteLine($"Key: {modelStateKey}, Error: {error.ErrorMessage}");
+                    }
+                }
                 return Page();
 
             }
+            Console.WriteLine("valid modelstate");
             _dyreService.AddDyr(Dyr);
             return RedirectToPage("GetAllDyr");
 

@@ -2,6 +2,7 @@
 using Dyreinternattet_Semesterprojekt_Vinter_2023.Data;
 using System.Diagnostics.Eventing.Reader;
 using static Dyreinternattet_Semesterprojekt_Vinter_2023.Models.Dyreoversigt.Dyr;
+using System.Runtime.CompilerServices;
 
 namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Services
 {
@@ -24,9 +25,23 @@ namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Services
         
         public void AddDyr(Dyr dyr) 
         {
+            if (dyr.ImagePath == "/images/image1")
+            {
+                dyr.ImagePath = GetImagePath(dyr.Art);
+            }
             _dyreliste.Add(dyr);
             JsonFileDyrService.SaveJsonDyr(_dyreliste);
         }
+        private string GetImagePath(DyreArt art)
+        {
+            string basePath = "/images/animals/";
+            string imageName = art.ToString().ToLower() + ".jpg";
+            return basePath + imageName;
+
+
+        }
+
+
 
         public void UpdateDyr(Dyr dyr) 
         {
@@ -46,7 +61,6 @@ namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Services
                         d.Vægt = dyr.Vægt;
                         d.VaccineStatus = dyr.VaccineStatus;
                         d.ErAdopteret = dyr.ErAdopteret;
-                        d.ImagePath = dyr.ImagePath;
                         d.Beskrivelse = dyr.Beskrivelse;
 
                         
@@ -56,9 +70,25 @@ namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Services
                 }
                 JsonFileDyrService.SaveJsonDyr(_dyreliste); //Listen gemmes i json bagefter
             }
-            Console.WriteLine("dyr er null");
         }
-       
+        public void UpdateDyrImage(Dyr dyr)
+        {
+            if (dyr != null) //Opdaterer kun hvis input ikke er null
+            {
+                foreach (Dyr d in _dyreliste) //Tjekker alle dyr
+                {
+                    if (d.ID == dyr.ID) //Hvis ID matcher, opdateres info
+                    {
+                        Console.WriteLine(dyr);
+                        Console.WriteLine("fundet");
+                        d.ImagePath = dyr.ImagePath;
+                    }
+
+                }
+                JsonFileDyrService.SaveJsonDyr(_dyreliste); //Listen gemmes i json bagefter
+            }
+        }
+
 
         public Dyr DeleteDyr(int? id)
         {
@@ -125,6 +155,8 @@ namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Services
             // Derfor skal den retunere SearchReasults
             return searchResults;
         }
+
+       
 
 
 
