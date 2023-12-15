@@ -1,9 +1,11 @@
 using Dyreinternattet_Semesterprojekt_Vinter_2023.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Pages.Dyreoversigt
 {
+    [Authorize]
     public class DeleteDyrModel : PageModel
     {
         private IDyreService _dyreService;

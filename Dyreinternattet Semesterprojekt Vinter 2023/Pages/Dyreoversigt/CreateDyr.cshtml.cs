@@ -4,11 +4,12 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Dyreinternattet_Semesterprojekt_Vinter_2023.Models.Dyreoversigt;
 using System;
 using Microsoft.AspNetCore.Hosting;
-
+using Microsoft.AspNetCore.Authorization;
 
 namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Pages.Dyreoversigt
 
 {
+    [Authorize]
     public class CreateDyrModel : PageModel
     {
 		private IDyreService _dyreService;
@@ -27,6 +28,11 @@ namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Pages.Dyreoversigt
 
         public IActionResult OnGet()
         {
+            var userClaims = User.Claims;
+            foreach (var claim in userClaims)
+            {
+                Console.WriteLine($"{claim.Type}: {claim.Value}");
+            }
             return Page();
         }
         public IActionResult OnPost()

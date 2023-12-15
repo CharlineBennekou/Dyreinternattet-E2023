@@ -43,7 +43,9 @@
              <img src="@dyr.ImagePath" alt="@dyr.Navn" >
                  <a asp-page="DyreDetaljer" asp-route-id="@dyr.ID"><br>
                     <button class="image-caption">
+                        <b>
                         SE MERE OM @dyr.Navn!
+                        </b>
                     </button>
                         </a>
                     </div>
@@ -56,9 +58,14 @@
 
 
 
-
-                <a class="btn btn-primary" asp-page="CreateDyr">Create a new animal</a>
+    @if (User.Identity.IsAuthenticated) //Viser kun hvis bruger er authenticated
+    {
+         <a class="btn btn-primary" asp-page="CreateDyr">Create a new animal</a>
+    }
+   
 </body>
+
+
 
 
 

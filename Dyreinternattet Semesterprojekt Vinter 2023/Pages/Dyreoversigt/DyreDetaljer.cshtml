@@ -2,55 +2,99 @@
 @model Dyreinternattet_Semesterprojekt_Vinter_2023.Pages.Dyreoversigt.DyreDetaljerModel
 @{
 }
-<div class="Dyr1">
-    <div class="dyrimage1">
-        <img src="@Model.Dyr.ImagePath" alt="Dyr 1 Image" />
-    </div>
-    <div id="@Model.Dyr.ID" class="dyrcontent">
-        <h1>
-            <strong>@Model.Dyr.Navn</strong>
-            <br>
-            <br>
-        </h1>
-        <div class="p4">
+
+
+<div class="HeleDyr1">
+    <h1 class="Overskrift">
+        <strong>@Model.Dyr.Navn</strong>
+        <br>    
+        <br>
+    </h1>
+
+    <div class="Dyr1">
+        <div class="dyrimage1">
+            <img src="@Model.Dyr.ImagePath" alt="Dyr 1 Image" />
+        </div>
+        <div id="@Model.Dyr.ID" class="dyrcontent">
+            <div class="p4">                  
             <p>
-            <p>
-                <strong>Alder:</strong> @Model.Dyr.Alder år
+                <div><strong>Alder:</strong> <p id="aar"> @Model.Dyr.Alder år</p></div>
             </p>
+            <div class="line-1"></div>
             <p>
-                <strong>Vægt:</strong> @Model.Dyr.Vægt kg
+                <div> <strong>Vægt:</strong> <p id="aar"> @Model.Dyr.Vægt kg </p></div>
             </p>
+            <div class="line-1"></div>
             <p>
-                <strong>Vaccineret:</strong> @Model.Dyr.VaccineStatus
+                <div> <strong>Vaccineret:</strong> <p id="aar"> @Model.Dyr.VaccineStatus </p></div>
             </p>
+            <div class="line-1"></div>
             <p>
-                <strong>Art:</strong> @Model.Dyr.Art
+                <div> <strong>Art:</strong> <p id="aar"> @Model.Dyr.Art </p></div>
             </p>
+            <div class="line-1"></div>
             <p>
-                <strong>Race:</strong> @Model.Dyr.Race
+                <div> <strong>Race:</strong> <p id="aar"> @Model.Dyr.Race </p></div>
             </p>
+            <div class="line-1"></div>
             <p><strong>Beskrivelse:</strong> </p>
             <div class="boxxx">
                 <p>
                         @Model.Dyr.Beskrivelse
                 </p>
             </div>
+            <div class="line-1"></div>
+            @if (User.Identity.IsAuthenticated) //viser kun knapper hvis bruger er authenticated
+                 {
+                <a class="btn btn-primary btn-sm" type="button" title="Edit"
+                   asp-page="EditDyr" asp-route-id="@Model.Dyr.ID">Edit</a>
+                <a class="btn btn-danger btn-sm " type="button" title="Delete"
+                   asp-page="DeleteDyr" asp-route-id="@Model.Dyr.ID">Delete</a>
+                }
+           
 
-            <a class="btn btn-primary btn-sm" type="button" title="Edit"
-               asp-page="EditDyr" asp-route-id="@Model.Dyr.ID">Edit</a>
-            <a class="btn btn-danger btn-sm " type="button" title="Delete"
-               asp-page="DeleteDyr" asp-route-id="@Model.Dyr.ID">Delete</a>
-
-        </div>
+        </>
     </div>
 </div>
-
+</div>
 <style>
+
+
+    .HeleDyr1
+    {
+        padding: 50px;
+            margin-left: -50px;
+            margin-right: -50px;
+            padding-bottom: 0px;
+
+    }
+
+
+        .Overskrift 
+        {
+           
+            font-family: 'Palatino Linotype', sans-serif;
+            background-color: #A29691;
+            font-size: 40px;
+            font-weight: bold;
+            text-align: center;
+            padding: 20px;
+            margin-top: -50px;
+            margin-left: -90px;
+            margin-right: -90px;
+            height: 100px;
+
+
+        }
+
+
+
+
     .Dyr1 {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        background-color: darkred;
+        background-color: #D7CBC6;
         text-align: center;
         padding: 43px;
         margin-top: -10px;
@@ -68,21 +112,35 @@
         width: 45%; /* Adjust as needed */
     }
 
-    .Dyr1 h1 {
-        font-family: 'Arial', sans-serif;
-        font-size: 20px;
+/*     .Dyr1 h1 {
+        font-family: 'Palatino Linotype', sans-serif;
+        font-size: 40px;
         font-weight: bold;
         text-align: center;
-        margin-top: -250px;
-    }
+        margin-top: -100px;
+    } */
 
     .p4 {
-        font-family: 'Arial', sans-serif;
-        font-size: 13px;
+        font-family: 'Palatino Linotype', sans-serif;
+        font-size: 20px;
         font-weight: bold;
         text-align: left;
-        margin-bottom: -250px;
-        color: white;
+        margin-bottom: 0px;
+        color: black;
+    }
+
+    .line-1
+    {
+            border-top: 1px solid black;
+    }
+
+    #aar
+    {
+          
+            display: inline;
+            float: right;
+            color: black;
+            
     }
 
     .dyrimage1 img {
@@ -95,7 +153,7 @@
         border: 1px solid #ccc; /* Border color and thickness */
         padding: 15px; /* Padding inside the box */
         border-radius: 8px; /* Border radius for rounded corners */
-        background-color: black; /* Background color */
+        background-color: #A29691; /* Background color */
         margin-bottom: 20px; /* Margin at the bottom for spacing */
         max-height: 200px; /* Maximum height of the box, adjust as needed */
         word-wrap: break-word; /* Break words to the next line if they exceed the box width */
