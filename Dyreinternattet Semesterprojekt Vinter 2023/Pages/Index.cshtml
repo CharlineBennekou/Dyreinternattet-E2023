@@ -33,7 +33,7 @@
 
 <div class="frivillig-section">
     <div class="frivillig-content">
-        <p>VIL DU VÆRE MED TIL AT VÆRE FRIVILLIG?</p>
+        <h3>VIL DU VÆRE MED TIL AT VÆRE FRIVILLIG?</h3>
         <p>At være frivillig hos os giver dig muligheden for at gøre en positiv forskel i dyrs liv og bidrage til vores mission om at stoppe overgreb mod dyr. Som frivillig kan du:</p>
         <ul>
             <li>Give kærlighed og omsorg til dyr i nød</li>
@@ -44,7 +44,7 @@
         <p>Bliv en del af vores frivilligteam og vær med til at gøre en forskel!</p>
     </div>
     <div class="frivillig-image">
-        <img src="~/images/fri.png" alt="Frivillig billede">
+        <img src="~/images/fri1.png" alt="Frivillig billede">
     </div>
 </div>
 
@@ -52,8 +52,10 @@
     .frivillig-section {
         
         padding: 20px;
-       
-      
+        background-color: whitesmoke;
+        margin-left: -7%;
+        margin-right: -7%;
+        
         display: flex;
         justify-content: space-around;
         align-items: center;
@@ -65,7 +67,7 @@
         max-width: 600px;
     }
 
-        .frivillig-content p {
+        .frivillig-content h3 p {
             color: #555;
             line-height: 1.5;
         }
@@ -79,10 +81,18 @@
             margin-bottom: 10px;
         }
 
+
+        .frivillig-image {
+            flex: 1;
+            text-align: right;
+            
+        }
+
     .frivillig-image img {
-        max-width: 100%;
+        max-width: 60%;
         height: auto;
         border-radius: 5px;
+        
     }
 </style>
 

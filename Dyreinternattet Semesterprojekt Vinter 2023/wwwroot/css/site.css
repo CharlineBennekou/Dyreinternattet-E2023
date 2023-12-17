@@ -12,9 +12,9 @@ html {
 }
 
 body {
-    margin: 0;
+   
     font-family: 'Arial', sans-serif;
-    background-color: #D7CBC6;
+    background-color: white;
     margin: 0;
     padding: 0;
 }
@@ -22,22 +22,21 @@ body {
 /* nav bar som ligger i Shared/_layout.cshtml*/
 
 header {
-    background-color: #fff;
     padding: 20px 0;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow for depth */
+    background-color: #D7CBC6;
 }
 
 nav {
     display: flex;
-    justify-content: space-between; 
-    align-items: center; 
+    justify-content: space-between;
+    align-items: center;
     max-width: 90%;
     margin: 0 auto;
-    background-color: #fff; 
-    padding: 10px 10px; 
-   /* border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);*/ /* Add a subtle box shadow for depth */
+    
+    padding: 10px 10px;
+    
 }
 .navBarImage {
     width: auto; /* Allow the image to scale proportionally */
@@ -124,13 +123,11 @@ h1 {
 /*footer som ligger i Shared/_layout.cshtml*/
 
 footer {
-    background-color: white;
+    background-color: #D7CBC6;
     color: black;
     padding: 20px 0;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);/*  Add a subtle box shadow for depth */
-    
-
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /*  Add a subtle box shadow for depth */
 }
 
 .footer-content {
@@ -145,7 +142,7 @@ footer {
 }
 
     .footer-section h3 {
-        color: #f0c4;
+        color: black;
     }
 
     .footer-section p {
@@ -236,39 +233,39 @@ footer {
 /*Næste side*/
 /*rød box over dyrelisten*/
 
-.p3 {
+/*.p3 {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #D7CBC6;
+    background-color: whitesmoke;
     text-align: center;
     padding: 43px;
     margin-top: -10px;
     margin-left: -90px;
     margin-right: -90px;
     height: 400px;
-}
+}*/
 
-    .p3 h1 {
+    /*.p3 h1 {
         font-family: 'Arial', sans-serif;
         right: 0px;
         font-size: 20px;
-        width: 70%; /* Set your desired width */
-        font-weight: bold;
-        text-align: left; /* Adjust as needed */
-        margin-top: -150px;
-    }
+        width: 70%;*/ /* Set your desired width */
+        /*font-weight: bold;
+        text-align: left;*/ /* Adjust as needed */
+        /*margin-top: -150px;
+    }*/
 
-.p3image {
-    width: 50%; /* Adjust as needed */
-    margin-left: -50px;
+/*.p3image {
+    width: 20%;*/ /* Adjust as needed */
+    /*margin-left: -50px;
 }
 
     .p3image img {
         width: 100%;
         height: 100%;
         object-fit: cover;
-    }
+    }*/
 
 
 
