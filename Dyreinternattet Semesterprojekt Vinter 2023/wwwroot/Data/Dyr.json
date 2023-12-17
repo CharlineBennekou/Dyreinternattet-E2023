@@ -9,8 +9,8 @@
     "V\u00E6gt": 5.8,
     "VaccineStatus": true,
     "ErAdopteret": false,
-    "ImagePath": "/images/image1.png",
-    "Beskrivelse": "Vores f\u00F8rste hund :)"
+    "ImagePath": "/images/animals/hund.jpg",
+    "Beskrivelse": "Vores f\u00F8rste hund :)!"
   },
   {
     "ID": 2,
@@ -22,8 +22,8 @@
     "V\u00E6gt": 6,
     "VaccineStatus": true,
     "ErAdopteret": true,
-    "ImagePath": "/images/image1.png",
-    "Beskrivelse": "uuuyy"
+    "ImagePath": "/images/animals/kat.jpg",
+    "Beskrivelse": "Dette er en kat. Han bider."
   },
   {
     "ID": 3,
@@ -35,21 +35,8 @@
     "V\u00E6gt": 4,
     "VaccineStatus": true,
     "ErAdopteret": true,
-    "ImagePath": "/images/image1.png",
+    "ImagePath": "/images/animals/kat.jpg",
     "Beskrivelse": " m"
-  },
-  {
-    "ID": 6,
-    "Art": 1,
-    "K\u00F8n": 0,
-    "Navn": "hatice",
-    "Race": "ghg",
-    "Alder": 12,
-    "V\u00E6gt": 5,
-    "VaccineStatus": true,
-    "ErAdopteret": true,
-    "ImagePath": "/images/dog1.jpg",
-    "Beskrivelse": "d"
   },
   {
     "ID": 5,
@@ -61,7 +48,72 @@
     "V\u00E6gt": 25,
     "VaccineStatus": true,
     "ErAdopteret": true,
-    "ImagePath": "/images/dog1.jpg",
+    "ImagePath": "/images/animals/kat.jpg",
     "Beskrivelse": "f"
+  },
+  {
+    "ID": 9,
+    "Art": 1,
+    "K\u00F8n": 0,
+    "Navn": "Nero",
+    "Race": "Sort kat",
+    "Alder": 2,
+    "V\u00E6gt": 4.8,
+    "VaccineStatus": true,
+    "ErAdopteret": false,
+    "ImagePath": "/images/animals/nero.jpg",
+    "Beskrivelse": "Nero er en lille kat med en stor k\u00E6rlighed for musik. Tolererer sm\u00E5 b\u00F8rn s\u00E5 l\u00E6nge de ikke r\u00F8rer hans trommes\u00E6t."
+  },
+  {
+    "ID": 6,
+    "Art": 2,
+    "K\u00F8n": 0,
+    "Navn": "Ninus",
+    "Race": "Dv\u00E6rgkanin",
+    "Alder": 0.2,
+    "V\u00E6gt": 0.9,
+    "VaccineStatus": true,
+    "ErAdopteret": false,
+    "ImagePath": "/images/animals/kanin.jpg",
+    "Beskrivelse": "En lille ninus"
+  },
+  {
+    "ID": 7,
+    "Art": 0,
+    "K\u00F8n": 1,
+    "Navn": "Snefnug",
+    "Race": "Pomeranian",
+    "Alder": 9,
+    "V\u00E6gt": 4.5,
+    "VaccineStatus": true,
+    "ErAdopteret": true,
+    "ImagePath": "/images/animals/hund.jpg",
+    "Beskrivelse": "En lille adelig pomeranian"
+  },
+  {
+    "ID": 8,
+    "Art": 1,
+    "K\u00F8n": 0,
+    "Navn": "Kaleido",
+    "Race": "British Shorthair",
+    "Alder": 2.9,
+    "V\u00E6gt": 6.7,
+    "VaccineStatus": true,
+    "ErAdopteret": false,
+    "ImagePath": "/images/animals/kaleido.jpg",
+    "Beskrivelse": "Kaleido er en dejlig kat som elsker at lege, men ikke med fremmede og foretr\u00E6kker et hjem uden sm\u00E5 b\u00F8rn."
+  },
+  {
+    "ID": 9,
+    "Art": 2,
+    "K\u00F8n": 0,
+    "Navn": "Albert",
+    "Race": "Magisk kanin",
+    "Alder": 4,
+    "V\u00E6gt": 8.5,
+    "VaccineStatus": true,
+    "ErAdopteret": false,
+    "ImagePath": "/images/animals/kanin.jpg",
+    "Beskrivelse": "Stor kanin"
   }
 ]

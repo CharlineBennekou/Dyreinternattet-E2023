@@ -12,7 +12,7 @@ namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Models.Dyreoversigt
             Kat=1,
             Kanin=2,  
         }
-        public enum EKøn
+        public enum EKøn //Enum for køn
         { 
         Han=0,
         Hun=1,
@@ -34,6 +34,7 @@ namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Models.Dyreoversigt
         public bool ErAdopteret { get; set; }
         public string ImagePath { get; set; }
         public string Beskrivelse { get; set; }
+        //public IFormFile ImageFile { get; set; }
 
 
         
@@ -46,27 +47,9 @@ namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Models.Dyreoversigt
         public Dyr()
         {
             ID = nextId++;
-            switch (Art)
-            {
-                case DyreArt.Hund:
-                    ImagePath = "/images/dog1.jpg";
-                    break;
-                case DyreArt.Kat:
-                    ImagePath = "/images/kat1.jpg";
-                    break;
-                case DyreArt.Kanin:
-                    ImagePath = "/images/kanin1.jpg";
-                    break;
-                default:
-                    ImagePath = null;
-                    break;
-            }
-
-
-
-
-
-        }
+            ImagePath = "/images/image1";
+            //ImageFile = null;
+    }
 
 
         public Dyr(DyreArt art, string navn, string race, double alder, double vægt, bool vaccineStatus, bool erAdopteret, string imagepath, string beskrivelse)

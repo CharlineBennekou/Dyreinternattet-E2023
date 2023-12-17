@@ -2,6 +2,7 @@
 using Dyreinternattet_Semesterprojekt_Vinter_2023.Data;
 using System.Diagnostics.Eventing.Reader;
 using static Dyreinternattet_Semesterprojekt_Vinter_2023.Models.Dyreoversigt.Dyr;
+using System.Runtime.CompilerServices;
 
 namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Services
 {
@@ -24,9 +25,23 @@ namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Services
         
         public void AddDyr(Dyr dyr) 
         {
+            if (dyr.ImagePath == "/images/image1")
+            {
+                dyr.ImagePath = GetImagePath(dyr.Art);
+            }
             _dyreliste.Add(dyr);
             JsonFileDyrService.SaveJsonDyr(_dyreliste);
         }
+        private string GetImagePath(DyreArt art)
+        {
+            string basePath = "/images/animals/";
+            string imageName = art.ToString().ToLower() + ".jpg";
+            return basePath + imageName;
+
+
+        }
+
+
 
         public void UpdateDyr(Dyr dyr) 
         {
@@ -46,8 +61,8 @@ namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Services
                         d.Vægt = dyr.Vægt;
                         d.VaccineStatus = dyr.VaccineStatus;
                         d.ErAdopteret = dyr.ErAdopteret;
-                        d.ImagePath = dyr.ImagePath;
                         d.Beskrivelse = dyr.Beskrivelse;
+                        d.ImagePath = dyr.ImagePath;
 
                         
 
@@ -56,9 +71,25 @@ namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Services
                 }
                 JsonFileDyrService.SaveJsonDyr(_dyreliste); //Listen gemmes i json bagefter
             }
-            Console.WriteLine("dyr er null");
         }
-       
+        public void UpdateDyrImage(Dyr dyr) //Obsolete
+        {
+            if (dyr != null) //Opdaterer kun hvis input ikke er null
+            {
+                foreach (Dyr d in _dyreliste) //Tjekker alle dyr
+                {
+                    if (d.ID == dyr.ID) //Hvis ID matcher, opdateres info
+                    {
+                        Console.WriteLine(dyr);
+                        Console.WriteLine("fundet");
+                        d.ImagePath = dyr.ImagePath;
+                    }
+
+                }
+                JsonFileDyrService.SaveJsonDyr(_dyreliste); //Listen gemmes i json bagefter
+            }
+        }
+
 
         public Dyr DeleteDyr(int? id)
         {
@@ -100,23 +131,33 @@ namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Services
         }
 
 
+
+        // Søge funktionen til siden "se dyr". Du kan søge med navn eller race.
         public IEnumerable<Dyr> Search(string searchTerm)
         {
+            // Den søger fra listen dyr med navn eller race
             List<Dyr> searchResults = new List<Dyr>();
+
 
             foreach (Dyr d in _dyreliste)
             {
+                // Dyret skal søges når searchTerm har en string med enten navn eller race.
                 if (string.IsNullOrEmpty(searchTerm) ||
+
+                    // ToLower er at den string skla søges med små bogstaver.
                     d.Navn.ToLower().Contains(searchTerm.ToLower()) ||
                     d.Race.ToLower().Contains(searchTerm.ToLower()))
 
+                    // SerachResults tilføjer dyr objektet når den er søgt.
                 {
                     searchResults.Add(d);
                 }   
             }
-
+            // Derfor skal den retunere SearchReasults
             return searchResults;
         }
+
+       
 
 
 
@@ -140,27 +181,27 @@ namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Services
 
 
 
-        public IEnumerable<Dyr> DyreFilter(Dyr.DyreArt Art, Dyr.EKøn Køn)
-        {
-            List<Dyr> filterList = new List<Dyr>();
-            foreach (Dyr dyr in _dyreliste)
-            {
-                if (dyr.Art == Art && dyr.Køn == Køn)
-                {
-                    filterList.Add(dyr);
-                }
+        //public IEnumerable<Dyr> DyreFilter(Dyr.DyreArt Art, Dyr.EKøn Køn)
+        //{
+        //    List<Dyr> filterList = new List<Dyr>();
+        //    foreach (Dyr dyr in _dyreliste)
+        //    {
+        //        if (dyr.Art == Art && dyr.Køn == Køn)
+        //        {
+        //            filterList.Add(dyr);
+        //        }
 
-            }
-            return filterList;
-
-
+        //    }
+        //    return filterList;
 
 
-        }
 
-        public IEnumerable<Dyr> DyrFilter(Dyr.DyreArt Art, Dyr.EKøn Køn)
-        {
-            throw new NotImplementedException();
-        }
+
+        //}
+
+        //public IEnumerable<Dyr> DyrFilter(Dyr.DyreArt Art, Dyr.EKøn Køn)
+        //{
+        //    throw new NotImplementedException();
+        //}
     }
 }

@@ -16,7 +16,7 @@
             <input type="submit" asp-page-handler="Search"
                    value="Search" class="btn btn-primary" />
         </div>
-    </form>
+    </form>  
 
     <br />
 
@@ -40,10 +40,12 @@
         
         <div class="image-item">
             <div class="image-item-container">
-             <img src="@dyr.ImagePath" alt="@dyr.Navn" >
+             <img src="@dyr.ImagePath" alt="@dyr.Navn" width=" 400" height="300" >
                  <a asp-page="DyreDetaljer" asp-route-id="@dyr.ID"><br>
                     <button class="image-caption">
+                        <b>
                         SE MERE OM @dyr.Navn!
+                        </b>
                     </button>
                         </a>
                     </div>
@@ -62,6 +64,8 @@
     }
    
 </body>
+
+
 
 
 
