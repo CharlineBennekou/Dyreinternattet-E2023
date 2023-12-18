@@ -6,19 +6,21 @@ namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Models.Indmeldinger
     {
 
 
-        public enum DyrType
+        public enum DyrType //Enum med dyreart
         {
             Hund = 0,
             Kat = 1,
             Kanin = 2,
         }
-        public enum DyrKøn
+        public enum DyrKøn //Enum for køn
         {
             Han = 0,
             Hun = 1,
         }
 
 
+
+        //Id'et bliver aktomatisk givet og alle Id bliver unikke
         static int nextId = 1;
         public int ID { get; set; }
         public DyrType DyrArt { get; set; }
@@ -38,7 +40,7 @@ namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Models.Indmeldinger
         public string EjerMail { get; set; }
 
 
-
+        //Den defaulte constructor skal have et Id ligemeget hvad
         public Indmelding()
         {
             ID = nextId++;
