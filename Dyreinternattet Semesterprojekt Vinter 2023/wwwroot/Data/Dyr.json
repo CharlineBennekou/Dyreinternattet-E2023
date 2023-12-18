@@ -115,5 +115,18 @@
     "ErAdopteret": false,
     "ImagePath": "/images/animals/kanin.jpg",
     "Beskrivelse": "Stor kanin"
+  },
+  {
+    "ID": 14,
+    "Art": 1,
+    "K\u00F8n": 0,
+    "Navn": "Helium",
+    "Race": "jj",
+    "Alder": 5,
+    "V\u00E6gt": 1,
+    "VaccineStatus": true,
+    "ErAdopteret": true,
+    "ImagePath": "/images/animals/kat.jpg",
+    "Beskrivelse": "s"
   }
 ]

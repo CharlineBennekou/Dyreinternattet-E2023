@@ -17,7 +17,7 @@
     <form method="post">
         <div class="input-group mb-3">
             <input asp-for="SearchString" class="form-control mr-1"
-                   placeholder="Enter search term" />
+                   placeholder="Søg efter art og race" />
             <input type="submit" asp-page-handler="Search"
                    value="Search" class="btn btn-primary" />
         </div>
@@ -27,7 +27,38 @@
 
 
 
+    <style>
+        .form-group {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+        }
 
+        /* Style the input field */
+        .form-control {
+            border: 2px solid #6c757d;
+            border-radius: 5px;
+            padding: 10px;
+        }
+
+        /* Style the submit button */
+        .btn-primary {
+            background-color: black;
+            
+            border-radius: 5px;
+            color: #fff;
+            transition: background-color 0.3s ease;
+        }
+
+            .btn-primary:hover {
+                background-color: mistyrose;
+            }
+
+        /* Optional: Add some box shadow for a subtle lift effect */
+        .form-group {
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
 
 
 

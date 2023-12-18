@@ -212,7 +212,7 @@ footer {
 }
 
 .image-caption {
-    background-color: floralwhite; /* Set your desired background color */
+    background-color: #A29691; /* Set your desired background color */
     color: black; /* Set your desired text color */
     padding: 10px 20px; /* Adjust padding as needed */
     font-size: 16px; /* Set your desired font size */
@@ -226,7 +226,7 @@ footer {
     .image-caption:hover {
         background-color: rgba(0, 0, 0, 0.9); /* Darken the background on hover */
         transform: translateY(-5px) scale(1.05); /* Move the text up and add a subtle scale effect on hover */
-        color: darkred; /* Change text color on hover */
+        color: #A29691;
     }
 
 
