@@ -6,18 +6,20 @@
 <head>
     <title>Title of the document</title>
 </head>
-<body>
-
-   
-
-
-    
+<body/>
   
     <br />
+    <!-- En formular, der anvender HTTP Post-metoden->
     <form method="post">
+
+         <!--En gruppe for inputfelter, der anvender Bootstrap-styling -->
         <div class="input-group mb-3">
+
+            <!-- Inputfeltet, der binder til "Searchstring" -->
             <input asp-for="SearchString" class="form-control mr-1"
                    placeholder="Søg efter art og race" />
+
+                   <!-- En knap af typen "submit", der udløser  "Search" sidehåndteringsmetoden-->
             <input type="submit" asp-page-handler="Search"
                    value="Search" class="btn btn-primary" />
         </div>
