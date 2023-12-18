@@ -47,6 +47,8 @@ namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Models.Indmeldinger
         }
 
 
+
+        // Constructor til at oprette en ny Indmelding med specifikke oplysninger om dyret og ejeren
         public Indmelding(DyrType dyrArt, string dyrName, DyrKøn dyrGender, string race, int age, double weight, bool isVac,
             string dyrInfo, string ejerName, string ejerAddress, int ejerPost, string ejerTlf, string ejerMail)
         {

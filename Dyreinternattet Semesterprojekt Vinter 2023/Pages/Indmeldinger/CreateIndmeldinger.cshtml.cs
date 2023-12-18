@@ -11,9 +11,9 @@ namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Pages.Indmeldinger
 
 
 
-
+        // Der er brugt BindProperty-attributter for at tilknytte modelens egenskaber til HTML-formularen
         [BindProperty]
-        [Required(ErrorMessage = "Indtast venligst et navn på dyret")]
+        [Required(ErrorMessage = "Indtast venligst et navn på dyret")] // Der er tilføjet validering ved hjælp af Required-attributten
         public string DyrName { get; set; }
 
 
@@ -60,7 +60,7 @@ namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Pages.Indmeldinger
         [Required(ErrorMessage = "Indtast venligst en gyldig email")]
         public string EjerMail { get; set; }
 
-        [BindProperty]
+        [BindProperty] // BindProperty blevet brugt til at indeholde en instans af Indmelding-klassen.
         public Models.Indmeldinger.Indmelding Indmelding { get; set; }
 
         private IIndService _indService;
@@ -73,18 +73,18 @@ namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Pages.Indmeldinger
 
 
 
-
+        // Fejlmeddelelsesvariabel der bruges til at vise brugeren der er fejl ved indsendelse af formularen
         public string errorMessage = "";
 
 
 
-        public IActionResult OnGet()
+        public IActionResult OnGet() // Metode der håndterer HTTP GET-anmodninger og returnerer siden
         {
             return Page();
         }
 
 
-        public IActionResult OnPost()
+        public IActionResult OnPost() // Metode der håndterer HTTP POST-anmodninger, udfører validering og gemmer indmeldingen, hvis dataen er korrekt
         {
             if (!ModelState.IsValid)
             {
@@ -92,6 +92,7 @@ namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Pages.Indmeldinger
 
                 return Page();
             }
+            // Hvis validering er korrekt tilføjes indmeldingen ved hjælp af indService og brugeren sendes til en anden side.
             _indService.AddInd(Indmelding);
             return RedirectToPage("AfterInd");
 
