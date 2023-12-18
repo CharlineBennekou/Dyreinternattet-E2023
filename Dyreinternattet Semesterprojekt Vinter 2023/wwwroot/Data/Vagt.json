@@ -75,5 +75,16 @@
     },
     "StartTid": "09:00",
     "SlutTid": "14:00"
+  },
+  {
+    "Id": 14,
+    "AssignedMedarbejder": {
+      "Id": 74,
+      "MedarbejderName": "Erik",
+      "MedarbejderEmail": "erik@example.com",
+      "MedarbejderTlf": 55555555
+    },
+    "StartTid": "17:00",
+    "SlutTid": "23:00"
   }
 ]
