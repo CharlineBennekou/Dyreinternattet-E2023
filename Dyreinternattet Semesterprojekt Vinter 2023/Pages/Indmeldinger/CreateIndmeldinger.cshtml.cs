@@ -10,17 +10,12 @@ namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Pages.Indmeldinger
     {
 
 
-        //[BindProperty]
-        //[Required(ErrorMessage = "Vælg venligst hvilket dyr du har")]
-        //public DyrType DyrArt { get; set; }
+
 
         [BindProperty]
         [Required(ErrorMessage = "Indtast venligst et navn på dyret")]
         public string DyrName { get; set; }
 
-        //[BindProperty]
-        //[Required(ErrorMessage = "Vælg venligst hvilket dyr du har")]
-        //public Dyr EKøn { get; set; }
 
         [BindProperty]
         [Required(ErrorMessage = "Indtast venligst racen på dyret")]
@@ -44,7 +39,6 @@ namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Pages.Indmeldinger
 
 
 
-        //Ejer propeties
         [BindProperty]
         [Required(ErrorMessage = "Indtast venligst et navn")]
         public string EjerName { get; set; }
@@ -71,7 +65,7 @@ namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Pages.Indmeldinger
 
         private IIndService _indService;
 
-        public CreateIndmeldingerModel(IIndService indService)
+        public CreateIndmeldingerModel(IIndService indService) //Service initialiseres vha. dependency injection
         {
             _indService = indService;
         }

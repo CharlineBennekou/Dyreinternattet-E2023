@@ -9,10 +9,10 @@ namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Pages.Indmeldinger
 		private IIndService _indService;
 
 		[BindProperty]
-		public Models.Indmeldinger.Indmelding Indmelding { get; set; } //husk mappe (slet kommentar efter)
+		public Models.Indmeldinger.Indmelding Indmelding { get; set; } 
 
-		public DeleteIndModel(IIndService indService)
-		{
+		public DeleteIndModel(IIndService indService) //Service initialiseres vha. dependency injection
+        {
 			_indService = indService;
 		}
 
@@ -20,7 +20,7 @@ namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Pages.Indmeldinger
 		{
 			Indmelding = _indService.GetIndmelding(id);
 			if (Indmelding == null)
-				return RedirectToPage("/NotFound"); //NotFound er ikke defineret endnu
+				return RedirectToPage("/NotFound"); 
 
 			return Page();
 		}

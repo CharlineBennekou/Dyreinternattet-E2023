@@ -14,7 +14,7 @@ namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Pages.Frivilligt
         //public List<Models.Frivillige> DyrList  { get; private set; } = new List<Models.Frivillige>()
 
 
-        public GetAllFrivilligeModel(IFrivilligService frivilligService) //Dependency Injection
+        public GetAllFrivilligeModel(IFrivilligService frivilligService) //Service initialiseres vha. dependency injection
         {
             _frivilligService = frivilligService;
         }

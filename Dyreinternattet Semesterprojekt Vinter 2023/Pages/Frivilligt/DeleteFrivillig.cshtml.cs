@@ -9,11 +9,11 @@ namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Pages.Frivilligt
 
 		private IFrivilligService _frivilligService;
 
-		[BindProperty]
+		[BindProperty] 
 		public Models.Frivilligt.Frivillige Frivillige { get; set; }
 
-		public DeleteFrivilligModel(IFrivilligService frivilligService)
-		{
+		public DeleteFrivilligModel(IFrivilligService frivilligService) //Service initialiseres vha. dependency injection
+        {
 			_frivilligService = frivilligService;
 		}
 

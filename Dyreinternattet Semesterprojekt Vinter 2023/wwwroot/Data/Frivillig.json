@@ -1,7 +1,7 @@
 [
   {
     "ID": 1,
-    "Name": "Stine",
+    "Name": "Stine Kofod",
     "Birthday": "2000-11-28",
     "Address": "Kongevej 22",
     "Postnummer": 4665,
@@ -11,7 +11,7 @@
   },
   {
     "ID": 2,
-    "Name": "Thomas",
+    "Name": "Thomas Mortensen",
     "Birthday": "1995-02-15",
     "Address": "Jordb\u00E6rdgade 84",
     "Postnummer": 6025,
@@ -21,7 +21,7 @@
   },
   {
     "ID": 3,
-    "Name": "Lars",
+    "Name": "Lars Frederiksen",
     "Birthday": "2000-03-12",
     "Address": "Kaffevej 4",
     "Postnummer": 3065,

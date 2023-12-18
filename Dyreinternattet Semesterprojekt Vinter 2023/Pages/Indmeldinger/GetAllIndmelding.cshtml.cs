@@ -14,7 +14,7 @@ namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Pages.Indmeldinger
         private IIndService _indService;
 
 
-        public CreateIndmeldingModel(IIndService indService) //Dependency Injection
+        public CreateIndmeldingModel(IIndService indService) //Service initialiseres vha. dependency injection
         {
             _indService = indService;
         }
