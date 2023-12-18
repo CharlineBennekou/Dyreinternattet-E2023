@@ -24,24 +24,24 @@ namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Pages.Dyreoversigt
         }
 
 
+        // Dette er en atrtribut som binder egenskaben til modellen for automatisk inputhåndtering.
         [BindProperty]
         public string SearchString { get; set; }
 
+
+        // Denne metode aktiveres, når der foretgaes en Post-anmodning til denne side for søgning.
         public IActionResult OnPostSearch()
         {
+            //Kalder på search(_dyreService.Search) til at søge efter
+            //elemente baseret på SearchSrtring og konverterer resultet til en liste
             Dyreliste = _dyreService.Search(SearchString).ToList();
+
+            // Retunere siden, efter søgningen er udført
             return Page();
         }
     }
 
-        //public IActionResult OnPostDyrFilter()
-        //{
-        //    Dyreliste = _dyreService.DyrFilter.ToList();
-        //    return Page();
-        //}
-
-        //public IActionResult 
-
+        
 
     
 }

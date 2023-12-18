@@ -12,8 +12,9 @@ namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Services
         void UpdateDyrImage(Dyr dyr);
         Dyr DeleteDyr(int? id);
 
-        //IEnumerable<Dyr> search(string str);
-
+        // Dene metode retunere en IEnumerable af Dyr-objekter baseret på et søgeterme.
+        // Paratret "searchTerm" er strenges der bruges til at søge efter Dyr-objekter.
+        // Returnerer en samling af Dyr, der matcher søgetermen.
         IEnumerable<Dyr> Search(string searchTerm);
     }
 

@@ -8,29 +8,32 @@ namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Pages.Indmeldinger
     {
 		private IIndService _indService;
 
-		[BindProperty]
-		public Models.Indmeldinger.Indmelding Indmelding { get; set; } //husk mappe (slet kommentar efter)
+		[BindProperty] // BindProperty blevet brugt til at indeholde en instans af Indmelding-klassen
+		public Models.Indmeldinger.Indmelding Indmelding { get; set; } 
 
-		public DeleteIndModel(IIndService indService)
-		{
+		public DeleteIndModel(IIndService indService) //Service initialiseres vha. dependency injection
+        {
 			_indService = indService;
 		}
 
+		// HTTP GET-handler, der henter indmeldings-oplysninger baseret på det givne ID
 		public IActionResult OnGet(int id)
 		{
 			Indmelding = _indService.GetIndmelding(id);
 			if (Indmelding == null)
-				return RedirectToPage("/NotFound"); //NotFound er ikke defineret endnu
+				return RedirectToPage("/NotFound"); // Hvis indmeldingen ikke eksisterer, omdiriger til NotFound-siden
 
 			return Page();
 		}
 
+		// HTTP POST-handler, der udfører sletning af indmelding baseret på ID'et og omdirigerer til en anden side
 		public IActionResult OnPost()
 		{
 			Models.Indmeldinger.Indmelding deletedInd = _indService.DeleteIndmelding(Indmelding.ID);
 			if (deletedInd == null)
 				return RedirectToPage("/Error");
-			return RedirectToPage("GetAllIndmelding");
+			return RedirectToPage("GetAllIndmelding"); // Hvis sletning var vellykket, omdiriger brugeren til GetAllIndmelding-siden
+
 		}
 	}
 }

@@ -3,7 +3,7 @@ using Dyreinternattet_Semesterprojekt_Vinter_2023.Models.Frivilligt;
 
 namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Services
 {
-    public class FrivilligService : IFrivilligService
+    public class FrivilligService : IFrivilligService //Bruger interface
     {
 
         private JsonFileFrivilligService JsonFileFrivilligService { get; set; } //Auto property for Jsonfilservice
@@ -25,14 +25,16 @@ namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Services
         }
 
 
-        public void AddFrivillig(Frivillige frivillige)
+        // Metode til at tilføje en ny frivillig og gemme data i JSON-filen
+        public void AddFrivillig(Frivillige frivillige) 
         {
             _frivList.Add(frivillige);
             JsonFileFrivilligService.SaveJsonFrivillig(_frivList);
         }
 
 
-		public Frivillige GetFriv(int id)
+        // Metode til at hente en frivillig ud fra ID
+        public Frivillige GetFriv(int id)
 		{
 			foreach (Frivillige frivillige in _frivList)
 			{
@@ -44,7 +46,8 @@ namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Services
 		}
 
 
-		public Frivillige DeleteFriv(int? friveId)
+        // Metode til at slette en frivillig ud fra ID og gemme ændringer i JSON-filen
+        public Frivillige DeleteFriv(int? friveId)
 		{
 			Frivillige FrivToBeDeleted = null;
 
@@ -70,7 +73,8 @@ namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Services
 
 
 
-		public List<Frivillige> GetFrivillig()
+        // Metode til at hente en liste af alle frivillige
+        public List<Frivillige> GetFrivillig()
         {
             return _frivList;
         }
