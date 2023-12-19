@@ -15,12 +15,10 @@ namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Data
                 "Ilse Jakobsen", "Ghettoplanen 24", 4260, "78318188", "ilseghetto@gmail.com")
         };
 
-        // Metode til at hente den statiske liste af fiktive frivillige
+        // Metode til at hente den statiske liste af fiktive indmeldinger
         public static List<Indmelding> GetMockInd()
         {
-
             return _adoptList;
-
         }
 
     }

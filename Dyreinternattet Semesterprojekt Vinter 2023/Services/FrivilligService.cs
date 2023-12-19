@@ -16,7 +16,6 @@ namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Services
             JsonFileFrivilligService = jsonFileFrivilligService;
 			//_frivList = MockFrivillig.GetMockFrivillig();
 			_frivList = JsonFileFrivilligService.GetJsonFrivillig().ToList();
-
 		}
 
         public FrivilligService() //Backup hvis json ikk virker
