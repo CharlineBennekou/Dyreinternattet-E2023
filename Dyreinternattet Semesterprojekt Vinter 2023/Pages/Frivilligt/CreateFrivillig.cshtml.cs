@@ -65,7 +65,6 @@ namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Pages.Frivilligt
                 errorMessage = "Alle felter er ikke belvet udfyldt";
                 return Page();
             }
-
             // Hvis validering er korrekt tilføjes frivillige ved hjælp af frivilligService og brugeren sendes til en anden side.
             _frivilligService.AddFrivillig(Frivillige);
             return RedirectToPage("AfterFriv");

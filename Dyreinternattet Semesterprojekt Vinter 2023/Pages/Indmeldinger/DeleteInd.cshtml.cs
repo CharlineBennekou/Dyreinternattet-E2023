@@ -33,7 +33,6 @@ namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Pages.Indmeldinger
 			if (deletedInd == null)
 				return RedirectToPage("/Error");
 			return RedirectToPage("GetAllIndmelding"); // Hvis sletning var vellykket, omdiriger brugeren til GetAllIndmelding-siden
-
 		}
 	}
 }

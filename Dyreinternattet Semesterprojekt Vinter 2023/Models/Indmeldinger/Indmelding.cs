@@ -4,8 +4,6 @@ namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Models.Indmeldinger
 {
     public class Indmelding
     {
-
-
         public enum DyrType //Enum med dyreart
         {
             Hund = 0,
