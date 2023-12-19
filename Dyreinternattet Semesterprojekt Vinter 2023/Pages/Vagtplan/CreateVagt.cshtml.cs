@@ -22,18 +22,18 @@ namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Pages.Vagtplan
         public CreateVagtModel(IVagtService vagtService)
         {
             _vagtService = vagtService;
-            MedarbejderOptions = new SelectList(Models.Vagtplan.Vagt.MedarbejderOptions(), nameof(Vagt.Medarbejder.MedarbejderName), nameof(Vagt.Medarbejder.MedarbejderName), nameof(Vagt.Medarbejder.MedarbejderEmail));
+            MedarbejderOptions = new SelectList(Data.MockVagter.MedarbejderOptions(), nameof(Vagt.Medarbejder.MedarbejderName), nameof(Vagt.Medarbejder.MedarbejderName), nameof(Vagt.Medarbejder.MedarbejderEmail));
 
         }
 
         public SelectList StartTidOptions()
         {
-            return new SelectList(Models.Vagtplan.Vagt.StartTidOptions());
+            return new SelectList(Data.MockVagter.StartTidOptions());
         }
 
         public SelectList SlutTidOptions()
         {
-            return new SelectList(Models.Vagtplan.Vagt.SlutTidOptions());
+            return new SelectList(Data.MockVagter.SlutTidOptions());
         }
 
         public IActionResult OnGet()
@@ -52,7 +52,7 @@ namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Pages.Vagtplan
             var selectedMedarbejderName = Vagt.AssignedMedarbejder.MedarbejderName;
 
             // Retrieve the complete Medarbejder with all information
-            var selectedMedarbejder = Models.Vagtplan.Vagt.MedarbejderOptions()
+            var selectedMedarbejder = Data.MockVagter.MedarbejderOptions()
                 .Where(m => m.MedarbejderName == selectedMedarbejderName)
                 .FirstOrDefault();
 

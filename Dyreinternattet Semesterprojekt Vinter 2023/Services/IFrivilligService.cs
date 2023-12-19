@@ -2,7 +2,7 @@
 
 namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Services
 {
-    public interface IFrivilligService
+    public interface IFrivilligService //Interface som bruges af firvilligService
     {
 
         List<Frivillige> GetFrivillig();

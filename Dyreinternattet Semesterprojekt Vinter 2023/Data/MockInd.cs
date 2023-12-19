@@ -5,7 +5,7 @@ namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Data
 {
     public class MockInd
     {
-
+        // Statisk liste af fiktive indmeldinger, initialiseret med nogle standarddata
         private static List<Indmelding> _adoptList = new List<Indmelding>()
         {
             new Indmelding (Indmelding.DyrType.Kanin, "Coco", Indmelding.DyrKøn.Han, "Løvehovede", 5, 3.5, true , "Den elsker gulerødder",
@@ -15,6 +15,7 @@ namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Data
                 "Ilse Jakobsen", "Ghettoplanen 24", 4260, "78318188", "ilseghetto@gmail.com")
         };
 
+        // Metode til at hente den statiske liste af fiktive frivillige
         public static List<Indmelding> GetMockInd()
         {
 
