@@ -18,7 +18,7 @@ namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Pages.Dyreoversigt
         }
         public List<Models.Dyreoversigt.Dyr> Dyreliste { get; private set; } //Property som kan referere til en liste af dyr
 
-        public void OnGet() //Dyrelisten henter data fra servicen
+        public void OnGet() //Dyrelisten henter data fra servicen og logiken for GET-andmodnind
         {
             Dyreliste = _dyreService.GetDyr();
         }
@@ -30,7 +30,7 @@ namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Pages.Dyreoversigt
 
 
         // Denne metode aktiveres, når der foretgaes en Post-anmodning til denne side for søgning.
-        public IActionResult OnPostSearch()
+        public IActionResult OnPostSearch() // Logiken for POST-andmodning
         {
             //Kalder på search(_dyreService.Search) til at søge efter
             //elemente baseret på SearchSrtring og konverterer resultet til en liste
