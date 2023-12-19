@@ -4,15 +4,15 @@ using Dyreinternattet_Semesterprojekt_Vinter_2023.Models.Indmeldinger;
 
 namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Services
 {
-    public class IndService :IIndService
+    public class IndService : IIndService //Bruger interface
     {
 
         private JsonFileIndService JsonFileIndService { get; set; } //Auto property for Jsonfilservice
 
-        private List<Indmelding> _adoptList;
+        private List<Indmelding> _adoptList; //Instance field kan referere til en liste af indmeldinger
 
 
-        public IndService(JsonFileIndService jsonFileIndService) //Når IndService constructes, henter dyrelisten data fra jsonfil
+        public IndService(JsonFileIndService jsonFileIndService) //Når IndService constructes, henter adoptlisten data fra jsonfil
         {
             JsonFileIndService = jsonFileIndService;
             //_adoptList = MockInd.GetMockInd();
@@ -25,6 +25,7 @@ namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Services
         }
 
 
+        // Metode til at tilføje en ny indmelding og gemme data i JSON-filen.
         public void AddInd(Indmelding indmelding)
         {
             _adoptList.Add(indmelding);
@@ -32,6 +33,7 @@ namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Services
         }
 
 
+        // Metode til at hente en indmelding ud fra ID.
         public Indmelding GetIndmelding(int id)
         {
             foreach (Indmelding indmelding in _adoptList)
@@ -44,6 +46,7 @@ namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Services
         }
 
 
+        // Metode til at slette en indmelding ud fra ID og gemme ændringer i JSON-filen
         public Indmelding DeleteIndmelding(int? indId)
         {
             Indmelding IndToBeDeleted = null;
@@ -69,6 +72,7 @@ namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Services
         }
 
 
+        // Metode til at hente en liste af alle indmeldinger
         public List<Indmelding> GetInd()
         {
             return _adoptList;

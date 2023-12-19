@@ -21,12 +21,12 @@ namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Pages.Vagtplan
 
         public SelectList StartTidOptions()
         {
-            return new SelectList(Models.Vagtplan.Vagt.StartTidOptions());
+            return new SelectList(Data.MockVagter.StartTidOptions());
         }
 
         public SelectList SlutTidOptions()
         {
-            return new SelectList(Models.Vagtplan.Vagt.SlutTidOptions());
+            return new SelectList(Data.MockVagter.SlutTidOptions());
         }
         public IActionResult OnGet(int id)
         {

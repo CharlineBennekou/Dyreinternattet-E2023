@@ -4,6 +4,8 @@ namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Data
 {
     public class MockFrivillig
     {
+
+        // Statisk liste af fiktive frivillige, initialiseret med nogle standarddata
         private static List<Frivillige> _frivList = new List<Frivillige>()
         {
             new Frivillige("Stine Kofod", "2000-11-28", "Kongevej 22", 4665, "35278071", "stinehellerup@gmail.com", "Jeg elsker dyr."),
@@ -11,6 +13,7 @@ namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Data
         };
 
 
+        // Metode til at hente den statiske liste af fiktive frivillige
         public static List<Frivillige> GetMockFrivillig()
         {
 
