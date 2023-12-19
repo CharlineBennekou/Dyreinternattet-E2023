@@ -12,7 +12,7 @@ builder.Services.AddAuthentication("MyCookieAuthenticationScheme")
 
 builder.Services.AddAuthorization(); //login
 
-// Add services to the container.
+// Add servces to the container.
 builder.Services.AddRazorPages();
 builder.Services.AddSingleton<IDyreService, _dyreService>();
 builder.Services.AddSingleton<IVagtService, VagtService>();
