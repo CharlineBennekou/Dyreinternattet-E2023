@@ -9,7 +9,7 @@ namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Pages.Frivilligt
 
 		private IFrivilligService _frivilligService;
 
-		[BindProperty] // BindProperty blevet brugt til at indeholde en instans af Frivillige-klassen
+		[BindProperty] // BindProperty blevet brugt til at indeholde en instans af Frivillige-klassen.
 		public Models.Frivilligt.Frivillige Frivillige { get; set; }
 
 		public DeleteFrivilligModel(IFrivilligService frivilligService) //Service initialiseres vha. dependency injection
@@ -32,7 +32,7 @@ namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Pages.Frivilligt
 			Models.Frivilligt.Frivillige deletedFriv = _frivilligService.DeleteFriv(Frivillige.ID);
 			if (deletedFriv == null)
 				return RedirectToPage("/Error");
-			return RedirectToPage("GetAllFrivillige"); // Hvis sletning var vellykket, omdiriger brugeren til GetAllFrivillige-siden
+			return RedirectToPage("GetAllFrivillige"); // Hvis sletning var vellykket, omdiriger brugeren til GetAllFrivillige-siden.
 		}
 
     }

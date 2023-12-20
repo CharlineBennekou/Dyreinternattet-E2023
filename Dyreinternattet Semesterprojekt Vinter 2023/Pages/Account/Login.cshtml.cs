@@ -15,32 +15,31 @@ namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Pages.Account
         {
 
         }
-
         public IActionResult OnPost() //Når man logger ind
         {
-            Console.WriteLine("onpost:");
+                     Console.WriteLine("onpost:");
             if (ModelState.IsValid) //tjekker om modelstate er valid
             {
                 if (Credential.UserName == "admin" && Credential.Password == "kode") //tjekker om username og password == vores username og kode
                 {
-					var claims = new List<Claim> //laver en ny liste af claims
+					var claims = new List<Claim> //laver en ny liste af claims om vores user
 				    {
-					    new Claim(ClaimTypes.Name, Credential.UserName), //Claimer at username == name
+					    new Claim(ClaimTypes.Name, Credential.UserName), //Vi har kun et claim og det er at deres navn = username
                     
                     };
-					var identity = new ClaimsIdentity(claims, "MyCookieAuthenticationScheme"); //Skaber en ny identitet med vores liste af claims + vores authenticationscheme vi satte op i program.cs
+					var identity = new ClaimsIdentity(claims, "MyCookieAuthenticationScheme"); //Skaber en identitet som repræsenterer vores user i denne session
 
-					var principal = new ClaimsPrincipal(identity); //Principal repræsenterer vores nuværende user og den enkapsulerer vores identitet(som består af claims+authenticationscheme)
+					var principal = new ClaimsPrincipal(identity); //Principal repræsenterer vores nuværende user og den enkapsulerer vores users identitet
 
-                    HttpContext.SignInAsync("MyCookieAuthenticationScheme", principal); // Metode som logger brugeren ind. Bruger vores authenticcationscheme og principal som argument.
-                                                                                        // Metoden sætter en session op og en cookie som indeholder brugerens identitet
+                    HttpContext.SignInAsync("MyCookieAuthenticationScheme", principal); // Metode som logger user ind.
+                                                                                        // Metoden sætter en session op og issuer en cookie
 
                     Console.WriteLine("Logged ind");
                     return RedirectToPage("/index"); //returnerer os til frontpage efter succesfuld login
                     
 
                 }
-                ModelState.AddModelError(string.Empty, "invalid login attempt"); //error hvis credentials ikke matcher vores program
+                ModelState.AddModelError(string.Empty, "invalid login attempt"); //error hvis credentials ikke matcher
             }
             
             return null;

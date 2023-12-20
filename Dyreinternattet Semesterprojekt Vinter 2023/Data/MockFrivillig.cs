@@ -16,9 +16,7 @@ namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Data
         // Metode til at hente den statiske liste af fiktive frivillige
         public static List<Frivillige> GetMockFrivillig()
         {
-
             return _frivList;
-
         }
 
     }

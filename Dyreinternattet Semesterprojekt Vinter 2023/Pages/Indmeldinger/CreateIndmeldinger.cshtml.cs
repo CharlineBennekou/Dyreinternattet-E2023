@@ -89,14 +89,11 @@ namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Pages.Indmeldinger
             if (!ModelState.IsValid)
             {
                 errorMessage = "Alle felter er ikke blevet udfyldt";
-
                 return Page();
             }
             // Hvis validering er korrekt tilføjes indmeldingen ved hjælp af indService og brugeren sendes til en anden side.
             _indService.AddInd(Indmelding);
             return RedirectToPage("AfterInd");
-
-
         }
 
     }

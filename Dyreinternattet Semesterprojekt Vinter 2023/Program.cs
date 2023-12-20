@@ -1,18 +1,17 @@
 using Dyreinternattet_Semesterprojekt_Vinter_2023.Services;
 var builder = WebApplication.CreateBuilder(args);
 
-//hva laver jeg?
-builder.Services.AddAuthentication("MyCookieAuthenticationScheme")
-	.AddCookie("MyCookieAuthenticationScheme", options =>
+builder.Services.AddAuthentication("MyCookieAuthenticationScheme") //builder en cookie-baseret authenticationscheme
+	.AddCookie("MyCookieAuthenticationScheme", options => 
 	{
-		options.Cookie.Name = "MyCookie";
-		options.LoginPath = "/Account/Login"; 
-		options.AccessDeniedPath = "/Account/AccessDenied"; 
-	});
+		options.Cookie.Name = "MyCookie"; //Navn på cookie
+ 		options.LoginPath = "/Account/Login"; //Redirecter til login hvis man ikke er logget ind
+        options.ExpireTimeSpan = TimeSpan.FromMinutes(30); //Hvis bruger er inaktiv i 30 sekundrr, udløber sessionen
+    });
 
-builder.Services.AddAuthorization(); //login
+builder.Services.AddAuthorization(); // builder authorization
 
-// Add services to the container.
+// Add servces to the container.
 builder.Services.AddRazorPages();
 builder.Services.AddSingleton<IDyreService, _dyreService>();
 builder.Services.AddSingleton<IVagtService, VagtService>();
