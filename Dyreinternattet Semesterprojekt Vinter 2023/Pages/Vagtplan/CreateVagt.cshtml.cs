@@ -16,13 +16,16 @@ namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Pages.Vagtplan
         private readonly IVagtService _vagtService;
 
         [BindProperty]
-        public Models.Vagtplan.Vagt Vagt { get; set; } = new Models.Vagtplan.Vagt();
+        public Models.Vagtplan.Vagt Vagt { get; set; } 
         public SelectList MedarbejderOptions { get; set; }
 
         public CreateVagtModel(IVagtService vagtService)
         {
             _vagtService = vagtService;
-            MedarbejderOptions = new SelectList(Data.MockVagter.MedarbejderOptions(), nameof(Vagt.Medarbejder.MedarbejderName), nameof(Vagt.Medarbejder.MedarbejderName), nameof(Vagt.Medarbejder.MedarbejderEmail));
+            MedarbejderOptions = new SelectList(Data.MockVagter.MedarbejderOptions(),
+                nameof(Vagt.Medarbejder.MedarbejderName), 
+                nameof(Vagt.Medarbejder.MedarbejderName), 
+                nameof(Vagt.Medarbejder.MedarbejderEmail));
 
         }
 
@@ -48,25 +51,18 @@ namespace Dyreinternattet_Semesterprojekt_Vinter_2023.Pages.Vagtplan
                 return Page();
             }
 
-            // Get the selected Medarbejder from the dropdown
             var selectedMedarbejderName = Vagt.AssignedMedarbejder.MedarbejderName;
 
-            // Retrieve the complete Medarbejder with all information
             var selectedMedarbejder = Data.MockVagter.MedarbejderOptions()
                 .Where(m => m.MedarbejderName == selectedMedarbejderName)
                 .FirstOrDefault();
 
             if (selectedMedarbejder == null)
             {
-                // Handle the case where selectedMedarbejder is not found
-                // You might want to add proper error handling or redirect back to the page with an error message
                 return Page();
             }
 
-            // Set AssignedMedarbejder with the selected Medarbejder
             Vagt.AssignedMedarbejder = selectedMedarbejder;
-
-            // Add the Vagt
             _vagtService.AddVagt(Vagt);
 
             return RedirectToPage("GetAllVagter");

@@ -22,17 +22,6 @@
     "SlutTid": "14:00"
   },
   {
-    "Id": 3,
-    "AssignedMedarbejder": {
-      "Id": 3,
-      "MedarbejderName": "\u00C5ge Knudsen",
-      "MedarbejderEmail": "\u00E5ge@example.com",
-      "MedarbejderTlf": 55555555
-    },
-    "StartTid": "11:00",
-    "SlutTid": "19:00"
-  },
-  {
     "Id": 4,
     "AssignedMedarbejder": {
       "Id": 36,
@@ -73,18 +62,29 @@
       "MedarbejderEmail": "odin@example.com",
       "MedarbejderTlf": 98765432
     },
-    "StartTid": "09:00",
-    "SlutTid": "14:00"
+    "StartTid": "12:00",
+    "SlutTid": "22:00"
   },
   {
-    "Id": 14,
+    "Id": 13,
     "AssignedMedarbejder": {
-      "Id": 74,
+      "Id": 72,
       "MedarbejderName": "Erik",
       "MedarbejderEmail": "erik@example.com",
       "MedarbejderTlf": 55555555
     },
-    "StartTid": "17:00",
+    "StartTid": "08:00",
     "SlutTid": "23:00"
+  },
+  {
+    "Id": 8,
+    "AssignedMedarbejder": {
+      "Id": 39,
+      "MedarbejderName": "Odin",
+      "MedarbejderEmail": "odin@example.com",
+      "MedarbejderTlf": 98765432
+    },
+    "StartTid": "12:00",
+    "SlutTid": "14:00"
   }
 ]
