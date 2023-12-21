@@ -16,12 +16,12 @@
     "ID": 2,
     "Art": 1,
     "K\u00F8n": 0,
-    "Navn": "Filip2",
+    "Navn": "Filip",
     "Race": "Huskat",
     "Alder": 5,
     "V\u00E6gt": 6,
     "VaccineStatus": true,
-    "ErAdopteret": true,
+    "ErAdopteret": false,
     "ImagePath": "/images/animals/kat.jpg",
     "Beskrivelse": "Dette er en kat. Han bider."
   },
@@ -29,7 +29,7 @@
     "ID": 3,
     "Art": 1,
     "K\u00F8n": 1,
-    "Navn": "Freia3",
+    "Navn": "Freia",
     "Race": "nun",
     "Alder": 5,
     "V\u00E6gt": 4,
@@ -39,7 +39,7 @@
     "Beskrivelse": " m"
   },
   {
-    "ID": 5,
+    "ID": 4,
     "Art": 1,
     "K\u00F8n": 0,
     "Navn": "Pop ",
@@ -52,7 +52,7 @@
     "Beskrivelse": "f"
   },
   {
-    "ID": 9,
+    "ID": 5,
     "Art": 1,
     "K\u00F8n": 0,
     "Navn": "Nero",
@@ -87,7 +87,7 @@
     "V\u00E6gt": 4.5,
     "VaccineStatus": true,
     "ErAdopteret": true,
-    "ImagePath": "/images/animals/hund.jpg",
+    "ImagePath": "/images/animals/snefnug.jpg",
     "Beskrivelse": "En lille adelig pomeranian"
   },
   {
@@ -117,7 +117,7 @@
     "Beskrivelse": "Stor kanin"
   },
   {
-    "ID": 14,
+    "ID": 10,
     "Art": 1,
     "K\u00F8n": 0,
     "Navn": "Helium",
